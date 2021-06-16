@@ -3,6 +3,9 @@ from unittest import TestCase
 
 import vcr
 
+from twitcaspy.api import API
+from twitcaspy.auth import AppAuthHandler
+
 from dotenv import load_dotenv
 load_dotenv('./.env', encoding='utf-8')
 user_id = environ.get('TWITTER_USER_ID', '182224938')
@@ -20,3 +23,7 @@ tape = vcr.VCR(
     record_mode='new_episodes'#'none' if use_replay else 'all',
 )
 
+class TwitcaspyTestCase(TestCase):
+    def setUp(self):
+        self.auth = AppAuthHandler(client_id, client_secret)
+        self.api = API(self.auth)

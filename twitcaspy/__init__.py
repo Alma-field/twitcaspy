@@ -9,6 +9,7 @@ __version__ = '0.0.0'
 __author__ = 'Alma-field'
 __license__ = 'MIT'
 
+from twitcaspy.api import API
 from twitcaspy.auth import (
     GrantAuthHandler, ImplicitAuthHandler, AppAuthHandler
 )
@@ -16,3 +17,6 @@ from twitcaspy.errors import (
     BadRequest, Forbidden, HTTPException, NotFound, TooManyRequests,
     TwitcaspyException, TwitcastingServerError, Unauthorized
 )
+
+# Global, unauthenticated instance of API
+api = API()
