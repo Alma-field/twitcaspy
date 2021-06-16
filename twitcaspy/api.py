@@ -6,6 +6,10 @@ import sys
 import requests
 
 from . import __version__ as twitcaspy_version
+from .errors import (
+    BadRequest, Forbidden, HTTPException, NotFound, TooManyRequests,
+    TwitcaspyException, TwitcastingServerError, Unauthorized
+)
 from .parsers import Parser, ModelParser
 
 log = logging.getLogger(__name__)
@@ -74,4 +78,69 @@ class API:
             )
 
         self.session = requests.Session()
+
+    def request(
+        self, method, endpoint, *, endpoint_parameters=(), params=None,
+        headers=None, json_payload=None, parser=None, payload_type=None,
+        post_data=None, require_auth=True, **kwargs
+    ):
+        # If authentication is required and no credentials
+        # are provided, throw an error.
+        if require_auth and not self.auth:
+            raise TwitcaspyException('Authentication required!')
+
+        if headers is None:
+            headers = {}
+        headers["X-Api-Version"] = '2.0'
+        headers["User-Agent"] = self.user_agent
+
+        # Build the request URL
+        url = 'https://' + self.host + endpoint
+
+        if params is None:
+            params = {}
+        for k, arg in kwargs.items():
+            if arg is None:
+                continue
+            if k not in endpoint_parameters:
+                log.warning(f'Unexpected parameter: {k}')
+            params[k] = str(arg)
+        log.debug("PARAMS: %r", params)
+
+        if parser is None:
+            parser = self.parser
+
+        try:
+            # Execute request
+            try:
+                response = self.session.request(
+                    method, url, params=params, headers=headers,
+                    data=post_data, json=json_payload, auth=self.auth.auth
+                )
+            except Exception as e:
+                raise TwitcaspyException(f'Failed to send request: {e}').with_traceback(sys.exc_info()[2])
+
+            # If an error was returned, throw an exception
+            self.last_response = response
+            if response.status_code == 400:
+                raise BadRequest(response)
+            if response.status_code == 401:
+                raise Unauthorized(response)
+            if response.status_code == 403:
+                raise Forbidden(response)
+            if response.status_code == 404:
+                raise NotFound(response)
+            if response.status_code == 429:
+                raise TooManyRequests(response)
+            if response.status_code >= 500:
+                raise TwitcastingServerError(response)
+            if response.status_code and not 200 <= response.status_code < 300:
+                raise HTTPException(response)
+
+            result = parser.parse(
+                response, api=self, payload_type=payload_type)
+
+            return result
+        finally:
+            self.session.close()
 

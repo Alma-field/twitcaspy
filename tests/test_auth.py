@@ -2,7 +2,7 @@ from unittest import TestCase
 from nose.tools import ok_
 
 from .config import *
-from twitcaspy import GrantAuthHandler
+from twitcaspy import API, GrantAuthHandler
 
 class TwitcaspyAuthTests(TestCase):
 
@@ -19,3 +19,6 @@ class TwitcaspyAuthTests(TestCase):
         auth.fetch_token(authorization_response)
         ok_(auth.oauth.token['access_token'] is not None)
 
+        # build api object test using oauth
+        api = API(auth)
+        result = api.verify_credentials()
