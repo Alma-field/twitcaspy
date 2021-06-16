@@ -1,0 +1,85 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://apiv2.twitcasting.tv/users/182224938",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Python/3.9.1 Requests/2.25.1 twitcaspy/0.0.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-Api-Version": [
+                        "2.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "X-WE-ARE-HIRING": [
+                        "https://about.moi.st/ja/recruit/"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "X-RateLimit-Remaining": [
+                        "59"
+                    ],
+                    "Content-Length": [
+                        "555"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "X-RateLimit-Reset": [
+                        "1623846324"
+                    ],
+                    "Expires": [
+                        "Thu, 19 Nov 1981 08:52:00 GMT"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=0"
+                    ],
+                    "Cache-Control": [
+                        "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    ],
+                    "Date": [
+                        "Wed, 16 Jun 2021 12:24:24 GMT"
+                    ],
+                    "X-Powered-By": [
+                        "PHP/5.6.40"
+                    ],
+                    "Set-Cookie": [
+                        "PHPSESSID=o82373gjgqjdnljv0ai2f2rk65; path=/"
+                    ],
+                    "Connection": [
+                        "close"
+                    ],
+                    "X-RateLimit-Limit": [
+                        "60"
+                    ]
+                },
+                "body": {
+                    "string": "{\"supporter_count\":0,\"supporting_count\":0,\"user\":{\"id\":\"182224938\",\"screen_id\":\"twitcasting_jp\",\"name\":\"\u30c4\u30a4\u30ad\u30e3\u30b9\u516c\u5f0f\",\"image\":\"http://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1285073394094891008/127zPO4f_bigger.jpg\",\"profile\":\"\u30c4\u30a4\u30ad\u30e3\u30b9\u306e\u516c\u5f0f\u30a2\u30ab\u30a6\u30f3\u30c8\u3067\u3059\u3002\u30c4\u30a4\u30ad\u30e3\u30b9\u306b\u95a2\u3059\u308b\u304a\u77e5\u3089\u305b\u306a\u3069\u3092\u6295\u7a3f\u3057\u307e\u3059\u3002\u304a\u554f\u3044\u5408\u308f\u305b\u306f https://t.co/4gCf7XVm7N \u307e\u3067\u304a\u9858\u3044\u3057\u307e\u3059\u3002\",\"level\":50,\"last_movie_id\":\"686162671\",\"is_live\":false,\"supporter_count\":0,\"supporting_count\":0,\"created\":0}}"
+                }
+            }
+        }
+    ]
+}

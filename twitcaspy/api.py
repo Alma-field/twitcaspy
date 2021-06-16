@@ -144,3 +144,36 @@ class API:
         finally:
             self.session.close()
 
+    @payload(
+        'user', supporter_count=['raw', False],
+        supporting_count=['raw', False])
+    def get_user_info(self, *, id=None, screen_id=None, **kwargs):
+        """
+        Returns information about the specified user.
+
+        Parameters
+        ----------
+        Either an id or screen_id is required for this method.
+        If both are specified, the id takes precedence.
+        id
+            |id|
+        screen_id
+            |screen_id|
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+                 |- user: twitcaspy.models.User
+                 |- supporter_count: twitcaspy.models.Raw(int)
+                 |- supporting_count: twitcaspy.models.Raw(int)
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-user-info
+        """
+        target_id = id if id is not None else screen_id
+        if target_id is None:
+            raise TwitcaspyException(
+                'Either an id or screen_id is required for this method.')
+        return self.request('GET', f'/users/{target_id}', **kwargs)
+
