@@ -2,7 +2,7 @@ from nose.tools import ok_, eq_, raises
 
 from twitcaspy import API
 
-from twitcaspy.errors import TwitcaspyException
+from twitcaspy.errors import TwitcaspyException, Unauthorized
 
 from .config import tape, TwitcaspyTestCase, user_id, username
 
