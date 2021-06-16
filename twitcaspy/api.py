@@ -177,3 +177,24 @@ class API:
                 'Either an id or screen_id is required for this method.')
         return self.request('GET', f'/users/{target_id}', **kwargs)
 
+    @payload(
+        'app', 'user', supporter_count=['raw', False],
+        supporting_count=['raw', False])
+    def verify_credentials(self, **kwargs):
+        """
+        Returns application and user information about the access_token.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+                 |- app: twitcaspy.models.App
+                 |- user: twitcaspy.models.User
+                 |- supporter_count: twitcaspy.models.Raw(int)
+                 |- supporting_count: twitcaspy.models.Raw(int)
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#verify-credentials
+        """
+        return self.request('GET', '/verify_credentials', **kwargs)
+

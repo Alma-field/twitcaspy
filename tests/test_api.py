@@ -21,3 +21,8 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         ok_(hasattr(data, 'supporter_count'))
         ok_(hasattr(data, 'supporting_count'))
 
+    @raises(Unauthorized)
+    @tape.use_cassette('testverifycredentials.json')
+    def testverifycredentials(self):
+        data = self.api.verify_credentials()
+
