@@ -14,6 +14,12 @@ else:
 with open("README.md") as readme_file:
     long_description = readme_file.read()
 
+tests_require = [
+    "nose>=1.3.7,<2",
+    "vcrpy>=4.1.1,<5",
+    "python-dotenv>=0.17.1,<1",
+]
+
 setup(
     name="twitcaspy",
     version=version,
@@ -29,10 +35,16 @@ setup(
         "Issue Tracker": "https://github.com/Alma-field/twitcaspy/issues",
         "Source Code": "https://github.com/Alma-field/twitcaspy",
     },
+    packages=find_packages(exclude=["tests"]),
     install_requires=[
         "requests>=2.25.1,<3",
         "requests_oauthlib>=1.3.0,<2",
     ],
+    tests_require=tests_require,
+    extras_require={
+        "test": tests_require,
+    },
+    test_suite="nose.collector",
     keywords="twitcasting library",
     python_requires=">=3.7",
     classifiers=[
