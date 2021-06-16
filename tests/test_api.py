@@ -6,6 +6,8 @@ from twitcaspy.errors import TwitcaspyException, Unauthorized
 
 from .config import tape, TwitcaspyTestCase, user_id, username
 
+movie_id = '189037369'
+
 class TwitcaspyAPITests(TwitcaspyTestCase):
     @raises(TwitcaspyException)
     @tape.use_cassette('testraise_authenticationrequired.json')
@@ -32,3 +34,13 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         eq_(data.status_code, 200)
         ok_(len(data.content) > 0)
 
+    @tape.use_cassette('testgetmovieinfo.json')
+    def testgetmovieinfo(self):
+        data = self.api.get_movie_info(movie_id=movie_id)
+        ok_(hasattr(data, 'movie'))
+        eq_(data.movie.user_id, user_id)
+        ok_(hasattr(data, 'broadcaster'))
+        eq_(data.broadcaster.id, user_id)
+        eq_(data.broadcaster.screen_id, username)
+        ok_(hasattr(data, 'tags'))
+        ok_(isinstance(data.tags, list))
