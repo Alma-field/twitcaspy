@@ -1,3 +1,4 @@
+import functools
 import logging
 from platform import python_version
 import sys
@@ -8,6 +9,21 @@ from . import __version__ as twitcaspy_version
 from .parsers import Parser, ModelParser
 
 log = logging.getLogger(__name__)
+
+def payload(*payload_list, **payload_kwargs):
+    if payload_kwargs is None:
+        payload_kwargs = {}
+    if isinstance(payload_list, tuple):
+        for _key in payload_list:
+            payload_kwargs[_key] = [_key, False]
+    def decorator(method):
+        @functools.wraps(method)
+        def wrapper(*args, **kwargs):
+            kwargs['payload_type'] = payload_kwargs
+            return method(*args, **kwargs)
+        wrapper.payload_type = payload_kwargs
+        return wrapper
+    return decorator
 
 class API:
     """Twitcasting API v2.0 Interface
