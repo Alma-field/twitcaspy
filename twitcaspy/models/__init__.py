@@ -8,6 +8,8 @@ from .result import Result
 
 from .raw import Raw
 
+from .user import User
+
 from .factory import ModelFactory
 
-__all__ = [ModelFactory, Raw]
+__all__ = [ModelFactory, Raw, User]

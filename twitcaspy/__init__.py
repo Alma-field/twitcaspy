@@ -17,6 +17,9 @@ from twitcaspy.errors import (
     BadRequest, Forbidden, HTTPException, NotFound, TooManyRequests,
     TwitcaspyException, TwitcastingServerError, Unauthorized
 )
+from twitcaspy.models import (
+    ModelFactory, Raw, User
+)
 
 # Global, unauthenticated instance of API
 api = API()
