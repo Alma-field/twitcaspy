@@ -4,6 +4,8 @@
 
 from .app import App
 
+from .movie import Movie
+
 from .raw import Raw
 
 from .user import User
@@ -15,5 +17,6 @@ class ModelFactory:
     """
 
     app = App
+    movie = Movie
     raw = Raw
     user = User

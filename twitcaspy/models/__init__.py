@@ -8,10 +8,12 @@ from .result import Result
 
 from .app import App
 
+from .movie import Movie
+
 from .raw import Raw
 
 from .user import User
 
 from .factory import ModelFactory
 
-__all__ = [App, ModelFactory, Raw, User]
+__all__ = [App, ModelFactory, Movie, Raw, User]
