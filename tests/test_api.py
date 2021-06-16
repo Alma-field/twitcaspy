@@ -26,3 +26,9 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
     def testverifycredentials(self):
         data = self.api.verify_credentials()
 
+    @tape.use_cassette('testgetlivethumbnailimage.yaml', serializer='yaml')
+    def testgetlivethumbnailimage(self):
+        data = self.api.get_live_thumbnail_image(id=user_id)
+        eq_(data.status_code, 200)
+        ok_(len(data.content) > 0)
+

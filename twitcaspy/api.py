@@ -10,7 +10,7 @@ from .errors import (
     BadRequest, Forbidden, HTTPException, NotFound, TooManyRequests,
     TwitcaspyException, TwitcastingServerError, Unauthorized
 )
-from .parsers import Parser, ModelParser
+from .parsers import Parser, ModelParser, RawParser
 
 log = logging.getLogger(__name__)
 
@@ -197,4 +197,41 @@ class API:
         https://apiv2-doc.twitcasting.tv/#verify-credentials
         """
         return self.request('GET', '/verify_credentials', **kwargs)
+
+    def get_live_thumbnail_image(self, *, id=None, screen_id=None, **kwargs):
+        """get_live_thumbnail_image(self, *, id=None, screen_id=None)
+
+        Returns live thumbnail the specified user.
+        Returns an offline image if the user is not streaming now.
+
+        Parameters
+        ----------
+        Either an id or screen_id is required for this method.
+        If both are specified, the id takes precedence.
+        id
+            |id|
+        screen_id
+            |screen_id|
+        size
+            |size|: image size(optional)
+            'large' or 'small' can be specified.(default is 'small'.)
+        position
+            |position|: (optional)
+            'beginning' or 'latest' can be specified.(default is 'latest'.)
+
+        Returns
+        -------
+        :class:`requests.models.Response`
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-live-thumbnail-image
+        """
+        target_id = id if id is not None else screen_id
+        if target_id is None:
+            raise TwitcaspyException(
+                'Either an id or screen_id is required for this method.')
+        return self.request(
+            'GET', f'/users/{target_id}/live/thumbnail',
+            parser=RawParser, **kwargs)
 
