@@ -4,3 +4,8 @@
 
 from .model import Model
 
+from .result import Result
+
+from .factory import ModelFactory
+
+__all__ = [ModelFactory]
