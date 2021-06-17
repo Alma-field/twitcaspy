@@ -2,6 +2,8 @@
 # Copyright 2021 Alma-field
 # See LICENSE for details.
 
+from ..utils import fromtimestamp
+
 from .model import Model
 
 class Movie(Model):
