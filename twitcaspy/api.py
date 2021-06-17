@@ -258,3 +258,47 @@ class API:
         https://apiv2-doc.twitcasting.tv/#get-movie-info
         """
         return self.request('GET', f'/movies/{movie_id}', **kwargs)
+
+    @payload(movies=['movie', True], total_count=['raw', False])
+    def get_movies_by_user(self, *, id=None, screen_id=None, **kwargs):
+        """
+        Returns movies of the specified user.
+
+        Parameters
+        ----------
+        Either an id or screen_id is required for this method.
+        If both are specified, the id takes precedence.
+        id
+            |id|
+        screen_id
+            |screen_id|
+        offset
+            |offset|: Position from the beginning(optional)
+            It can be specified in the range of 0 to 1000.(default is 0.)
+        limit
+            |limit|: Maximum number of acquisitions(optional)
+            It can be specified in the range of 1 to 50.(default is 20.)
+            (In some cases,
+            it may return less than the specified number of videos.)
+        slice_id
+            |slice_id|: (optional)
+            Gets the movie before this slice_id.
+            It can be specified in the range of 1 or more.
+            (Not specified by default.[=None])
+            If you specify this parameter, offset is ignored.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+                 |- total_count: twitcaspy.models.Raw(int)
+                 |- movies: List of twitcaspy.models.Movie
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-movies-by-user
+        """
+        target_id = id if id is not None else screen_id
+        if target_id is None:
+            raise TwitcaspyException(
+                'Either an id or screen_id is required for this method.')
+        return self.request('GET', f'/users/{target_id}/movies', **kwargs)
