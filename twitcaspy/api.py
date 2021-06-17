@@ -243,8 +243,6 @@ class API:
 
         Parameters
         ----------
-        Either an id or screen_id is required for this method.
-        If both are specified, the id takes precedence.
         movie_id
             |movie_id|
 
