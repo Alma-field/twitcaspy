@@ -199,7 +199,8 @@ class API:
         return self.request('GET', '/verify_credentials', **kwargs)
 
     def get_live_thumbnail_image(self, *, id=None, screen_id=None, **kwargs):
-        """get_live_thumbnail_image(self, *, id=None, screen_id=None)
+        """get_live_thumbnail_image(self, *, id=None, screen_id=None,
+                size='small', position='latest')
 
         Returns live thumbnail the specified user.
         Returns an offline image if the user is not streaming now.
