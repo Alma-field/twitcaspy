@@ -244,7 +244,7 @@ class API:
                 'Either an id or screen_id is required for this method.')
         return self.request(
             'GET', f'/users/{target_id}/live/thumbnail',
-            parser=RawParser, **kwargs)
+            parser=RawParser, require_auth=False, **kwargs)
 
     @payload('movie', broadcaster=['user', False], tags=['raw', False])
     def get_movie_info(self, *, movie_id, **kwargs):
