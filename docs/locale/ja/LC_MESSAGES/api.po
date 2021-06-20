@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-21 00:55+0900\n"
+"POT-Creation-Date: 2021-06-21 01:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,6 +149,10 @@ msgstr ""
 msgid "User"
 msgstr ""
 
+#: ../../api.rst:52
+msgid "get_user_info"
+msgstr ""
+
 #: of twitcaspy.api.API.get_user_info:1
 msgid "Returns information about the specified user."
 msgstr "ユーザーの情報を取得します。"
@@ -247,6 +251,10 @@ msgstr "idとscreen_idの両方が指定されていないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#get-user-info"
 msgstr ""
 
+#: ../../api.rst:56
+msgid "verify_credentials"
+msgstr ""
+
 #: of twitcaspy.api.API.verify_credentials:1
 msgid "Returns application and user information about the access_token."
 msgstr "アクセストークンに関するアプリケーションとユーザーの情報を取得します。"
@@ -275,8 +283,12 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#verify-credentials"
 msgstr ""
 
-#: ../../api.rst:56
+#: ../../api.rst:60
 msgid "Live Thumbnail"
+msgstr ""
+
+#: ../../api.rst:63
+msgid "get_live_thumbnail_image"
 msgstr ""
 
 #: of twitcaspy.api.API.get_live_thumbnail_image:1
@@ -323,8 +335,12 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-live-thumbnail-image"
 msgstr ""
 
-#: ../../api.rst:61
+#: ../../api.rst:67
 msgid "Movie"
+msgstr ""
+
+#: ../../api.rst:70
+msgid "get_movie_info"
 msgstr ""
 
 #: of twitcaspy.api.API.get_movie_info:1
@@ -357,6 +373,10 @@ msgstr ""
 
 #: of twitcaspy.api.API.get_movie_info:15
 msgid "https://apiv2-doc.twitcasting.tv/#get-movie-info"
+msgstr ""
+
+#: ../../api.rst:74
+msgid "get_movies_by_user"
 msgstr ""
 
 #: of twitcaspy.api.API.get_movies_by_user:2
@@ -440,12 +460,20 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-movies-by-user"
 msgstr ""
 
+#: ../../api.rst:78
+msgid "get_current_live"
+msgstr ""
+
 #: of twitcaspy.api.API.get_current_live:1
 msgid "Returns live information if the user is streaming now."
 msgstr "ーザーが配信中の場合、ライブ情報を取得します。"
 
 #: of twitcaspy.api.API.get_current_live:21
 msgid "https://apiv2-doc.twitcasting.tv/#get-current-live"
+msgstr ""
+
+#: ../../api.rst:82
+msgid "set_current_live_subtitle"
 msgstr ""
 
 #: of twitcaspy.api.API.set_current_live_subtitle:1
@@ -487,10 +515,9 @@ msgstr "**subtitle** : :class:`~twitcaspy.models.Raw` (:class:`int`) テロッ�
 msgid ""
 "When the subtitle is less than one character.     When the subtitle is "
 "more than 17 characters and cut_out is False."
-msgstr ""
-"subtitleが1文字より少ないとき "
-"subtitleが17文字より多く、cut_outがFalseのとき"
+msgstr "subtitleが1文字より少ないとき subtitleが17文字より多く、cut_outがFalseのとき"
 
 #: of twitcaspy.api.API.set_current_live_subtitle:19
 msgid "https://apiv2-doc.twitcasting.tv/#set-current-live-subtitle"
 msgstr ""
+
