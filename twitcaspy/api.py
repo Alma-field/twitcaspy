@@ -174,6 +174,11 @@ class API:
             | **supporting_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
                 Number supported user by the user.
 
+        Raises
+        ------
+        TwitcaspyException
+            If both id and screen_id are not specified
+
         References
         ----------
         https://apiv2-doc.twitcasting.tv/#get-user-info
@@ -233,6 +238,11 @@ class API:
         -------
         :class:`requests.models.Response`
             | Image data is stored in the content attribute.
+
+        Raises
+        ------
+        TwitcaspyException
+            If both id and screen_id are not specified
 
         References
         ----------
@@ -309,6 +319,11 @@ class API:
             | |latelimit|
             | **total_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
             | **movies** : :class:`List` of :class:`~twitcaspy.models.Movie`
+
+        Raises
+        ------
+        TwitcaspyException
+            If both id and screen_id are not specified
 
         References
         ----------
