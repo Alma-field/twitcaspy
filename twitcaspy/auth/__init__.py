@@ -8,4 +8,4 @@ from .grant import GrantAuthHandler
 
 from .implicit import ImplicitAuthHandler
 
-__all__ = [AppAuthHandler, GrantAuthHandler, ImplicitAuthHandler]
+__all__ = ['AppAuthHandler', 'GrantAuthHandler', 'ImplicitAuthHandler']

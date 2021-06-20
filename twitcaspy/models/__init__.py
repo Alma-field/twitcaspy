@@ -14,6 +14,8 @@ from .raw import Raw
 
 from .user import User
 
+from .latelimit import LateLimit
+
 from .factory import ModelFactory
 
-__all__ = [App, ModelFactory, Movie, Raw, User]
+__all__ = ['App', 'ModelFactory', 'LateLimit', 'Movie', 'Raw', 'User']
