@@ -247,7 +247,7 @@ class API:
             parser=RawParser, require_auth=False, **kwargs)
 
     @payload('movie', broadcaster=['user', False], tags=['raw', False])
-    def get_movie_info(self, *, movie_id, **kwargs):
+    def get_movie_info(self, movie_id, **kwargs):
         """get_movie_info(movie_id)
 
         Returns information about the specified movie.
