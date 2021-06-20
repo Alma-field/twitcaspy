@@ -3,10 +3,10 @@
 # See LICENSE for details.
 
 class Raw:
-    """
-    Raw Object
+    """Raw Object
 
-    The data will be returned as it is.
+    | The data will be returned as it is.
+    | This class does not instantiate.
     """
 
     @classmethod

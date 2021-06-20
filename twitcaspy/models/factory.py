@@ -12,8 +12,8 @@ from .user import User
 
 class ModelFactory:
     """
-    Used by parsers for creating instances of models.
-    You may subclass this factory to add your own extended models.
+    | Used by parsers for creating instances of models.
+    | You may subclass this factory to add your own extended models.
     """
 
     app = App

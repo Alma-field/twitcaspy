@@ -5,8 +5,20 @@
 from .model import Model
 
 class App(Model):
-    """
-    Application Object : https://apiv2-doc.twitcasting.tv/#app-object
+    """Application Object
+
+    Attributes
+    ----------
+    client_id: :class:`str`
+        | Application client ID
+    name: :class:`str`
+        | Application name
+    owner_user_id: :class:`str`
+        | Application developer user ID
+
+    References
+    ----------
+    https://apiv2-doc.twitcasting.tv/#app-object
     """
 
     @classmethod

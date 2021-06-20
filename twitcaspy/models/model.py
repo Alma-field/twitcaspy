@@ -3,6 +3,13 @@
 # See LICENSE for details.
 
 class Model:
+    """Model Base Class
+
+    Attributes
+    ----------
+    _api : :class:`~twitcaspy.api.API`
+    """
+
     def __init__(self, api=None):
         self._api = api
 

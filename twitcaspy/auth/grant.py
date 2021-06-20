@@ -14,12 +14,14 @@ class GrantAuthHandler(AuthHandler):
 
     Parameters
     ----------
-    client_id
-        client_id of this app
-    client_secret
-        client_secret of this app
-    callback
-        Specify the same Callback URL set when registering the application.
+    client_id: :class:`str`
+        |client_id|
+    client_secret: :class:`str`
+        |client_secret|
+    callback: :class:`str`
+        |callback|
+    state: :class:`str`
+        |csrf_token|
 
     References
     ----------

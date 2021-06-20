@@ -12,10 +12,10 @@ class AppAuthHandler(AuthHandler):
 
     Parameters
     ----------
-    client_id
-        client_id of this app
-    client_secret
-        client_secret of this app
+    client_id: :class:`str`
+        |client_id|
+    client_secret: :class:`str`
+        |client_secret|
 
     References
     ----------

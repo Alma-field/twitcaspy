@@ -3,6 +3,20 @@
 # See LICENSE for details.
 
 class AuthHandler:
+    """AuthHandler Base Class
+
+    Parameters
+    ----------
+    client_id: :class:`str`
+        |client_id|
+    client_secret: :class:`str`
+        |client_secret|
+
+    Raises
+    ------
+    TypeError
+        If the given client id and/or secret is not a string instance
+    """
     OAUTH_HOST = 'apiv2.twitcasting.tv'
     OAUTH_ROOT = '/oauth2/'
 

@@ -34,13 +34,15 @@ class API:
 
     Parameters
     ----------
-    auth
+    auth: :class:`~twitcaspy.auth.auth.AuthHandler`
         The authentication handler to be used
-    host
+    host: :class:`str`
         The general REST API host server URL
-    parser
-        The Parser instance to use for parsing the response from Twitcasting;
-        defaults to an instance of ModelParser
+    parser: :class:`~twitcaspy.parsers.parser.Parser`
+        | The Parser instance to use for parsing the response from Twitcasting.
+        | defaults to an instance of ModelParser
+    user_agent: :class:`str`
+        The UserAgent to be used
 
     Raises
     ------
@@ -148,24 +150,29 @@ class API:
         'user', supporter_count=['raw', False],
         supporting_count=['raw', False])
     def get_user_info(self, *, id=None, screen_id=None, **kwargs):
-        """
-        Returns information about the specified user.
+        """get_user_info(*, id=None, screen_id=None)
+
+        | Returns information about the specified user.
+        | |id_screenid|
 
         Parameters
         ----------
-        Either an id or screen_id is required for this method.
-        If both are specified, the id takes precedence.
-        id
+        id: :class:`str`
             |id|
-        screen_id
+            |id_notice|
+        screen_id: :class:`str`
             |screen_id|
 
         Returns
         -------
         :class:`~twitcaspy.models.Result`
-                 |- user: twitcaspy.models.User
-                 |- supporter_count: twitcaspy.models.Raw(int)
-                 |- supporting_count: twitcaspy.models.Raw(int)
+            | |attribute|
+            | |latelimit|
+            | **user** : :class:`~twitcaspy.models.User`
+            | **supporter_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+                Number of user supporters.
+            | **supporting_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+                Number supported user by the user.
 
         References
         ----------
@@ -181,16 +188,19 @@ class API:
         'app', 'user', supporter_count=['raw', False],
         supporting_count=['raw', False])
     def verify_credentials(self, **kwargs):
-        """
+        """verify_credentials()
+
         Returns application and user information about the access_token.
 
         Returns
         -------
         :class:`~twitcaspy.models.Result`
-                 |- app: twitcaspy.models.App
-                 |- user: twitcaspy.models.User
-                 |- supporter_count: twitcaspy.models.Raw(int)
-                 |- supporting_count: twitcaspy.models.Raw(int)
+            | |attribute|
+            | |latelimit|
+            | **app** : :class:`~twitcaspy.models.App`
+            | **user** : :class:`~twitcaspy.models.User`
+            | **supporter_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+            | **supporting_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
 
         References
         ----------
@@ -199,30 +209,30 @@ class API:
         return self.request('GET', '/verify_credentials', **kwargs)
 
     def get_live_thumbnail_image(self, *, id=None, screen_id=None, **kwargs):
-        """get_live_thumbnail_image(self, *, id=None, screen_id=None,
+        """get_live_thumbnail_image(*, id=None, screen_id=None,\
                 size='small', position='latest')
 
-        Returns live thumbnail the specified user.
-        Returns an offline image if the user is not streaming now.
+        | Returns live thumbnail the specified user.
+        | Returns an offline image if the user is not streaming now.
+        | |id_screenid|
 
         Parameters
         ----------
-        Either an id or screen_id is required for this method.
-        If both are specified, the id takes precedence.
-        id
+        id: :class:`str`
             |id|
-        screen_id
+            |id_notice|
+        screen_id: :class:`str`
             |screen_id|
-        size
-            |size|: image size(optional)
-            'large' or 'small' can be specified.(default is 'small'.)
-        position
-            |position|: (optional)
-            'beginning' or 'latest' can be specified.(default is 'latest'.)
+        size(optional): :class:`str`
+            | image size
+            | 'large' or 'small' can be specified.(default is 'small'.)
+        position(optional): :class:`str`
+            | 'beginning' or 'latest' can be specified.(default is 'latest'.)
 
         Returns
         -------
         :class:`requests.models.Response`
+            | Image data is stored in the content attribute.
 
         References
         ----------
@@ -238,20 +248,23 @@ class API:
 
     @payload('movie', broadcaster=['user', False], tags=['raw', False])
     def get_movie_info(self, *, movie_id, **kwargs):
-        """
-        Returns information about the specified user.
+        """get_movie_info(movie_id)
+
+        Returns information about the specified movie.
 
         Parameters
         ----------
-        movie_id
+        movie_id: :class:`str`
             |movie_id|
 
         Returns
         -------
         :class:`~twitcaspy.models.Result`
-                 |- movie: twitcaspy.models.Movie
-                 |- broadcaster: twitcaspy.models.User
-                 |- tags: twitcaspy.models.Raw(list)
+            | |attribute|
+            | |latelimit|
+            | **movie** : :class:`~twitcaspy.models.Movie`
+            | **broadcaster** : :class:`~twitcaspy.models.User`
+            | **tags** : :class:`~twitcaspy.models.Raw` (:class:`list`)
 
         References
         ----------
@@ -261,37 +274,41 @@ class API:
 
     @payload(movies=['movie', True], total_count=['raw', False])
     def get_movies_by_user(self, *, id=None, screen_id=None, **kwargs):
-        """
-        Returns movies of the specified user.
+        """get_movies_by_user(*, id=None, screen_id=None,\
+                offset=0, limit=20, slice_id=None)
+
+        | Returns movies of the specified user
+          in descending order of creation date and time.
+        | |id_screenid|
 
         Parameters
         ----------
-        Either an id or screen_id is required for this method.
-        If both are specified, the id takes precedence.
-        id
+        id: :class:`str`
             |id|
-        screen_id
+            |id_notice|
+        screen_id: :class:`str`
             |screen_id|
-        offset
-            |offset|: Position from the beginning(optional)
-            It can be specified in the range of 0 to 1000.(default is 0.)
-        limit
-            |limit|: Maximum number of acquisitions(optional)
-            It can be specified in the range of 1 to 50.(default is 20.)
-            (In some cases,
-            it may return less than the specified number of videos.)
-        slice_id
-            |slice_id|: (optional)
-            Gets the movie before this slice_id.
-            It can be specified in the range of 1 or more.
-            (Not specified by default.[=None])
-            If you specify this parameter, offset is ignored.
+        offset(optional): :class:`int`
+            | Position from the beginning
+            | It can be specified in the range of 0 to 1000.(default is 0.)
+        limit(optional): :class:`int`
+            | Maximum number of acquisitions
+            | It can be specified in the range of 1 to 50.(default is 20.)
+            | (In some cases,
+              it may return less than the specified number of videos.)
+        slice_id(optional): :class:`int` or :class:`None`
+            | Gets the movie before this slice_id.
+            | It can be specified in the range of 1 or more.
+            | (Not specified by default.[= :class:`None`])
+            | If you specify this parameter, offset is ignored.
 
         Returns
         -------
         :class:`~twitcaspy.models.Result`
-                 |- total_count: twitcaspy.models.Raw(int)
-                 |- movies: List of twitcaspy.models.Movie
+            | |attribute|
+            | |latelimit|
+            | **total_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+            | **movies** : :class:`List` of :class:`~twitcaspy.models.Movie`
 
         References
         ----------

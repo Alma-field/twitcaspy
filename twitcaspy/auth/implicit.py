@@ -10,17 +10,26 @@ from ..errors import TwitcaspyException
 from .auth import AuthHandler
 
 class ImplicitAuthHandler(AuthHandler):
-    """Implicit Code Grant handler"""
+    """
+    Implicit Code Grant handler
+
+    Parameters
+    ----------
+    client_id: :class:`str`
+        |client_id|
+    client_secret: :class:`str`
+        |client_secret|
+    callback: :class:`str`
+        |callback|
+    state: :class:`str`
+        |csrf_token|
+
+    References
+    ----------
+    https://apiv2-doc.twitcasting.tv/#implicit
+    """
 
     def __init__(self, client_id, client_secret, callback=None, *, state=None):
-        """
-        :param client_id: このアプリのCliendID
-        :type client_id: str
-        :param client_secret: このアプリのClientSecret
-        :type client_secret: str
-        :param state: (optional) このアプリのCSRFトークン
-        :type state: str
-        """
         super().__init__(client_id, client_secret)
         self.callback = callback
         self.state = state
