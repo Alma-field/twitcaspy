@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-21 01:33+0900\n"
+"POT-Creation-Date: 2021-06-21 01:45+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,6 +73,7 @@ msgstr "指定されたparserがParserインスタンスではない場合"
 #: twitcaspy.api.API.get_movie_info:14 twitcaspy.api.API.get_movies_by_user:33
 #: twitcaspy.api.API.get_user_info:22
 #: twitcaspy.api.API.set_current_live_subtitle:18
+#: twitcaspy.api.API.unset_current_live_subtitle:11
 #: twitcaspy.api.API.verify_credentials:12
 msgid "References"
 msgstr ""
@@ -145,11 +146,19 @@ msgstr ""
 msgid ":meth:`API.set_current_live_subtitle`"
 msgstr ""
 
-#: ../../api.rst:49
-msgid "User"
+#: ../../api.rst:39
+msgid "`DELETE /movies/subtitle`_"
+msgstr ""
+
+#: ../../api.rst:39
+msgid ":meth:`API.unset_current_live_subtitle`"
 msgstr ""
 
 #: ../../api.rst:52
+msgid "User"
+msgstr ""
+
+#: ../../api.rst:55
 msgid "get_user_info"
 msgstr ""
 
@@ -179,6 +188,7 @@ msgstr "ライブ配信者のID(例: @~~)"
 #: twitcaspy.api.API.get_live_thumbnail_image twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_user_info
 #: twitcaspy.api.API.set_current_live_subtitle
+#: twitcaspy.api.API.unset_current_live_subtitle
 #: twitcaspy.api.API.verify_credentials
 msgid "Returns"
 msgstr "戻り値"
@@ -195,6 +205,7 @@ msgstr ""
 #: of twitcaspy.api.API.get_current_live twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_user_info
 #: twitcaspy.api.API.set_current_live_subtitle
+#: twitcaspy.api.API.unset_current_live_subtitle
 #: twitcaspy.api.API.verify_credentials
 msgid "|attribute|"
 msgstr "|attribute_ja|"
@@ -202,6 +213,7 @@ msgstr "|attribute_ja|"
 #: of twitcaspy.api.API.get_current_live twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_user_info
 #: twitcaspy.api.API.set_current_live_subtitle
+#: twitcaspy.api.API.unset_current_live_subtitle
 #: twitcaspy.api.API.verify_credentials
 msgid "|latelimit|"
 msgstr ""
@@ -230,6 +242,7 @@ msgstr ""
 #: twitcaspy.api.API.get_live_thumbnail_image twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_user_info
 #: twitcaspy.api.API.set_current_live_subtitle
+#: twitcaspy.api.API.unset_current_live_subtitle
 #: twitcaspy.api.API.verify_credentials
 msgid "Return type"
 msgstr "戻り値の型"
@@ -237,6 +250,7 @@ msgstr "戻り値の型"
 #: of twitcaspy.api.API.get_current_live:15 twitcaspy.api.API.get_movie_info:11
 #: twitcaspy.api.API.get_movies_by_user:28 twitcaspy.api.API.get_user_info:17
 #: twitcaspy.api.API.set_current_live_subtitle:13
+#: twitcaspy.api.API.unset_current_live_subtitle:8
 #: twitcaspy.api.API.verify_credentials:9
 msgid ":class:`~twitcaspy.models.Result`"
 msgstr ""
@@ -251,7 +265,7 @@ msgstr "idとscreen_idの両方が指定されていないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#get-user-info"
 msgstr ""
 
-#: ../../api.rst:56
+#: ../../api.rst:59
 msgid "verify_credentials"
 msgstr ""
 
@@ -283,11 +297,11 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#verify-credentials"
 msgstr ""
 
-#: ../../api.rst:60
+#: ../../api.rst:63
 msgid "Live Thumbnail"
 msgstr ""
 
-#: ../../api.rst:63
+#: ../../api.rst:66
 msgid "get_live_thumbnail_image"
 msgstr ""
 
@@ -335,11 +349,11 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-live-thumbnail-image"
 msgstr ""
 
-#: ../../api.rst:67
+#: ../../api.rst:70
 msgid "Movie"
 msgstr ""
 
-#: ../../api.rst:70
+#: ../../api.rst:73
 msgid "get_movie_info"
 msgstr ""
 
@@ -375,7 +389,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-movie-info"
 msgstr ""
 
-#: ../../api.rst:74
+#: ../../api.rst:77
 msgid "get_movies_by_user"
 msgstr ""
 
@@ -460,7 +474,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-movies-by-user"
 msgstr ""
 
-#: ../../api.rst:78
+#: ../../api.rst:81
 msgid "get_current_live"
 msgstr ""
 
@@ -472,7 +486,7 @@ msgstr "ーザーが配信中の場合、ライブ情報を取得します。"
 msgid "https://apiv2-doc.twitcasting.tv/#get-current-live"
 msgstr ""
 
-#: ../../api.rst:82
+#: ../../api.rst:85
 msgid "set_current_live_subtitle"
 msgstr ""
 
@@ -504,6 +518,7 @@ msgid ""
 msgstr ""
 
 #: of twitcaspy.api.API.set_current_live_subtitle
+#: twitcaspy.api.API.unset_current_live_subtitle
 msgid "**movie_id** : :class:`~twitcaspy.models.Raw` (:class:`str`) |movie_id|"
 msgstr "**movie_id** : :class:`~twitcaspy.models.Raw` (:class:`int`) ライブのID"
 
@@ -521,3 +536,25 @@ msgstr "subtitleが1文字より少ないとき subtitleが17文字より多く�
 msgid "https://apiv2-doc.twitcasting.tv/#set-current-live-subtitle"
 msgstr ""
 
+#: ../../api.rst:89
+msgid "unset_current_live_subtitle"
+msgstr ""
+
+#: of twitcaspy.api.API.unset_current_live_subtitle:1
+msgid "If the user is broadcasting, unset a live telop."
+msgstr "ユーザーが配信中の場合、ライブのテロップを削除する。"
+
+#: of twitcaspy.api.API.unset_current_live_subtitle:3
+msgid ""
+"| |attribute| | |latelimit| | **movie_id** : "
+":class:`~twitcaspy.models.Raw` (:class:`str`)   |movie_id| | **subtitle**"
+" : :class:`~twitcaspy.models.Raw` (:class:`None`)"
+msgstr ""
+
+#: of twitcaspy.api.API.unset_current_live_subtitle
+msgid "**subtitle** : :class:`~twitcaspy.models.Raw` (:class:`None`)"
+msgstr ""
+
+#: of twitcaspy.api.API.unset_current_live_subtitle:12
+msgid "https://apiv2-doc.twitcasting.tv/#unset-current-live-subtitle"
+msgstr ""

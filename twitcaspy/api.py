@@ -417,3 +417,24 @@ class API:
             subtitle = subtitle[:17]
         return self.request(
             'POST', '/movies/subtitle', **kwargs)
+
+    @payload(movie_id=['raw', False], subtitle=['raw', False])
+    def unset_current_live_subtitle(self, **kwargs):
+        """unset_current_live_subtitle()
+
+        | If the user is broadcasting, unset a live telop.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **movie_id** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+              |movie_id|
+            | **subtitle** : :class:`~twitcaspy.models.Raw` (:class:`None`)
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#unset-current-live-subtitle
+        """
+        return self.request('DELETE', '/movies/subtitle', **kwargs)
