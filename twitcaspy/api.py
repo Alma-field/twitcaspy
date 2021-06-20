@@ -374,3 +374,46 @@ class API:
                 'Either an id or screen_id is required for this method.')
         return self.request(
             'GET', f'/users/{target_id}/current_live', **kwargs)
+
+    @payload(movie_id=['raw', False], subtitle=['raw', False])
+    def set_current_live_subtitle(self, subtitle, *, cut_out=False, **kwargs):
+        """set_current_live_subtitle(subtitle, *, cut_out=False)
+
+        | If the user is broadcasting, set a live telop.
+
+        Parameters
+        ----------
+        subtitle: :class:`str`
+            | live telop
+        cut_out: :class:`bool`
+            | If the subtitle is more than 17 characters, cut out
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **movie_id** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+              |movie_id|
+            | **subtitle** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+
+        Raises
+        ------
+        TwitcaspyException:
+            When the subtitle is less than one character.
+            When the subtitle is more than 17 characters and cut_out is False.
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#set-current-live-subtitle
+        """
+        if len(subtitle) < 1:
+            raise TwitcaspyException(
+                '`subtitle` must be at least one character.')
+        if not cut_out and 17 < len(subtitle):
+            raise TwitcaspyException(
+                'The subtitle must be 17 characters or less.')
+        else:
+            subtitle = subtitle[:17]
+        return self.request(
+            'POST', '/movies/subtitle', **kwargs)

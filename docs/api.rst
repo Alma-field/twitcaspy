@@ -34,6 +34,8 @@
     +------------------------------------------+---------------------------------------+
     | `GET /users/:user_id/current_live`_      | :meth:`API.get_current_live`          |
     +------------------------------------------+---------------------------------------+
+    | `POST /movies/subtitle`_                 | :meth:`API.set_current_live_subtitle` |
+    +------------------------------------------+---------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -41,6 +43,7 @@
 .. _GET /movies/:movie_id: https://apiv2-doc.twitcasting.tv/#get-movie-info
 .. _GET /users/:user_id/movies: https://apiv2-doc.twitcasting.tv/#get-movies-by-user
 .. _GET /users/:user_id/current_live: https://apiv2-doc.twitcasting.tv/#get-current-live
+.. _POST /movies/subtitle: https://apiv2-doc.twitcasting.tv/#set-current-live-subtitle
 
 User
 ====
@@ -62,3 +65,5 @@ Movie
 .. automethod:: API.get_movies_by_user
 
 .. automethod:: API.get_current_live
+
+.. automethod:: API.set_current_live_subtitle

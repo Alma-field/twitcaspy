@@ -56,3 +56,14 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
     @tape.use_cassette('testgetcurrentlive_raise404.json')
     def testgetcurrentlive_raise404(self):
         data = self.api.get_current_live(id=user_id)
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsetcurrentlivesubtitle_raise1.json')
+    def testsetcurrentlivesubtitle_raise1(self):
+        data = self.api.set_current_live_subtitle('')
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsetcurrentlivesubtitle_raise2.json')
+    def testsetcurrentlivesubtitle_raise2(self):
+        data = self.api.set_current_live_subtitle(
+            '123456789012345678')
