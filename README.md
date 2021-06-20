@@ -6,4 +6,8 @@
 
 Twitcatting for Python
 
+## Other language version/他言語版
+ - [English/英語](README.md)
+ - [Japanese/日本語](README_JA.md)
+
 Python 3.7 - 3.9 are supported.
