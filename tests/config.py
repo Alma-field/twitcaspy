@@ -20,7 +20,7 @@ tape = vcr.VCR(
     filter_headers=['Authorization'],
     serializer='json',
     # Either use existing cassettes, or never use recordings:
-    record_mode='new_episodes'#'none' if use_replay else 'all',
+    record_mode='none' if use_replay else 'all',
 )
 
 class TwitcaspyTestCase(TestCase):
