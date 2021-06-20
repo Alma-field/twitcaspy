@@ -46,24 +46,38 @@
 .. _POST /movies/subtitle: https://apiv2-doc.twitcasting.tv/#set-current-live-subtitle
 
 User
-====
+----
 
+get_user_info
+=============
 .. automethod:: API.get_user_info
 
+verify_credentials
+==================
 .. automethod:: API.verify_credentials
 
 Live Thumbnail
-==============
+--------------
 
+get_live_thumbnail_image
+========================
 .. automethod:: API.get_live_thumbnail_image
 
 Movie
-=====
+-----
 
+get_movie_info
+==============
 .. automethod:: API.get_movie_info
 
+get_movies_by_user
+==================
 .. automethod:: API.get_movies_by_user
 
+get_current_live
+================
 .. automethod:: API.get_current_live
 
+set_current_live_subtitle
+=========================
 .. automethod:: API.set_current_live_subtitle
