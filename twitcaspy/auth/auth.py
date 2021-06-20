@@ -33,7 +33,3 @@ class AuthHandler:
 
     def _get_oauth_url(self, endpoint):
         return 'https://' + self.OAUTH_HOST + self.OAUTH_ROOT + endpoint
-
-    def apply_auth(self, url, method, headers, parameters):
-        """Apply authentication headers to request"""
-        raise NotImplementedError
