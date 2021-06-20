@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Alma-field
+# This file is distributed under the same license as the twitcaspy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: twitcaspy 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-17 20:42+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../exceptions.rst:5
+msgid "Exceptions"
+msgstr ""
+
+#: ../../exceptions.rst:7
+msgid ""
+"Exceptions are available directly in the :mod:`twitcaspy` module, which "
+"means :mod:`twitcaspy.errors` itself does not need to be imported. For "
+"example, :exc:`twitcaspy.errors.TwitcaspyException` is available as "
+":exc:`twitcaspy.TwitcaspyException`."
+msgstr ""
+"例外は :mod:`twitcaspy` モジュールから直接利用できます。"
+"つまり、 :mod:`twitcaspy.errors` 自体をインポートする必要はありません。"
+"例えば、 :exc:`twitcaspy.errors.TwitcaspyException` は "
+":exc:`twitcaspy.TwitcaspyException` として使用できます。"
+
+#: of twitcaspy.errors.TwitcaspyException:1
+msgid "Bases: :class:`Exception`"
+msgstr ""
+
+#: of twitcaspy.errors.TwitcaspyException:1
+msgid "Base exception for Twitcaspy"
+msgstr ""
+
+#: of twitcaspy.errors.HTTPException:1
+msgid "Bases: :class:`twitcaspy.errors.TwitcaspyException`"
+msgstr ""
+
+#: of twitcaspy.errors.HTTPException:1
+msgid "Exception raised when an HTTP request fails"
+msgstr ""
+
+#: of twitcaspy.errors.BadRequest:1 twitcaspy.errors.Forbidden:1
+#: twitcaspy.errors.NotFound:1 twitcaspy.errors.TooManyRequests:1
+#: twitcaspy.errors.TwitcastingServerError:1 twitcaspy.errors.Unauthorized:1
+msgid "Bases: :class:`twitcaspy.errors.HTTPException`"
+msgstr ""
+
+#: of twitcaspy.errors.BadRequest:1
+msgid "Exception raised for a 400 HTTP status code"
+msgstr ""
+
+#: of twitcaspy.errors.Unauthorized:1
+msgid "Exception raised for a 401 HTTP status code"
+msgstr ""
+
+#: of twitcaspy.errors.Forbidden:1
+msgid "Exception raised for a 403 HTTP status code"
+msgstr ""
+
+#: of twitcaspy.errors.NotFound:1
+msgid "Exception raised for a 404 HTTP status code"
+msgstr ""
+
+#: of twitcaspy.errors.TooManyRequests:1
+msgid "Exception raised for a 429 HTTP status code"
+msgstr ""
+
+#: of twitcaspy.errors.TwitcastingServerError:1
+msgid "Exception raised for a 5xx HTTP status code"
+msgstr ""

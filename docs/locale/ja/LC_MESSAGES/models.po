@@ -1,0 +1,388 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Alma-field
+# This file is distributed under the same license as the twitcaspy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: twitcaspy 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-20 13:46+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../models.rst:9
+msgid "Models Reference"
+msgstr ""
+
+#: ../../models.rst:12
+msgid "Model class"
+msgstr ""
+
+#: of twitcaspy.models.model.Model:1
+msgid "Model Base Class"
+msgstr ""
+
+#: of twitcaspy.models.app.App twitcaspy.models.latelimit.LateLimit
+#: twitcaspy.models.model.Model twitcaspy.models.movie.Movie
+#: twitcaspy.models.result.Result twitcaspy.models.user.User
+msgid "type"
+msgstr "型"
+
+#: of twitcaspy.models.model.Model:7
+msgid ":class:`~twitcaspy.api.API`"
+msgstr ""
+
+#: of twitcaspy.models.app.App.parse:1 twitcaspy.models.model.Model.parse:1
+#: twitcaspy.models.movie.Movie.parse:1 twitcaspy.models.user.User.parse:1
+msgid "Parse a JSON Model into a model instance."
+msgstr "JSONオブジェクトをモデルインスタンスに解析します。"
+
+#: ../../models.rst:18
+msgid "Result class"
+msgstr ""
+
+#: of twitcaspy.models.app.App:1 twitcaspy.models.movie.Movie:1
+#: twitcaspy.models.result.Result:1 twitcaspy.models.user.User:1
+msgid "Bases: :class:`twitcaspy.models.model.Model`"
+msgstr ""
+
+#: of twitcaspy.models.result.Result:1
+msgid "API Result Object"
+msgstr ""
+
+#: of twitcaspy.models.result.Result:7
+msgid ":class:`~twitcaspy.models.LateLimit`"
+msgstr ""
+
+#: ../../models.rst:25
+msgid "Raw class"
+msgstr ""
+
+#: of twitcaspy.models.raw.Raw:1
+msgid "Raw Object"
+msgstr ""
+
+#: of twitcaspy.models.raw.Raw:3
+msgid "The data will be returned as it is."
+msgstr "元のデータをそのまま返却します。"
+
+#: of twitcaspy.models.raw.Raw:4
+msgid "This class does not instantiate."
+msgstr "このクラスはインスタンスを生成しません。"
+
+#: ../../models.rst:31
+msgid "User class"
+msgstr ""
+
+#: of twitcaspy.models.user.User:1
+msgid "User Object"
+msgstr ""
+
+#: of twitcaspy.models.user.User:5
+msgid "|id|"
+msgstr "ライブ配信者のユーザID"
+
+#: of twitcaspy.models.app.App:7 twitcaspy.models.app.App:13
+#: twitcaspy.models.app.App:19 twitcaspy.models.movie.Movie:7
+#: twitcaspy.models.movie.Movie:13 twitcaspy.models.movie.Movie:19
+#: twitcaspy.models.movie.Movie:25 twitcaspy.models.movie.Movie:43
+#: twitcaspy.models.movie.Movie:67 twitcaspy.models.movie.Movie:73
+#: twitcaspy.models.movie.Movie:79 twitcaspy.models.user.User:7
+#: twitcaspy.models.user.User:14 twitcaspy.models.user.User:20
+#: twitcaspy.models.user.User:26 twitcaspy.models.user.User:32
+msgid ":class:`str`"
+msgstr ""
+
+#: of twitcaspy.models.user.User:11
+msgid "|screen_id|"
+msgstr "ライブ配信者のID(例: @~~)"
+
+#: of twitcaspy.models.user.User:12
+msgid "**Note**: screen_id is subject to change by the user."
+msgstr "**注意**: screen_idはユーザによって変更される場合があります。"
+
+#: of twitcaspy.models.user.User:18
+msgid "Human readable user name"
+msgstr "ヒューマンリーダブルなユーザの名前"
+
+#: of twitcaspy.models.user.User:24
+msgid "URL of user icon"
+msgstr "ユーザアイコンのURL"
+
+#: of twitcaspy.models.user.User:30
+msgid "Profile text"
+msgstr "プロフィール文章"
+
+#: of twitcaspy.models.user.User:36
+msgid "User level"
+msgstr "ユーザのレベル"
+
+#: of twitcaspy.models.latelimit.LateLimit:7
+#: twitcaspy.models.latelimit.LateLimit:13
+#: twitcaspy.models.latelimit.LateLimit:19 twitcaspy.models.movie.Movie:61
+#: twitcaspy.models.movie.Movie:85 twitcaspy.models.movie.Movie:110
+#: twitcaspy.models.movie.Movie:117 twitcaspy.models.movie.Movie:123
+#: twitcaspy.models.user.User:38 twitcaspy.models.user.User:59
+#: twitcaspy.models.user.User:68 twitcaspy.models.user.User:77
+msgid ":class:`int`"
+msgstr ""
+
+#: of twitcaspy.models.user.User:42
+msgid "The last live ID by the user"
+msgstr "ユーザが最後に配信したライブのID"
+
+#: of twitcaspy.models.movie.Movie:31 twitcaspy.models.movie.Movie:37
+#: twitcaspy.models.movie.Movie:131 twitcaspy.models.user.User:44
+msgid ":class:`str` or :class:`None`"
+msgstr ""
+
+#: of twitcaspy.models.user.User:48
+msgid "Whether it is currently live streamed"
+msgstr "現在ライブ配信中かどうか"
+
+#: of twitcaspy.models.movie.Movie:49 twitcaspy.models.movie.Movie:55
+#: twitcaspy.models.movie.Movie:97 twitcaspy.models.movie.Movie:103
+#: twitcaspy.models.user.User:50
+msgid ":class:`bool`"
+msgstr ""
+
+#: of twitcaspy.models.user.User:54
+msgid "Number of user supporters."
+msgstr "ユーザーのサポーターの数"
+
+#: of twitcaspy.models.user.User:55 twitcaspy.models.user.User:64
+msgid ""
+"`2018-09-03 update "
+"<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-09-03>`_"
+msgstr ""
+"`2018-09-03 更新 "
+"<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-09-03>`_"
+
+#: of twitcaspy.models.user.User:56 twitcaspy.models.user.User:65
+#: twitcaspy.models.user.User:74
+msgid "Returns a fixed value of 0."
+msgstr "固定値0を返します。"
+
+#: of twitcaspy.models.user.User:57 twitcaspy.models.user.User:66
+#: twitcaspy.models.user.User:75
+msgid "This parameter is deprecated."
+msgstr "このパラメータは非推奨です。"
+
+#: of twitcaspy.models.user.User:63
+msgid "Number supported user by the user."
+msgstr "ユーザーがサポートしている数"
+
+#: of twitcaspy.models.user.User:72
+msgid "Date and time when this account was created."
+msgstr "このアカウントの作成日時"
+
+#: of twitcaspy.models.user.User:73
+msgid ""
+"`2018-08-03 update "
+"<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-08-03>`_"
+msgstr ""
+"`2018-08-03 更新 "
+"<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-08-03>`_"
+
+#: of twitcaspy.models.app.App:22 twitcaspy.models.latelimit.LateLimit:28
+#: twitcaspy.models.movie.Movie:134 twitcaspy.models.user.User:80
+msgid "References"
+msgstr ""
+
+#: of twitcaspy.models.user.User:81
+msgid "https://apiv2-doc.twitcasting.tv/#user-object"
+msgstr ""
+
+#: ../../models.rst:38
+msgid "App class"
+msgstr ""
+
+#: of twitcaspy.models.app.App:1
+msgid "Application Object"
+msgstr ""
+
+#: of twitcaspy.models.app.App:5
+msgid "Application client ID"
+msgstr "アプリケーションのクライアントID"
+
+#: of twitcaspy.models.app.App:11
+msgid "Application name"
+msgstr "アプリケーション名"
+
+#: of twitcaspy.models.app.App:17
+msgid "Application developer user ID"
+msgstr "アプリケーション開発者のユーザID"
+
+#: of twitcaspy.models.app.App:23
+msgid "https://apiv2-doc.twitcasting.tv/#app-object"
+msgstr ""
+
+#: ../../models.rst:45
+msgid "Movie class"
+msgstr ""
+
+#: of twitcaspy.models.movie.Movie:1
+msgid "Movie Object"
+msgstr ""
+
+#: of twitcaspy.models.movie.Movie:5
+msgid "The ID of the movie"
+msgstr "ライブのID"
+
+#: of twitcaspy.models.movie.Movie:11
+msgid "The ID of the user"
+msgstr "ライブ配信者のユーザID"
+
+#: of twitcaspy.models.movie.Movie:17
+msgid "Live title"
+msgstr "タイトル"
+
+#: of twitcaspy.models.movie.Movie:23
+msgid "Live subtitle (telop)"
+msgstr "テロップ"
+
+#: of twitcaspy.models.movie.Movie:29
+msgid "Live streamer's latest comment text"
+msgstr "ライブ配信者の最新コメントの文章"
+
+#: of twitcaspy.models.movie.Movie:35
+msgid "category id"
+msgstr "カテゴリID"
+
+#: of twitcaspy.models.movie.Movie:41
+msgid "Link URL to live (or recording)"
+msgstr "ライブ(録画)へのリンクURL"
+
+#: of twitcaspy.models.movie.Movie:47
+msgid "Whether live streaming now"
+msgstr "ライブ配信中かどうか"
+
+#: of twitcaspy.models.movie.Movie:53
+msgid "Whether the recording is public"
+msgstr "録画が公開されているかどうか"
+
+#: of twitcaspy.models.movie.Movie:59
+msgid "Total number of comments"
+msgstr "総コメント数"
+
+#: of twitcaspy.models.movie.Movie:65
+msgid "URL of thumbnail image (large)"
+msgstr "サムネイル画像(大)のURL"
+
+#: of twitcaspy.models.movie.Movie:71
+msgid "URL of thumbnail image (small)"
+msgstr "サムネイル画像(小)のURL"
+
+#: of twitcaspy.models.movie.Movie:77
+msgid "stream area (country code)"
+msgstr "配信地域(国コード)"
+
+#: of twitcaspy.models.movie.Movie:83
+msgid "stream time (seconds)"
+msgstr "配信時間(秒)"
+
+#: of twitcaspy.models.movie.Movie:89
+msgid ""
+"Converted Unix time stamp of stream start date and time to "
+":class:`datetime.datetime` type"
+msgstr "配信開始日時のunixタイムスタンプを :class:`datetime.datetime` 型へ変換したもの"
+
+#: of twitcaspy.models.latelimit.LateLimit:25 twitcaspy.models.movie.Movie:91
+msgid ":class:`datetime.datetime`"
+msgstr ":class:`datetime.datetime`"
+
+#: of twitcaspy.models.movie.Movie:95
+msgid "Whether it is a collaboration stream"
+msgstr "コラボ配信かどうか"
+
+#: of twitcaspy.models.movie.Movie:101
+msgid "Whether to need the secret word"
+msgstr "合言葉配信かどうか"
+
+#: of twitcaspy.models.movie.Movie:107
+msgid "Maximum number of simultaneous viewers"
+msgstr "最大同時視聴数"
+
+#: of twitcaspy.models.movie.Movie:108
+msgid "(0 if streaming now.)"
+msgstr "(配信中の場合0)"
+
+#: of twitcaspy.models.movie.Movie:114
+msgid "Current number of simultaneous viewers"
+msgstr "現在の同時視聴者数"
+
+#: of twitcaspy.models.movie.Movie:115
+msgid "(0 if not streaming now.)"
+msgstr "(配信中ではない場合0)"
+
+#: of twitcaspy.models.movie.Movie:121
+msgid "Total number of viewers"
+msgstr "総視聴者数"
+
+#: of twitcaspy.models.movie.Movie:127
+msgid "URL for HTTP Live Streaming playback"
+msgstr "HTTP Live Streaming再生用のURL"
+
+#: of twitcaspy.models.movie.Movie:128
+msgid ""
+"`2019-04-17 update "
+"<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2019-04-17>`_"
+msgstr ""
+"`2019-04-17 更新 "
+"<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2019-04-17>`_"
+
+#: of twitcaspy.models.movie.Movie:129
+msgid ""
+"Changed the URL of the hls_url parameter from `http` to `https` "
+"|google_translate_ja_en|"
+msgstr "hls_url パラメータの URL を http から https に変更しました。"
+
+#: of twitcaspy.models.movie.Movie:135
+msgid "https://apiv2-doc.twitcasting.tv/#movie-object"
+msgstr ""
+
+#: ../../models.rst:52
+msgid "LateLimit class"
+msgstr ""
+
+#: of twitcaspy.models.latelimit.LateLimit:1
+msgid "Late Limit Object"
+msgstr ""
+
+#: of twitcaspy.models.latelimit.LateLimit:5
+msgid "Maximum number of API executions"
+msgstr "APIの実行上限回数"
+
+#: of twitcaspy.models.latelimit.LateLimit:11
+msgid "API remaining executable times"
+msgstr "APIの残り実行可能回数"
+
+#: of twitcaspy.models.latelimit.LateLimit:17
+msgid "Unix Timestamp at the time when the remaining API execution count is reset"
+msgstr "APIの残り実行可能回数がリセットされる時刻のUnixTimestamp"
+
+#: of twitcaspy.models.latelimit.LateLimit:23
+msgid "Converted reset to :class:`datetime.datetime` type"
+msgstr "resetを :class:`datetime.datetime` 型へ変換したもの"
+
+#: of twitcaspy.models.latelimit.LateLimit:29
+msgid "https://apiv2-doc.twitcasting.tv/#response-headers"
+msgstr ""
+
+#: ../../models.rst:58
+msgid "ModelFactory class"
+msgstr ""
+
+#: of twitcaspy.models.factory.ModelFactory:1
+msgid "Used by parsers for creating instances of models."
+msgstr "パーサーがモデルのインスタンスを作成するために使用されます。"
+
+#: of twitcaspy.models.factory.ModelFactory:2
+msgid "You may subclass this factory to add your own extended models."
+msgstr "独自のモデルを追加する場合は、このクラスを継承してください。"

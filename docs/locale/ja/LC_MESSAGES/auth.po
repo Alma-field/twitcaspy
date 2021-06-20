@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Alma-field
+# This file is distributed under the same license as the twitcaspy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: twitcaspy 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-20 17:17+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../auth.rst:9
+msgid ":class:`AuthHandler` class --- Twitcasting API Authentication"
+msgstr ""
+
+#: ../../auth.rst:12
+msgid "Authentication header"
+msgstr ""
+
+#: ../../auth.rst:15
+msgid "AuthHandler"
+msgstr ""
+
+#: of twitcaspy.auth.auth.AuthHandler:1
+msgid "AuthHandler Base Class"
+msgstr ""
+
+#: of twitcaspy.auth.app.AppAuthHandler twitcaspy.auth.auth.AuthHandler
+#: twitcaspy.auth.grant.GrantAuthHandler
+#: twitcaspy.auth.implicit.ImplicitAuthHandler
+#: twitcaspy.auth.oauth.basic.OAuth2Basic
+#: twitcaspy.auth.oauth.bearer.OAuth2Bearer
+msgid "Parameters"
+msgstr "引数"
+
+#: of twitcaspy.auth.app.AppAuthHandler:3 twitcaspy.auth.auth.AuthHandler:3
+#: twitcaspy.auth.grant.GrantAuthHandler:3
+#: twitcaspy.auth.implicit.ImplicitAuthHandler:3
+#: twitcaspy.auth.oauth.basic.OAuth2Basic:3
+msgid "|client_id|"
+msgstr "このアプリケーションのclient_id"
+
+#: of twitcaspy.auth.app.AppAuthHandler:5 twitcaspy.auth.auth.AuthHandler:5
+#: twitcaspy.auth.grant.GrantAuthHandler:5
+#: twitcaspy.auth.implicit.ImplicitAuthHandler:5
+#: twitcaspy.auth.oauth.basic.OAuth2Basic:5
+msgid "|client_secret|"
+msgstr "このアプリケーションのclient_secret"
+
+#: of twitcaspy.auth.auth.AuthHandler twitcaspy.auth.oauth.basic.OAuth2Basic
+#: twitcaspy.auth.oauth.bearer.OAuth2Bearer
+msgid "Raises"
+msgstr ""
+
+#: of twitcaspy.auth.auth.AuthHandler:8
+#: twitcaspy.auth.oauth.basic.OAuth2Basic:8
+msgid "If the given client id and/or secret is not a string instance"
+msgstr "client id または secret が string インスタンスではないとき"
+
+#: ../../auth.rst:21 of twitcaspy.auth.app.AppAuthHandler:1
+msgid "Application-only authentication handler"
+msgstr ""
+
+#: of twitcaspy.auth.app.AppAuthHandler:1
+#: twitcaspy.auth.grant.GrantAuthHandler:1
+#: twitcaspy.auth.implicit.ImplicitAuthHandler:1
+msgid "Bases: :class:`twitcaspy.auth.auth.AuthHandler`"
+msgstr ""
+
+#: of twitcaspy.auth.app.AppAuthHandler:9
+#: twitcaspy.auth.grant.GrantAuthHandler:13
+#: twitcaspy.auth.implicit.ImplicitAuthHandler:13
+msgid "References"
+msgstr ""
+
+#: of twitcaspy.auth.app.AppAuthHandler:10
+msgid "https://apiv2-doc.twitcasting.tv/#access-token"
+msgstr ""
+
+#: ../../auth.rst:28 of twitcaspy.auth.grant.GrantAuthHandler:1
+msgid "Authorization Code Grant handler"
+msgstr ""
+
+#: of twitcaspy.auth.grant.GrantAuthHandler:7
+#: twitcaspy.auth.implicit.ImplicitAuthHandler:7
+msgid "|callback|"
+msgstr "リダイレクトURI(アプリケーション登録時に設定したCallback URLと同一のものを指定)"
+
+#: of twitcaspy.auth.grant.GrantAuthHandler:9
+#: twitcaspy.auth.implicit.ImplicitAuthHandler:9
+msgid "|csrf_token|"
+msgstr "任意のCSRFトークン"
+
+#: of twitcaspy.auth.grant.GrantAuthHandler:14
+msgid "https://apiv2-doc.twitcasting.tv/#authorization-code-grant"
+msgstr ""
+
+#: of twitcaspy.auth.grant.GrantAuthHandler.get_authorization_url:1
+#: twitcaspy.auth.implicit.ImplicitAuthHandler.get_authorization_url:1
+msgid "Get the authorization URL to redirect the user"
+msgstr "ユーザー認証のためのリダイレクトURLを取得します"
+
+#: ../../auth.rst:35
+msgid "Implicit handler"
+msgstr ""
+
+#: of twitcaspy.auth.implicit.ImplicitAuthHandler:1
+msgid "Implicit Code Grant handler"
+msgstr ""
+
+#: of twitcaspy.auth.implicit.ImplicitAuthHandler:14
+msgid "https://apiv2-doc.twitcasting.tv/#implicit"
+msgstr ""
+
+#: ../../auth.rst:42
+msgid "OAuth2"
+msgstr ""
+
+#: ../../auth.rst:44 of twitcaspy.auth.oauth.basic.OAuth2Basic:1
+msgid "Basic Authentication"
+msgstr "Basic認証"
+
+#: of twitcaspy.auth.oauth.basic.OAuth2Basic:1
+#: twitcaspy.auth.oauth.bearer.OAuth2Bearer:1
+msgid "Bases: :class:`requests.auth.AuthBase`"
+msgstr ""
+
+#: ../../auth.rst:51 of twitcaspy.auth.oauth.bearer.OAuth2Bearer:1
+msgid "Bearer Authentication"
+msgstr "Bearer認証"
+
+#: of twitcaspy.auth.oauth.bearer.OAuth2Bearer:3
+msgid "|bearer_token|"
+msgstr "Bearerトークン"
+
+#: of twitcaspy.auth.oauth.bearer.OAuth2Bearer:6
+msgid "If the given bearer_token is not a string instance"
+msgstr "bearer_tokenが string インスタンスではないとき"

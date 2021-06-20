@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Alma-field
+# This file is distributed under the same license as the twitcaspy package.
+# Alma-field, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: twitcaspy 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-20 13:23+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Alma-field\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../api.rst:9
+msgid ":class:`twitcaspy.API` --- Twitcasting API v2 Reference"
+msgstr ""
+
+#: of twitcaspy.api.API:1
+msgid "Twitcasting API v2.0 Interface"
+msgstr ""
+
+#: of twitcaspy.api.API twitcaspy.api.API.get_live_thumbnail_image
+#: twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
+#: twitcaspy.api.API.get_user_info
+msgid "Parameters"
+msgstr "引数"
+
+#: of twitcaspy.api.API:3
+msgid "The authentication handler to be used"
+msgstr "使用される認証ハンドラー"
+
+#: of twitcaspy.api.API:5
+msgid "The general REST API host server URL"
+msgstr "使用されるREST APIのホストサーバーURL"
+
+#: of twitcaspy.api.API:7
+msgid ""
+"| The Parser instance to use for parsing the response from Twitcasting. |"
+" defaults to an instance of ModelParser"
+msgstr ""
+
+#: of twitcaspy.api.API
+msgid "The Parser instance to use for parsing the response from Twitcasting."
+msgstr "Twitcastingからのレスポンスを解析するために使用するParserインスタンス。"
+
+#: of twitcaspy.api.API
+msgid "defaults to an instance of ModelParser"
+msgstr "デフォルトはModelParserのインスタンスです。"
+
+#: of twitcaspy.api.API:10
+msgid "The UserAgent to be used"
+msgstr "使用されるユーザーエージェント"
+
+#: of twitcaspy.api.API
+msgid "Raises"
+msgstr "発生する例外"
+
+#: of twitcaspy.api.API:13
+msgid "If the given parser is not a Parser instance"
+msgstr "指定されたparserがParserインスタンスではない場合"
+
+#: of twitcaspy.api.API:16 twitcaspy.api.API.get_live_thumbnail_image:20
+#: twitcaspy.api.API.get_movie_info:14 twitcaspy.api.API.get_movies_by_user:30
+#: twitcaspy.api.API.get_user_info:20 twitcaspy.api.API.verify_credentials:12
+msgid "References"
+msgstr ""
+
+#: of twitcaspy.api.API:17
+msgid "https://apiv2-doc.twitcasting.tv/"
+msgstr ""
+
+#: ../../api.rst:17
+msgid "Twitcasting API v2 Endpoint"
+msgstr ""
+
+#: ../../api.rst:17
+msgid ":class:`API` Method"
+msgstr ""
+
+#: ../../api.rst:21
+msgid "`GET /users/:user_id`_"
+msgstr ""
+
+#: ../../api.rst:21
+msgid ":meth:`API.get_user_info`"
+msgstr ""
+
+#: ../../api.rst:23
+msgid "`GET /verify_credentials`_"
+msgstr ""
+
+#: ../../api.rst:23
+msgid ":meth:`API.verify_credentials`"
+msgstr ""
+
+#: ../../api.rst:27
+msgid "`GET /users/:user_id/live/thumbnail`_"
+msgstr ""
+
+#: ../../api.rst:27
+msgid ":meth:`API.get_live_thumbnail_image`"
+msgstr ""
+
+#: ../../api.rst:31
+msgid "`GET /movies/:movie_id`_"
+msgstr ""
+
+#: ../../api.rst:31
+msgid ":meth:`API.get_movie_info`"
+msgstr ""
+
+#: ../../api.rst:33
+msgid "`GET /users/:user_id/movies`_"
+msgstr ""
+
+#: ../../api.rst:33
+msgid ":meth:`API.get_movies_by_user`"
+msgstr ""
+
+#: ../../api.rst:43
+msgid "User"
+msgstr ""
+
+#: of twitcaspy.api.API.get_user_info:1
+msgid "Returns information about the specified user."
+msgstr "ユーザーの情報を取得します。"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:3
+#: twitcaspy.api.API.get_movies_by_user:2 twitcaspy.api.API.get_user_info:2
+msgid "|id_screenid|"
+msgstr "idまたはscreen_idのいずれかを指定する必要があります。"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:5
+#: twitcaspy.api.API.get_movies_by_user:4 twitcaspy.api.API.get_user_info:4
+msgid "|id| |id_notice|"
+msgstr "ライブ配信者のユーザID **このパラメータを指定した場合、screen_idは無視されます。**"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:8
+#: twitcaspy.api.API.get_movies_by_user:7 twitcaspy.api.API.get_user_info:7
+msgid "|screen_id|"
+msgstr "ライブ配信者のID(例: @~~)"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image
+#: twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
+#: twitcaspy.api.API.get_user_info twitcaspy.api.API.verify_credentials
+msgid "Returns"
+msgstr "戻り値"
+
+#: of twitcaspy.api.API.get_user_info:10
+msgid ""
+"| |attribute| | |latelimit| | **user** : :class:`~twitcaspy.models.User` "
+"| **supporter_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)"
+"     Number of user supporters. | **supporting_count** : "
+":class:`~twitcaspy.models.Raw` (:class:`int`)     Number supported user "
+"by the user."
+msgstr ""
+
+#: of twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
+#: twitcaspy.api.API.get_user_info twitcaspy.api.API.verify_credentials
+msgid "|attribute|"
+msgstr "|attribute_ja|"
+
+#: of twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
+#: twitcaspy.api.API.get_user_info twitcaspy.api.API.verify_credentials
+msgid "|latelimit|"
+msgstr ""
+
+#: of twitcaspy.api.API.get_user_info twitcaspy.api.API.verify_credentials
+msgid "**user** : :class:`~twitcaspy.models.User`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_user_info
+msgid ""
+"**supporter_count** : :class:`~twitcaspy.models.Raw` (:class:`int`) "
+"Number of user supporters."
+msgstr ""
+"**supporter_count** : :class:`~twitcaspy.models.Raw` (:class:`int`) "
+"ユーザーのサポーターの数"
+
+#: of twitcaspy.api.API.get_user_info
+msgid ""
+"**supporting_count** : :class:`~twitcaspy.models.Raw` (:class:`int`) "
+"Number supported user by the user."
+msgstr ""
+"**supporting_count** : :class:`~twitcaspy.models.Raw` (:class:`int`) "
+"ユーザーがサポートしている数"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image
+#: twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
+#: twitcaspy.api.API.get_user_info twitcaspy.api.API.verify_credentials
+msgid "Return type"
+msgstr "戻り値の型"
+
+#: of twitcaspy.api.API.get_movie_info:11
+#: twitcaspy.api.API.get_movies_by_user:27 twitcaspy.api.API.get_user_info:17
+#: twitcaspy.api.API.verify_credentials:9
+msgid ":class:`~twitcaspy.models.Result`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_user_info:21
+msgid "https://apiv2-doc.twitcasting.tv/#get-user-info"
+msgstr ""
+
+#: of twitcaspy.api.API.verify_credentials:1
+msgid "Returns application and user information about the access_token."
+msgstr "アクセストークンに関するアプリケーションとユーザーの情報を取得します。"
+
+#: of twitcaspy.api.API.verify_credentials:3
+msgid ""
+"| |attribute| | |latelimit| | **app** : :class:`~twitcaspy.models.App` | "
+"**user** : :class:`~twitcaspy.models.User` | **supporter_count** : "
+":class:`~twitcaspy.models.Raw` (:class:`int`) | **supporting_count** : "
+":class:`~twitcaspy.models.Raw` (:class:`int`)"
+msgstr ""
+
+#: of twitcaspy.api.API.verify_credentials
+msgid "**app** : :class:`~twitcaspy.models.App`"
+msgstr ""
+
+#: of twitcaspy.api.API.verify_credentials
+msgid "**supporter_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)"
+msgstr ""
+
+#: of twitcaspy.api.API.verify_credentials
+msgid "**supporting_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)"
+msgstr ""
+
+#: of twitcaspy.api.API.verify_credentials:13
+msgid "https://apiv2-doc.twitcasting.tv/#verify-credentials"
+msgstr ""
+
+#: ../../api.rst:50
+msgid "Live Thumbnail"
+msgstr ""
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:1
+msgid "Returns live thumbnail the specified user."
+msgstr "指定されたユーザーにおける配信中のライブのサムネイル画像を取得します。"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:2
+msgid "Returns an offline image if the user is not streaming now."
+msgstr "ユーザーが配信中でない場合はオフライン画像を返します。"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:10
+msgid "| image size | 'large' or 'small' can be specified.(default is 'small'.)"
+msgstr ""
+
+#: of twitcaspy.api.API.get_live_thumbnail_image
+msgid "image size"
+msgstr "画像サイズ"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image
+msgid "'large' or 'small' can be specified.(default is 'small'.)"
+msgstr "画像サイズは大('large')または小('small')が指定可能です。(デフォルト: 'small')"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:13
+msgid "| 'beginning' or 'latest' can be specified.(default is 'latest'.)"
+msgstr ""
+
+#: of twitcaspy.api.API.get_live_thumbnail_image
+msgid "'beginning' or 'latest' can be specified.(default is 'latest'.)"
+msgstr "ライブ開始時点(beginning)または最新('latest')を指定可能です。(デフォルト: 'latest')"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:16
+msgid "| Image data is stored in the content attribute."
+msgstr ""
+
+#: of twitcaspy.api.API.get_live_thumbnail_image
+msgid "Image data is stored in the content attribute."
+msgstr "画像データはcontent属性に格納されています。"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:17
+msgid ":class:`requests.models.Response`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:21
+msgid "https://apiv2-doc.twitcasting.tv/#get-live-thumbnail-image"
+msgstr ""
+
+#: ../../api.rst:55
+msgid "Movie"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movie_info:1
+msgid "Returns information about the specified movie."
+msgstr "ライブ情報を取得します。"
+
+#: of twitcaspy.api.API.get_movie_info:3
+msgid "|movie_id|"
+msgstr "ライブのID"
+
+#: of twitcaspy.api.API.get_movie_info:6
+msgid ""
+"| |attribute| | |latelimit| | **movie** : "
+":class:`~twitcaspy.models.Movie` | **broadcaster** : "
+":class:`~twitcaspy.models.User` | **tags** : "
+":class:`~twitcaspy.models.Raw` (:class:`list`)"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movie_info
+msgid "**movie** : :class:`~twitcaspy.models.Movie`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movie_info
+msgid "**broadcaster** : :class:`~twitcaspy.models.User`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movie_info
+msgid "**tags** : :class:`~twitcaspy.models.Raw` (:class:`list`)"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movie_info:15
+msgid "https://apiv2-doc.twitcasting.tv/#get-movie-info"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movies_by_user:1
+msgid "Returns movies of the specified user in descending order of creation date and time."
+msgstr "ユーザーが保有する過去ライブ（録画）の一覧を作成日時の降順で取得します。"
+
+#: of twitcaspy.api.API.get_movies_by_user:9
+msgid ""
+"| Position from the beginning | It can be specified in the range of 0 to "
+"1000.(default is 0.)"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "Position from the beginning"
+msgstr "先頭からの位置"
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "It can be specified in the range of 0 to 1000.(default is 0.)"
+msgstr "0から1000の範囲で指定できます。(デフォルト: 0)"
+
+#: of twitcaspy.api.API.get_movies_by_user:12
+msgid ""
+"| Maximum number of acquisitions | It can be specified in the range of 1 "
+"to 50.(default is 20.) | (In some cases,   it may return less than the "
+"specified number of videos.)"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "Maximum number of acquisitions"
+msgstr "最大取得件数"
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "It can be specified in the range of 1 to 50.(default is 20.)"
+msgstr "1から50の範囲で指定できます。(デフォルト: 20)"
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "(In some cases, it may return less than the specified number of videos.)"
+msgstr "(場合により、指定件数に満たない数の動画を返す可能性があります。)"
+
+#: of twitcaspy.api.API.get_movies_by_user:17
+msgid ""
+"| Gets the movie before this slice_id. | It can be specified in the range"
+" of 1 or more. | (Not specified by default.[= :class:`None`]) | If you "
+"specify this parameter, offset is ignored."
+msgstr ""
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "Gets the movie before this slice_id."
+msgstr "このslice_id以前のライブを取得します。"
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "It can be specified in the range of 1 or more."
+msgstr "1以上の範囲で指定できます。"
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "(Not specified by default.[= :class:`None`])"
+msgstr "(デフォルトでは指定されていません。[= :class:`None`])"
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "If you specify this parameter, offset is ignored."
+msgstr "このパラメータを指定した場合、offsetは無視されます。"
+
+#: of twitcaspy.api.API.get_movies_by_user:23
+msgid ""
+"| |attribute| | |latelimit| | **total_count** : "
+":class:`~twitcaspy.models.Raw` (:class:`int`) | **movies** : "
+":class:`List` of :class:`~twitcaspy.models.Movie`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "**total_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movies_by_user
+msgid "**movies** : :class:`List` of :class:`~twitcaspy.models.Movie`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_movies_by_user:31
+msgid "https://apiv2-doc.twitcasting.tv/#get-movies-by-user"
+msgstr ""

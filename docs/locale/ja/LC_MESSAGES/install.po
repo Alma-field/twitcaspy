@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, Alma-field
+# This file is distributed under the same license as the twitcaspy package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: twitcaspy 0.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-20 13:57+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../install.rst:2
+msgid "Installation"
+msgstr "インストール"
+
+#: ../../install.rst:4
+msgid "The easiest way to install the latest version from PyPI is by using pip::"
+msgstr "PyPIから最新バージョンをインストールするには、pipを用いるのがもっとも簡単です。::"
+
+#: ../../install.rst:8
+msgid ""
+"You can also use Git to clone the repository from GitHub to install the "
+"latest development version::"
+msgstr "GitHubからリポジトリのクローンを作成することで、最新の開発バージョンをインストールすることもできます。"
+
+#: ../../install.rst:15
+msgid "Alternatively, install directly from the GitHub repository::"
+msgstr "または、GitHubリポジトリから直接インストールします。"
