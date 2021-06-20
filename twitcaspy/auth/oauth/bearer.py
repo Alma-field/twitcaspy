@@ -18,6 +18,10 @@ class OAuth2Bearer(AuthBase):
         If the given bearer_token is not a string instance
     """
     def __init__(self, bearer_token):
+        if not isinstance(bearer_token, str):
+            raise TypeError("bearer_token must be string, not "
+                            + type(bearer_token).__name__)
+
         self.bearer_token = bearer_token
 
     def __call__(self, request):
