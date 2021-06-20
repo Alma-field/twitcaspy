@@ -4,6 +4,6 @@
 [![GitHub issues open](https://img.shields.io/github/issues/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues close](https://img.shields.io/github/issues-closed-raw/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aclose+is%3Aissue)
 
-Twitcatting for Python
+Python用Twitcattingクライアントライブラリ
 
-Python 3.7 - 3.9 are supported.
+Python 3.7 - 3.9 がサポートされています。
