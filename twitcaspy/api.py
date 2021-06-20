@@ -414,9 +414,10 @@ class API:
             raise TwitcaspyException(
                 'The subtitle must be 17 characters or less.')
         else:
-            subtitle = subtitle[:17]
+            post_data = {}
+            post_data['subtitle'] = subtitle[:17]
         return self.request(
-            'POST', '/movies/subtitle', **kwargs)
+            'POST', '/movies/subtitle', post_data=post_data, **kwargs)
 
     @payload(movie_id=['raw', False], subtitle=['raw', False])
     def unset_current_live_subtitle(self, **kwargs):
