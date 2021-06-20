@@ -334,3 +334,43 @@ class API:
             raise TwitcaspyException(
                 'Either an id or screen_id is required for this method.')
         return self.request('GET', f'/users/{target_id}/movies', **kwargs)
+
+    @payload('movie', broadcaster=['user', False], tags=['raw', False])
+    def get_current_live(self, *, id=None, screen_id=None, **kwargs):
+        """get_current_live(*, id=None, screen_id=None)
+
+        | Returns live information if the user is streaming now.
+        | |id_screenid|
+
+        Parameters
+        ----------
+        id: :class:`str`
+            |id|
+            |id_notice|
+        screen_id: :class:`str`
+            |screen_id|
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **movie** : :class:`~twitcaspy.models.Movie`
+            | **broadcaster** : :class:`~twitcaspy.models.User`
+            | **tags** : :class:`~twitcaspy.models.Raw` (:class:`list`)
+
+        Raises
+        ------
+        TwitcaspyException
+            If both id and screen_id are not specified
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-current-live
+        """
+        target_id = id if id is not None else screen_id
+        if target_id is None:
+            raise TwitcaspyException(
+                'Either an id or screen_id is required for this method.')
+        return self.request(
+            'GET', f'/users/{target_id}/current_live', **kwargs)

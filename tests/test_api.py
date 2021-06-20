@@ -2,7 +2,7 @@ from nose.tools import ok_, eq_, raises
 
 from twitcaspy import API
 
-from twitcaspy.errors import TwitcaspyException, Unauthorized
+from twitcaspy.errors import TwitcaspyException, Unauthorized, NotFound
 
 from .config import tape, TwitcaspyTestCase, user_id, username
 
@@ -51,3 +51,8 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         ok_(hasattr(data, 'total_count'))
         ok_(hasattr(data, 'movies'))
         ok_(len(data.movies) == 20 or len(data.movies) == data.total_count)
+
+    @raises(NotFound)
+    @tape.use_cassette('testgetcurrentlive_raise404.json')
+    def testgetcurrentlive_raise404(self):
+        data = self.api.get_current_live(id=user_id)

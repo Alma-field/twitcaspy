@@ -1,0 +1,85 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://apiv2.twitcasting.tv/users/182224938/current_live",
+                "body": null,
+                "headers": {
+                    "User-Agent": [
+                        "Python/3.9.1 Requests/2.25.1 twitcaspy/0.0.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-Api-Version": [
+                        "2.0"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 404,
+                    "message": "Not Found"
+                },
+                "headers": {
+                    "X-WE-ARE-HIRING": [
+                        "https://about.moi.st/ja/recruit/"
+                    ],
+                    "X-RateLimit-Reset": [
+                        "1624203466"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Expires": [
+                        "Thu, 19 Nov 1981 08:52:00 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "Cache-Control": [
+                        "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    ],
+                    "X-RateLimit-Limit": [
+                        "60"
+                    ],
+                    "X-RateLimit-Remaining": [
+                        "59"
+                    ],
+                    "Content-Length": [
+                        "44"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Date": [
+                        "Sun, 20 Jun 2021 15:36:46 GMT"
+                    ],
+                    "X-Powered-By": [
+                        "PHP/5.6.40"
+                    ],
+                    "Connection": [
+                        "close"
+                    ],
+                    "Set-Cookie": [
+                        "PHPSESSID=dp7gc6g55mnfvtuc3eta2mqvb3; path=/"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=0"
+                    ]
+                },
+                "body": {
+                    "string": "{\"error\":{\"code\":404,\"message\":\"Not Found\"}}"
+                }
+            }
+        }
+    ]
+}
