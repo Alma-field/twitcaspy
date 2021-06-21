@@ -667,3 +667,44 @@ class API:
         return self.request(
             'GET', '/gifts',
             endpoint_parameters=('slice_id'), **kwargs)
+
+    @payload(is_supporting=['raw', False], target_user=['user', False])
+    def get_supporting_status(self, *, id=None, screen_id=None, **kwargs):
+        """get_supporting_status(*, id=None, screen_id=None)
+
+        | Gets the status of whether a user is a supporter of another user.
+        | |id_screenid|
+
+        Parameters
+        ----------
+        id: :class:`str`
+            |id|
+            |id_notice|
+        screen_id: :class:`str`
+            |screen_id|
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`)
+              Whether it is a supporter.
+            | **target_user** : :class:`~twitcaspy.models.User`
+              Target user information
+
+        Raises
+        ------
+        TwitcaspyException
+            If both id and screen_id are not specified
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-supporting-status
+        """
+        target_id = id if id is not None else screen_id
+        if target_id is None:
+            raise TwitcaspyException(
+                'Either an id or screen_id is required for this method.')
+        return self.request(
+            'GET', f'/users/{target_id}/supporting_status', **kwargs)

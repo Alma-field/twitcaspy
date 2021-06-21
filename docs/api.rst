@@ -140,3 +140,10 @@ Gift
 get_gifts
 =========
 .. automethod:: API.get_gifts
+
+Supporter
+---------
+
+get_supporting_status
+=====================
+.. automethod:: API.get_supporting_status
