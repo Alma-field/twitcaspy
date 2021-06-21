@@ -746,3 +746,39 @@ class API:
         post_data = {'target_user_ids': target_user_ids}
         return self.request(
             'PUT', '/support', post_data=post_data, **kwargs)
+
+    @payload(removed_count=['raw', False])
+    def unsupport_user(self, target_user_ids=None, **kwargs):
+        """unsupport_user(target_user_ids=None)
+
+        | Release the supporter status of the specified user.
+
+        Parameters
+        ----------
+        target_user_ids: :class:`list` or :class:`tuple`
+            | An array of target user id or screen_id
+            | The number of elements in the array must be 20 or less.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **removed_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+              Number of cases where supporters were released.
+
+        Raises
+        ------
+        TwitcaspyException
+            When target_user_ids is not a :class:`list` or :class:`tuple`
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#support-user
+        """
+        if not isinstance(target_user_ids, (list, tuple)):
+            raise TwitcaspyException("target_user_ids must be list or tuple, not "
+                            + type(target_user_ids).__name__)
+        post_data = {'target_user_ids': target_user_ids}
+        return self.request(
+            'PUT', '/unsupport', post_data=post_data, **kwargs)

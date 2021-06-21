@@ -82,3 +82,10 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         data = self.api.support_user(target_user_ids=target_user_ids)
         ok_(hasattr(data, 'added_count'))
         eq_(data.added_count, len(target_user_ids))
+
+    @tape.use_cassette('testunsupportuser.json')
+    def testunsupportuser(self):
+        target_user_ids = ['twitcasting_jp']
+        data = self.api.unsupport_user(target_user_ids=target_user_ids)
+        ok_(hasattr(data, 'removed_count'))
+        eq_(data.removed_count, len(target_user_ids))
