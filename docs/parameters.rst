@@ -10,6 +10,7 @@
 .. |id_notice| replace:: **If you specify this parameter, screen_id is ignored.**
 .. |screen_id| replace:: The screen name of the user.(e.g.: `@~~`)
 .. |movie_id| replace:: The ID of the movie.
+.. |comment_id| replace:: The ID of the comment.
 .. |id_screenid| replace:: Either an id or screen_id is required for this method.
 .. |attribute| replace:: The attribute of :class:`~twitcaspy.models.Result` is as follows.
 .. |attribute_ja| replace:: 以下は :class:`~twitcaspy.models.Result` の属性です。

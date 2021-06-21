@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-21 14:33+0900\n"
+"POT-Creation-Date: 2021-06-21 14:49+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,9 +28,10 @@ msgstr ""
 msgid "Model Base Class"
 msgstr ""
 
-#: of twitcaspy.models.app.App twitcaspy.models.latelimit.LateLimit
-#: twitcaspy.models.model.Model twitcaspy.models.movie.Movie
-#: twitcaspy.models.result.Result twitcaspy.models.user.User
+#: of twitcaspy.models.app.App twitcaspy.models.comment.Comment
+#: twitcaspy.models.latelimit.LateLimit twitcaspy.models.model.Model
+#: twitcaspy.models.movie.Movie twitcaspy.models.result.Result
+#: twitcaspy.models.user.User
 msgid "type"
 msgstr "型"
 
@@ -46,8 +47,9 @@ msgstr "JSONオブジェクトをモデルインスタンスに解析します�
 msgid "Result class"
 msgstr ""
 
-#: of twitcaspy.models.app.App:1 twitcaspy.models.movie.Movie:1
-#: twitcaspy.models.result.Result:1 twitcaspy.models.user.User:1
+#: of twitcaspy.models.app.App:1 twitcaspy.models.comment.Comment:1
+#: twitcaspy.models.movie.Movie:1 twitcaspy.models.result.Result:1
+#: twitcaspy.models.user.User:1
 msgid "Bases: :class:`twitcaspy.models.model.Model`"
 msgstr ""
 
@@ -88,7 +90,8 @@ msgid "|id|"
 msgstr "ライブ配信者のユーザID"
 
 #: of twitcaspy.models.app.App:7 twitcaspy.models.app.App:13
-#: twitcaspy.models.app.App:19 twitcaspy.models.movie.Movie:7
+#: twitcaspy.models.app.App:19 twitcaspy.models.comment.Comment:7
+#: twitcaspy.models.comment.Comment:13 twitcaspy.models.movie.Movie:7
 #: twitcaspy.models.movie.Movie:13 twitcaspy.models.movie.Movie:19
 #: twitcaspy.models.movie.Movie:25 twitcaspy.models.movie.Movie:43
 #: twitcaspy.models.movie.Movie:67 twitcaspy.models.movie.Movie:73
@@ -189,8 +192,9 @@ msgstr ""
 "`2018-08-03 更新 "
 "<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-08-03>`_"
 
-#: of twitcaspy.models.app.App:22 twitcaspy.models.latelimit.LateLimit:28
-#: twitcaspy.models.movie.Movie:134 twitcaspy.models.user.User:80
+#: of twitcaspy.models.app.App:22 twitcaspy.models.comment.Comment:28
+#: twitcaspy.models.latelimit.LateLimit:28 twitcaspy.models.movie.Movie:134
+#: twitcaspy.models.user.User:80
 msgid "References"
 msgstr ""
 
@@ -288,7 +292,8 @@ msgid ""
 ":class:`datetime.datetime` type"
 msgstr "配信開始日時のunixタイムスタンプを :class:`datetime.datetime` 型へ変換したもの"
 
-#: of twitcaspy.models.latelimit.LateLimit:25 twitcaspy.models.movie.Movie:91
+#: of twitcaspy.models.comment.Comment:25
+#: twitcaspy.models.latelimit.LateLimit:25 twitcaspy.models.movie.Movie:91
 msgid ":class:`datetime.datetime`"
 msgstr ":class:`datetime.datetime`"
 
@@ -343,6 +348,40 @@ msgid "https://apiv2-doc.twitcasting.tv/#movie-object"
 msgstr ""
 
 #: ../../models.rst:44
+msgid "Comment class"
+msgstr ""
+
+#: of twitcaspy.models.comment.Comment:1
+msgid "Comment Object"
+msgstr ""
+
+#: of twitcaspy.models.comment.Comment:5
+msgid "|comment_id|"
+msgstr "コメントのID"
+
+#: of twitcaspy.models.comment.Comment:11
+msgid "comment text"
+msgstr "コメント本文"
+
+#: of twitcaspy.models.comment.Comment:17
+msgid "Comment contributor information"
+msgstr "コメント投稿者の情報"
+
+#: of twitcaspy.models.comment.Comment:19
+msgid ":class:`~twitcaspy.models.User`"
+msgstr ""
+
+#: of twitcaspy.models.comment.Comment:23
+msgid ""
+"Converted Unix time stamp of comment posting date and time to "
+":class:`datetime.datetime` type"
+msgstr "コメント投稿日時のunixタイムスタンプを :class:`datetime.datetime` 型へ変換したもの"
+
+#: of twitcaspy.models.comment.Comment:29
+msgid "https://apiv2-doc.twitcasting.tv/#comment-object"
+msgstr ""
+
+#: ../../models.rst:49
 msgid "LateLimit class"
 msgstr ""
 
@@ -370,7 +409,7 @@ msgstr "resetを :class:`datetime.datetime` 型へ変換したもの"
 msgid "https://apiv2-doc.twitcasting.tv/#response-headers"
 msgstr ""
 
-#: ../../models.rst:50
+#: ../../models.rst:55
 msgid "ModelFactory class"
 msgstr ""
 
@@ -381,3 +420,9 @@ msgstr "パーサーがモデルのインスタンスを作成するために使
 #: of twitcaspy.models.factory.ModelFactory:2
 msgid "You may subclass this factory to add your own extended models."
 msgstr "独自のモデルを追加する場合は、このクラスを継承してください。"
+
+#~ msgid "..autoclass:: twitcaspy.models.Comment"
+#~ msgstr ""
+
+#~ msgid "show-inheritance"
+#~ msgstr ""

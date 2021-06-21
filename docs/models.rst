@@ -40,6 +40,11 @@ Movie class
 .. autoclass:: twitcaspy.models.Movie
     :show-inheritance:
 
+Comment class
+-------------
+.. autoclass:: twitcaspy.models.Comment
+    :show-inheritance:
+
 LateLimit class
 ---------------
 .. autoclass:: twitcaspy.models.LateLimit

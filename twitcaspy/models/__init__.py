@@ -8,6 +8,8 @@ from .result import Result
 
 from .app import App
 
+from .comment import Comment
+
 from .movie import Movie
 
 from .raw import Raw
@@ -18,4 +20,4 @@ from .latelimit import LateLimit
 
 from .factory import ModelFactory
 
-__all__ = ['App', 'ModelFactory', 'LateLimit', 'Movie', 'Raw', 'User']
+__all__ = ['App', 'Comment', 'ModelFactory', 'LateLimit', 'Movie', 'Raw', 'User']
