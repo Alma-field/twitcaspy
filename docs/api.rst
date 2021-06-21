@@ -58,6 +58,8 @@
     +--------------------------------------------------+-----------------------------------------+
     | `GET /users/:user_id/supporting_status`_         | :meth:`API.get_supporting_status`       |
     +--------------------------------------------------+-----------------------------------------+
+    | `PUT /support`_                                  | :meth:`API.support_user`                |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -74,6 +76,7 @@
 .. _DELETE /movies/:movie_id/comments/:comment_id: https://apiv2-doc.twitcasting.tv/#delete-comment
 .. _GET /gifts: https://apiv2-doc.twitcasting.tv/#get-gifts
 .. _GET /users/:user_id/supporting_status: https://apiv2-doc.twitcasting.tv/#get-supporting-status
+.. _PUT /support: https://apiv2-doc.twitcasting.tv/#support-user
 
 User
 ----
@@ -152,3 +155,7 @@ Supporter
 get_supporting_status
 =====================
 .. automethod:: API.get_supporting_status
+
+support_user
+============
+.. automethod:: API.support_user

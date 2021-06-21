@@ -75,3 +75,10 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         eq_(data.movie_id, '189037369')
         ok_(hasattr(data, 'all_count'))
         ok_(hasattr(data, 'comments'))
+
+    @tape.use_cassette('testsupportuser.json')
+    def testsupportuser(self):
+        target_user_ids = ['twitcasting_jp']
+        data = self.api.support_user(target_user_ids=target_user_ids)
+        ok_(hasattr(data, 'added_count'))
+        eq_(data.added_count, len(target_user_ids))
