@@ -6,6 +6,8 @@ from .app import App
 
 from .comment import Comment
 
+from .gift import Gift
+
 from .movie import Movie
 
 from .raw import Raw
@@ -20,6 +22,7 @@ class ModelFactory:
 
     app = App
     comment = Comment
+    gift = Gift
     movie = Movie
     raw = Raw
     user = User

@@ -45,6 +45,11 @@ Comment class
 .. autoclass:: twitcaspy.models.Comment
     :show-inheritance:
 
+Gift class
+----------
+.. autoclass:: twitcaspy.models.Gift
+    :show-inheritance:
+
 LateLimit class
 ---------------
 .. autoclass:: twitcaspy.models.LateLimit
