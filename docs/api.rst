@@ -62,6 +62,8 @@
     +--------------------------------------------------+-----------------------------------------+
     | `PUT /unsupport`_                                | :meth:`API.unsupport_user`              |
     +--------------------------------------------------+-----------------------------------------+
+    | `GET /users/:user_id/supporting`_                | :meth:`API.supporting_list`             |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -80,6 +82,7 @@
 .. _GET /users/:user_id/supporting_status: https://apiv2-doc.twitcasting.tv/#get-supporting-status
 .. _PUT /support: https://apiv2-doc.twitcasting.tv/#support-user
 .. _PUT /unsupport: https://apiv2-doc.twitcasting.tv/#unsupport-user
+.. _GET /users/:user_id/supporting: https://apiv2-doc.twitcasting.tv/#supporting-list
 
 User
 ----
@@ -166,3 +169,7 @@ support_user
 unsupport_user
 ==============
 .. automethod:: API.unsupport_user
+
+supporting_list
+===============
+.. automethod:: API.supporting_list
