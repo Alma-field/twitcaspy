@@ -254,7 +254,8 @@ class API:
                 'Either an id or screen_id is required for this method.')
         return self.request(
             'GET', f'/users/{target_id}/live/thumbnail',
-            parser=RawParser, require_auth=False, **kwargs)
+            parser=RawParser, require_auth=False,
+            endpoint_parameters=('size', 'position'), **kwargs)
 
     @payload('movie', broadcaster=['user', False], tags=['raw', False])
     def get_movie_info(self, movie_id, **kwargs):
@@ -333,7 +334,9 @@ class API:
         if target_id is None:
             raise TwitcaspyException(
                 'Either an id or screen_id is required for this method.')
-        return self.request('GET', f'/users/{target_id}/movies', **kwargs)
+        return self.request(
+            'GET', f'/users/{target_id}/movies',
+            endpoint_parameters=('offset', 'limit', 'slice_id'), **kwargs)
 
     @payload('movie', broadcaster=['user', False], tags=['raw', False])
     def get_current_live(self, *, id=None, screen_id=None, **kwargs):
@@ -550,7 +553,9 @@ class API:
         ----------
         https://apiv2-doc.twitcasting.tv/#get-comments
         """
-        return self.request('GET', f'/movies/{movie_id}/comments', **kwargs)
+        return self.request(
+            'GET', f'/movies/{movie_id}/comments',
+            endpoint_parameters=('offset', 'limit', 'slice_id'), **kwargs)
 
     @payload('comment', movie_id=['raw', False], all_count=['raw', False])
     def post_comment(self, comment, **kwargs):
