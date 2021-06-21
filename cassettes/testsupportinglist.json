@@ -1,0 +1,88 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://apiv2.twitcasting.tv/users/182224938/supporting",
+                "body": "null",
+                "headers": {
+                    "User-Agent": [
+                        "Python/3.9.1 Requests/2.25.1 twitcaspy/0.0.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-Api-Version": [
+                        "2.0"
+                    ],
+                    "Content-Length": [
+                        "4"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "X-WE-ARE-HIRING": [
+                        "https://about.moi.st/ja/recruit/"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Connection": [
+                        "close"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "X-RateLimit-Limit": [
+                        "30"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "X-RateLimit-Remaining": [
+                        "29"
+                    ],
+                    "Cache-Control": [
+                        "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    ],
+                    "Date": [
+                        "Mon, 21 Jun 2021 18:25:07 GMT"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=0"
+                    ],
+                    "Content-Length": [
+                        "27"
+                    ],
+                    "Set-Cookie": [
+                        "PHPSESSID=6ip24g2j98jdscechiagofic10; path=/"
+                    ],
+                    "Expires": [
+                        "Thu, 19 Nov 1981 08:52:00 GMT"
+                    ],
+                    "X-RateLimit-Reset": [
+                        "1624299937"
+                    ],
+                    "X-Powered-By": [
+                        "PHP/5.6.40"
+                    ]
+                },
+                "body": {
+                    "string": "{\"total\":0,\"supporting\":[]}"
+                }
+            }
+        }
+    ]
+}
