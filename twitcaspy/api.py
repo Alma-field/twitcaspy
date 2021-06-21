@@ -551,3 +551,51 @@ class API:
         https://apiv2-doc.twitcasting.tv/#get-comments
         """
         return self.request('GET', f'/movies/{movie_id}/comments', **kwargs)
+
+    @payload('comment', movie_id=['raw', False], all_count=['raw', False])
+    def post_comment(self, comment, **kwargs):
+        """post_comment(comment, *, sns='none')
+
+        | Post a comment.
+        | It can be executed only on a user-by-user basis.
+
+        Parameters
+        ----------
+        comment: :class:`str`
+            | Comment text to post.
+            | Must be 1 to 140 characters.
+        sns: :class:`str`
+            | Simultaneous posting to SNS.
+            | (Valid only when the user is linked with Twitter or Facebook.)
+            | 'reply' : Post in a format that replies to the streamer.
+            | 'normal' : Regular post.
+            | 'none' : No SNS posts.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **movie_id** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+              |movie_id|
+            | **all_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+              Total number of comments
+            | **comment** : :class:`~twitcaspy.models.Comment`
+
+        Raises
+        ------
+        TwitcaspyException:
+            When comment is not 1-140 characters.
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#post-comment
+        """
+        if not 1 <= len(hashtag) <= 140:
+            raise TwitcaspyException(
+                '`comment` must be in the range 1-140 characters.')
+        else:
+            post_data = {'comment': comment}
+        return self.request(
+            'POST', f'/movies/{movie_id}/comments',
+            post_data=post_data, **kwargs)
