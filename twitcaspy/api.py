@@ -637,3 +637,33 @@ class API:
         https://apiv2-doc.twitcasting.tv/#delete-comment
         """
         return self.request('DELETE', f'/movies/{movie_id}/comments/{comment_id}', **kwargs)
+
+    @payload(slice_id=['raw', False], gifts=['gift', True])
+    def get_gifts(self, **kwargs):
+        """get_gifts(*, slice_id=-1)
+
+        | Acquire the item sent by the user associated
+          with the access token in the last 10 seconds.
+
+        Parameters
+        ----------
+        slice_id(optional): :class:`int`
+            | Gets the items sent after this item send ID.
+            | It can be specified in the range of -1 or more.(default is -1.)
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **slice_id** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+              Slice_id to be specified the next time you call the API.
+            | **gifts** : :class:`list` of :class:`~twitcaspy.models.Gift`
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-gifts
+        """
+        return self.request(
+            'GET', '/gifts',
+            endpoint_parameters=('slice_id'), **kwargs)

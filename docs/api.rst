@@ -50,6 +50,10 @@
     +--------------------------------------------------+-----------------------------------------+
     | `DELETE /movies/:movie_id/comments/:comment_id`_ | :meth:`API.delete_comment`              |
     +--------------------------------------------------+-----------------------------------------+
+    | .. centered:: :ref:`Gift`                                                                  |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /gifts`_                                    | :meth:`API.get_gifts`                   |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -64,6 +68,7 @@
 .. _GET /movies/:movie_id/comments: https://apiv2-doc.twitcasting.tv/#get-comments
 .. _POST /movies/:movie_id/comments: https://apiv2-doc.twitcasting.tv/#post-comments
 .. _DELETE /movies/:movie_id/comments/:comment_id: https://apiv2-doc.twitcasting.tv/#delete-comment
+.. _GET /gifts: https://apiv2-doc.twitcasting.tv/#get-gifts
 
 User
 ----
@@ -128,3 +133,10 @@ post_comment
 delete_comment
 ==============
 .. automethod:: API.delete_comment
+
+Gift
+----
+
+get_gifts
+=========
+.. automethod:: API.get_gifts
