@@ -8,6 +8,8 @@ from ..errors import TwitcaspyException
 
 from .auth import AuthHandler
 
+from .oauth import OAuth2Bearer
+
 class GrantAuthHandler(AuthHandler):
     """
     Authorization Code Grant handler

@@ -9,6 +9,8 @@ from ..errors import TwitcaspyException
 
 from .auth import AuthHandler
 
+from .oauth import OAuth2Bearer
+
 class ImplicitAuthHandler(AuthHandler):
     """
     Implicit Code Grant handler
