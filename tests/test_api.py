@@ -90,6 +90,7 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         ok_(hasattr(data, 'removed_count'))
         eq_(data.removed_count, len(target_user_ids))
 
+    @tape.use_cassette('testsupportinglist.json')
     def testsupportinglist(self):
         data = self.api.supporting_list(id=user_id)
         ok_(hasattr(data, 'total'))
