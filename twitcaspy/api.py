@@ -439,3 +439,47 @@ class API:
         https://apiv2-doc.twitcasting.tv/#unset-current-live-subtitle
         """
         return self.request('DELETE', '/movies/subtitle', **kwargs)
+
+    @payload(movie_id=['raw', False], hashtag=['raw', False])
+    def set_current_live_hashtag(self, hashtag, *, cut_out=False, **kwargs):
+        """set_current_live_hashtag(hashtag, *, cut_out=False)
+
+        | If the user is broadcasting, set a live hashtag.
+
+        Parameters
+        ----------
+        hashtag: :class:`str`
+            live hashtag
+        cut_out: :class:`bool`
+            | If the hashtag is more than 26 characters, cut out
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **movie_id** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+              |movie_id|
+            | **hashtag** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+
+        Raises
+        ------
+        TwitcaspyException:
+            When the hashtag is less than one character./
+            When the hashtag is more than 26 characters and cut_out is False.
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#set-current-live-hashtag
+        """
+        if len(hashtag) < 1:
+            raise TwitcaspyException(
+                '`hashtag` must be at least one character.')
+        if not cut_out and 26 < len(hashtag):
+            raise TwitcaspyException(
+                '`hashtag` must be 26 characters or less.')
+        else:
+            post_data = {}
+            post_data['hashtag'] = hashtag[:26]
+        return self.request(
+            'POST', '/movies/hashtag', post_data=post_data, **kwargs)
