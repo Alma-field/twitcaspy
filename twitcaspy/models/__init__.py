@@ -16,6 +16,8 @@ from .movie import Movie
 
 from .raw import Raw
 
+from .supporter import Supporter
+
 from .user import User
 
 from .latelimit import LateLimit
@@ -24,5 +26,5 @@ from .factory import ModelFactory
 
 __all__ = [
     'App', 'Comment', 'ModelFactory', 'Gift',
-    'LateLimit', 'Movie', 'Raw', 'User'
+    'LateLimit', 'Movie', 'Raw', 'Supporter', 'User'
 ]

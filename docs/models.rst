@@ -50,6 +50,11 @@ Gift class
 .. autoclass:: twitcaspy.models.Gift
     :show-inheritance:
 
+Supporter class
+---------------
+.. autoclass:: twitcaspy.models.Supporter
+    :show-inheritance:
+
 LateLimit class
 ---------------
 .. autoclass:: twitcaspy.models.LateLimit

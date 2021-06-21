@@ -18,7 +18,8 @@ from twitcaspy.errors import (
     TwitcaspyException, TwitcastingServerError, Unauthorized
 )
 from twitcaspy.models import (
-    App, Comment, ModelFactory, Movie, Raw, User
+    App, Comment, ModelFactory, Gift,
+    LateLimit, Movie, Raw, Supporter, User
 )
 
 # Global, unauthenticated instance of API
