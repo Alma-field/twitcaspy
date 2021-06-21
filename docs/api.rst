@@ -13,41 +13,43 @@
 .. table::
     :align: center
 
-    +------------------------------------------+-----------------------------------------+
-    | Twitcasting API v2 Endpoint              | :class:`API` Method                     |
-    +==========================================+=========================================+
-    | .. centered:: :ref:`User`                                                          |
-    +------------------------------------------+-----------------------------------------+
-    | `GET /users/:user_id`_                   | :meth:`API.get_user_info`               |
-    +------------------------------------------+-----------------------------------------+
-    | `GET /verify_credentials`_               | :meth:`API.verify_credentials`          |
-    +------------------------------------------+-----------------------------------------+
-    | .. centered:: :ref:`Live Thumbnail`                                                |
-    +------------------------------------------+-----------------------------------------+
-    | `GET /users/:user_id/live/thumbnail`_    | :meth:`API.get_live_thumbnail_image`    |
-    +------------------------------------------+-----------------------------------------+
-    | .. centered:: :ref:`Movie`                                                         |
-    +------------------------------------------+-----------------------------------------+
-    | `GET /movies/:movie_id`_                 | :meth:`API.get_movie_info`              |
-    +------------------------------------------+-----------------------------------------+
-    | `GET /users/:user_id/movies`_            | :meth:`API.get_movies_by_user`          |
-    +------------------------------------------+-----------------------------------------+
-    | `GET /users/:user_id/current_live`_      | :meth:`API.get_current_live`            |
-    +------------------------------------------+-----------------------------------------+
-    | `POST /movies/subtitle`_                 | :meth:`API.set_current_live_subtitle`   |
-    +------------------------------------------+-----------------------------------------+
-    | `DELETE /movies/subtitle`_               | :meth:`API.unset_current_live_subtitle` |
-    +------------------------------------------+-----------------------------------------+
-    | `POST /movies/hashtag`_                  | :meth:`API.set_current_live_hashtag`    |
-    +------------------------------------------+-----------------------------------------+
-    | `DELETE /movies/hashtag`_                | :meth:`API.unset_current_live_hashtag`  |
-    +------------------------------------------+-----------------------------------------+
-    | .. centered:: :ref:`Comment`                                                       |
-    +------------------------------------------+-----------------------------------------+
-    | `GET /movies/:movie_id/comments`_        | :meth:`API.get_comments`                |
-    +------------------------------------------+-----------------------------------------+
-    | `POST /movies/:movie_id/comments`_       | :meth:`API.post_comments`               |
-    +------------------------------------------+-----------------------------------------+
+    +--------------------------------------------------+-----------------------------------------+
+    | Twitcasting API v2 Endpoint                      | :class:`API` Method                     |
+    +==================================================+=========================================+
+    | .. centered:: :ref:`User`                                                                  |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /users/:user_id`_                           | :meth:`API.get_user_info`               |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /verify_credentials`_                       | :meth:`API.verify_credentials`          |
+    +--------------------------------------------------+-----------------------------------------+
+    | .. centered:: :ref:`Live Thumbnail`                                                        |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /users/:user_id/live/thumbnail`_            | :meth:`API.get_live_thumbnail_image`    |
+    +--------------------------------------------------+-----------------------------------------+
+    | .. centered:: :ref:`Movie`                                                                 |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /movies/:movie_id`_                         | :meth:`API.get_movie_info`              |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /users/:user_id/movies`_                    | :meth:`API.get_movies_by_user`          |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /users/:user_id/current_live`_              | :meth:`API.get_current_live`            |
+    +--------------------------------------------------+-----------------------------------------+
+    | `POST /movies/subtitle`_                         | :meth:`API.set_current_live_subtitle`   |
+    +--------------------------------------------------+-----------------------------------------+
+    | `DELETE /movies/subtitle`_                       | :meth:`API.unset_current_live_subtitle` |
+    +--------------------------------------------------+-----------------------------------------+
+    | `POST /movies/hashtag`_                          | :meth:`API.set_current_live_hashtag`    |
+    +--------------------------------------------------+-----------------------------------------+
+    | `DELETE /movies/hashtag`_                        | :meth:`API.unset_current_live_hashtag`  |
+    +--------------------------------------------------+-----------------------------------------+
+    | .. centered:: :ref:`Comment`                                                               |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /movies/:movie_id/comments`_                | :meth:`API.get_comments`                |
+    +--------------------------------------------------+-----------------------------------------+
+    | `POST /movies/:movie_id/comments`_               | :meth:`API.post_comments`               |
+    +--------------------------------------------------+-----------------------------------------+
+    | `DELETE /movies/:movie_id/comments/:comment_id`_ | :meth:`API.delete_comment`              |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -61,6 +63,7 @@
 .. _DELETE /movies/hashtag: https://apiv2-doc.twitcasting.tv/#unset-current-live-hashtag
 .. _GET /movies/:movie_id/comments: https://apiv2-doc.twitcasting.tv/#get-comments
 .. _POST /movies/:movie_id/comments: https://apiv2-doc.twitcasting.tv/#post-comments
+.. _DELETE /movies/:movie_id/comments/:comment_id: https://apiv2-doc.twitcasting.tv/#delete-comment
 
 User
 ----
@@ -121,3 +124,7 @@ get_comments
 post_comment
 ============
 .. automethod:: API.post_comment
+
+delete_comment
+==============
+.. automethod:: API.delete_comment

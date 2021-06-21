@@ -599,3 +599,36 @@ class API:
         return self.request(
             'POST', f'/movies/{movie_id}/comments',
             post_data=post_data, **kwargs)
+
+    @payload(comment_id=['raw', False])
+    def delete_comment(self, movie_id, comment_id, **kwargs):
+        """delete_comment(movie_id, comment_id)
+
+        | Delete the comment.
+        | It can be executed only on a user-by-user basis.
+        | As a general rule, the comments that can be deleted are limited to
+          those that the poster is the same as the user associated
+          with the access token.
+        | However, if you use the access token of the user who owns the movie,
+          you can delete the comments posted by other users.
+
+        Parameters
+        ----------
+        movie_id: :class:`str`
+            |movie_id|
+        comment_id: :class:`str`
+            |comment_id|
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **comment_id** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+              ID of the deleted comment.
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#delete-comment
+        """
+        return self.request('DELETE', f'/movies/{movie_id}/comments/{comment_id}', **kwargs)
