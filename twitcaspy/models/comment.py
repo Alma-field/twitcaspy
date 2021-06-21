@@ -35,7 +35,7 @@ class Comment(Model):
             if k == 'created':
                 setattr(comment, k, fromtimestamp(v))
             elif k == 'from_user':
-                setattr(comment, k, User.parse(v))
+                setattr(comment, k, User.parse(api, v))
             else:
                 setattr(comment, k, v)
         return comment
