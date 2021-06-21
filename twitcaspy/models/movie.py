@@ -12,9 +12,9 @@ class Movie(Model):
     Attributes
     ----------
     id: :class:`str`
-        | The ID of the movie
+        | |movie_id|
     user_id: :class:`str`
-        | The ID of the user
+        | |id|
     title: :class:`str`
         | Live title
     subtitle: :class:`str`

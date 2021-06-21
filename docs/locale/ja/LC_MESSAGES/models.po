@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-20 13:46+0900\n"
+"POT-Creation-Date: 2021-06-21 14:33+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,7 @@ msgstr "型"
 msgid ":class:`~twitcaspy.api.API`"
 msgstr ""
 
-#: of twitcaspy.models.app.App.parse:1 twitcaspy.models.model.Model.parse:1
-#: twitcaspy.models.movie.Movie.parse:1 twitcaspy.models.user.User.parse:1
+#: of twitcaspy.models.model.Model.parse:1
 msgid "Parse a JSON Model into a model instance."
 msgstr "JSONオブジェクトをモデルインスタンスに解析します。"
 
@@ -76,7 +75,7 @@ msgstr "元のデータをそのまま返却します。"
 msgid "This class does not instantiate."
 msgstr "このクラスはインスタンスを生成しません。"
 
-#: ../../models.rst:31
+#: ../../models.rst:29
 msgid "User class"
 msgstr ""
 
@@ -84,7 +83,7 @@ msgstr ""
 msgid "User Object"
 msgstr ""
 
-#: of twitcaspy.models.user.User:5
+#: of twitcaspy.models.movie.Movie:11 twitcaspy.models.user.User:5
 msgid "|id|"
 msgstr "ライブ配信者のユーザID"
 
@@ -199,7 +198,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#user-object"
 msgstr ""
 
-#: ../../models.rst:38
+#: ../../models.rst:34
 msgid "App class"
 msgstr ""
 
@@ -223,7 +222,7 @@ msgstr "アプリケーション開発者のユーザID"
 msgid "https://apiv2-doc.twitcasting.tv/#app-object"
 msgstr ""
 
-#: ../../models.rst:45
+#: ../../models.rst:39
 msgid "Movie class"
 msgstr ""
 
@@ -232,12 +231,8 @@ msgid "Movie Object"
 msgstr ""
 
 #: of twitcaspy.models.movie.Movie:5
-msgid "The ID of the movie"
+msgid "|movie_id|"
 msgstr "ライブのID"
-
-#: of twitcaspy.models.movie.Movie:11
-msgid "The ID of the user"
-msgstr "ライブ配信者のユーザID"
 
 #: of twitcaspy.models.movie.Movie:17
 msgid "Live title"
@@ -347,7 +342,7 @@ msgstr "hls_url パラメータの URL を http から https に変更しまし�
 msgid "https://apiv2-doc.twitcasting.tv/#movie-object"
 msgstr ""
 
-#: ../../models.rst:52
+#: ../../models.rst:44
 msgid "LateLimit class"
 msgstr ""
 
@@ -375,7 +370,7 @@ msgstr "resetを :class:`datetime.datetime` 型へ変換したもの"
 msgid "https://apiv2-doc.twitcasting.tv/#response-headers"
 msgstr ""
 
-#: ../../models.rst:58
+#: ../../models.rst:50
 msgid "ModelFactory class"
 msgstr ""
 
