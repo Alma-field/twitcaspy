@@ -483,3 +483,24 @@ class API:
             post_data['hashtag'] = hashtag[:26]
         return self.request(
             'POST', '/movies/hashtag', post_data=post_data, **kwargs)
+
+    @payload(movie_id=['raw', False], hashtag=['raw', False])
+    def unset_current_live_hashtag(self, **kwargs):
+        """unset_current_live_hashtag()
+
+        | If the user is broadcasting, unset a live hashtag.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **movie_id** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+              |movie_id|
+            | **hashtag** : :class:`~twitcaspy.models.Raw` (:class:`None`)
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#unset-current-live-hashtag
+        """
+        return self.request('DELETE', '/movies/hashtag', **kwargs)
