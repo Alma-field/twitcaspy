@@ -67,3 +67,11 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
     def testsetcurrentlivesubtitle_raise2(self):
         data = self.api.set_current_live_subtitle(
             '123456789012345678')
+
+    @tape.use_cassette('testgetcomments.yaml', serializer='yaml')
+    def testgetcomments(self):
+        data = self.api.get_comments('189037369')
+        ok_(hasattr(data, 'movie_id'))
+        eq_(data.movie_id, '189037369')
+        ok_(hasattr(data, 'all_count'))
+        ok_(hasattr(data, 'comments'))

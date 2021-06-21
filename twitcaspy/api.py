@@ -504,3 +504,50 @@ class API:
         https://apiv2-doc.twitcasting.tv/#unset-current-live-hashtag
         """
         return self.request('DELETE', '/movies/hashtag', **kwargs)
+
+    @payload(
+        movie_id=['raw', False],
+        all_count=['raw', False],
+        comments=['comment', True])
+    def get_comments(self, movie_id, **kwargs):
+        """get_comments(movie_id, *, offset=0, limit=20, slice_id=None)
+
+        | Returns comments of the specified movie
+          in descending order of creation date and time.
+
+        Parameters
+        ----------
+        movie_id: :class:`str`
+            |movie_id|
+        offset(optional): :class:`int`
+            | Position from the beginning
+            | It can be specified in the range of 0 or more.(default is 0.)
+        limit(optional): :class:`int`
+            | Maximum number of acquisitions
+            | It can be specified in the range of 1 to 50.(default is 10.)
+            | (In some cases,
+              it may return less than the specified number of videos.)
+        slice_id(optional): :class:`int` or :class:`None`
+            | Gets the comment after this slice_id.
+            | It can be specified in the range of 1 or more.
+            | (Not specified by default.[= :class:`None`])
+            | If you specify this parameter, offset is ignored.
+            | `2018-08-28 update <https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-08-28>`_
+            | The minimum value that can be specified for slice_id is now 1.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **movie_id** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+              |movie_id|
+            | **all_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+              Total number of comments
+            | **comments** : :class:`List` of :class:`~twitcaspy.models.Comment`
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-comments
+        """
+        return self.request('GET', f'/movies/{movie_id}/comments', **kwargs)

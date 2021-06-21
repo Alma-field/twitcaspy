@@ -42,6 +42,10 @@
     +------------------------------------------+-----------------------------------------+
     | `DELETE /movies/hashtag`_                | :meth:`API.unset_current_live_hashtag`  |
     +------------------------------------------+-----------------------------------------+
+    | .. centered:: :ref:`Comment`                                                       |
+    +------------------------------------------+-----------------------------------------+
+    | `GET /movies/:movie_id/comments`_        | :meth:`API.get_comments`                |
+    +------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -53,6 +57,7 @@
 .. _DELETE /movies/subtitle: https://apiv2-doc.twitcasting.tv/#unset-current-live-subtitle
 .. _POST /movies/hashtag: https://apiv2-doc.twitcasting.tv/#set-current-live-hashtag
 .. _DELETE /movies/hashtag: https://apiv2-doc.twitcasting.tv/#unset-current-live-hashtag
+.. _GET /movies/:movie_id/comments: https://apiv2-doc.twitcasting.tv/#get-comments
 
 User
 ----
@@ -102,3 +107,10 @@ set_current_live_hashtag
 unset_current_live_hashtag
 ===========================
 .. automethod:: API.unset_current_live_hashtag
+
+Comment
+-------
+
+get_comments
+============
+.. automethod:: API.get_comments
