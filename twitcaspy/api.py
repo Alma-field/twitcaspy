@@ -1,5 +1,6 @@
 import functools
 import logging
+import json
 from platform import python_version
 import sys
 
@@ -117,7 +118,8 @@ class API:
             try:
                 response = self.session.request(
                     method, url, params=params, headers=headers,
-                    data=post_data, json=json_payload, auth=self.auth.auth
+                    data=json.dumps(post_data), json=json_payload,
+                    auth=self.auth.auth
                 )
             except Exception as e:
                 raise TwitcaspyException(f'Failed to send request: {e}').with_traceback(sys.exc_info()[2])
