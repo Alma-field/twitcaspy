@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-21 22:55+0900\n"
+"POT-Creation-Date: 2021-06-21 23:29+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -211,11 +211,19 @@ msgstr ""
 msgid ":meth:`API.get_gifts`"
 msgstr ""
 
-#: ../../api.rst:74
+#: ../../api.rst:59
+msgid "`GET /users/:user_id/supporting_status`_"
+msgstr ""
+
+#: ../../api.rst:59
+msgid ":meth:`API.get_supporting_status`"
+msgstr ""
+
+#: ../../api.rst:79
 msgid "User"
 msgstr ""
 
-#: ../../api.rst:77
+#: ../../api.rst:82
 msgid "get_user_info"
 msgstr ""
 
@@ -348,7 +356,7 @@ msgstr "idとscreen_idの両方が指定されていないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#get-user-info"
 msgstr ""
 
-#: ../../api.rst:81
+#: ../../api.rst:86
 msgid "verify_credentials"
 msgstr ""
 
@@ -380,11 +388,11 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#verify-credentials"
 msgstr ""
 
-#: ../../api.rst:85
+#: ../../api.rst:90
 msgid "Live Thumbnail"
 msgstr ""
 
-#: ../../api.rst:88
+#: ../../api.rst:93
 msgid "get_live_thumbnail_image"
 msgstr ""
 
@@ -432,11 +440,11 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-live-thumbnail-image"
 msgstr ""
 
-#: ../../api.rst:92
+#: ../../api.rst:97
 msgid "Movie"
 msgstr ""
 
-#: ../../api.rst:95
+#: ../../api.rst:100
 msgid "get_movie_info"
 msgstr ""
 
@@ -473,7 +481,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-movie-info"
 msgstr ""
 
-#: ../../api.rst:99
+#: ../../api.rst:104
 msgid "get_movies_by_user"
 msgstr ""
 
@@ -558,7 +566,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-movies-by-user"
 msgstr ""
 
-#: ../../api.rst:103
+#: ../../api.rst:108
 msgid "get_current_live"
 msgstr ""
 
@@ -570,7 +578,7 @@ msgstr "ーザーが配信中の場合、ライブ情報を取得します。"
 msgid "https://apiv2-doc.twitcasting.tv/#get-current-live"
 msgstr ""
 
-#: ../../api.rst:107
+#: ../../api.rst:112
 msgid "set_current_live_subtitle"
 msgstr ""
 
@@ -623,7 +631,7 @@ msgstr "subtitleが1文字より少ないとき subtitleが17文字より多く�
 msgid "https://apiv2-doc.twitcasting.tv/#set-current-live-subtitle"
 msgstr ""
 
-#: ../../api.rst:111
+#: ../../api.rst:116
 msgid "unset_current_live_subtitle"
 msgstr ""
 
@@ -646,7 +654,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#unset-current-live-subtitle"
 msgstr ""
 
-#: ../../api.rst:115
+#: ../../api.rst:120
 msgid "set_current_live_hashtag"
 msgstr ""
 
@@ -687,7 +695,7 @@ msgstr "hashtagが1文字より少ないとき/hashtagが26文字より多く、
 msgid "https://apiv2-doc.twitcasting.tv/#set-current-live-hashtag"
 msgstr ""
 
-#: ../../api.rst:119
+#: ../../api.rst:124
 msgid "unset_current_live_hashtag"
 msgstr ""
 
@@ -710,11 +718,11 @@ msgstr "**hashtag** : :class:`~twitcaspy.models.Raw` (:class:`None`)"
 msgid "https://apiv2-doc.twitcasting.tv/#unset-current-live-hashtag"
 msgstr ""
 
-#: ../../api.rst:123
+#: ../../api.rst:128
 msgid "Comment"
 msgstr ""
 
-#: ../../api.rst:126
+#: ../../api.rst:131
 msgid "get_comments"
 msgstr ""
 
@@ -793,7 +801,7 @@ msgstr "**comments** : :class:`~twitcaspy.models.Comment` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#get-comments"
 msgstr ""
 
-#: ../../api.rst:130
+#: ../../api.rst:135
 msgid "post_comment"
 msgstr ""
 
@@ -864,7 +872,7 @@ msgstr "comment が 1-140 文字でないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#post-comment"
 msgstr ""
 
-#: ../../api.rst:134
+#: ../../api.rst:139
 msgid "delete_comment"
 msgstr ""
 
@@ -905,11 +913,11 @@ msgstr "**comment_id** : :class:`~twitcaspy.models.Raw` (:class:`str`) 削除し
 msgid "https://apiv2-doc.twitcasting.tv/#delete-comment"
 msgstr ""
 
-#: ../../api.rst:138
+#: ../../api.rst:143
 msgid "Gift"
 msgstr ""
 
-#: ../../api.rst:141
+#: ../../api.rst:146
 msgid "get_gifts"
 msgstr ""
 
@@ -957,11 +965,11 @@ msgstr "**gifts** : :class:`~twitcaspy.models.Gift` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#get-gifts"
 msgstr ""
 
-#: ../../api.rst:145
+#: ../../api.rst:150
 msgid "Supporter"
 msgstr ""
 
-#: ../../api.rst:148
+#: ../../api.rst:153
 msgid "get_supporting_status"
 msgstr ""
 
@@ -982,7 +990,8 @@ msgid ""
 "**is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`) "
 "Whether it is a supporter."
 msgstr ""
-"**is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`) サポーターかどうか"
+"**is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`) "
+"サポーターかどうか"
 
 #: of twitcaspy.api.API.get_supporting_status
 msgid "**target_user** : :class:`~twitcaspy.models.User` Target user information"
@@ -991,3 +1000,4 @@ msgstr "**target_user** : :class:`~twitcaspy.models.User` 対象ユーザ情報"
 #: of twitcaspy.api.API.get_supporting_status:22
 msgid "https://apiv2-doc.twitcasting.tv/#get-supporting-status"
 msgstr ""
+

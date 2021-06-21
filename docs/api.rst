@@ -54,6 +54,10 @@
     +--------------------------------------------------+-----------------------------------------+
     | `GET /gifts`_                                    | :meth:`API.get_gifts`                   |
     +--------------------------------------------------+-----------------------------------------+
+    | .. centered:: :ref:`Supporter`                                                             |
+    +--------------------------------------------------+-----------------------------------------+
+    | `GET /users/:user_id/supporting_status`_         | :meth:`API.get_supporting_status`       |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -69,6 +73,7 @@
 .. _POST /movies/:movie_id/comments: https://apiv2-doc.twitcasting.tv/#post-comments
 .. _DELETE /movies/:movie_id/comments/:comment_id: https://apiv2-doc.twitcasting.tv/#delete-comment
 .. _GET /gifts: https://apiv2-doc.twitcasting.tv/#get-gifts
+.. _GET /users/:user_id/supporting_status: https://apiv2-doc.twitcasting.tv/#get-supporting-status
 
 User
 ----
