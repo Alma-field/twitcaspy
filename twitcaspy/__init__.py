@@ -18,7 +18,7 @@ from twitcaspy.errors import (
     TwitcaspyException, TwitcastingServerError, Unauthorized
 )
 from twitcaspy.models import (
-    App, Comment, ModelFactory, Gift,
+    App, Category, Comment, ModelFactory, Gift,
     LateLimit, Movie, Raw, SubCategory, Supporter, User
 )
 

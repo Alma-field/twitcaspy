@@ -4,6 +4,8 @@
 
 from .app import App
 
+from .category import Category
+
 from .comment import Comment
 
 from .gift import Gift
@@ -25,6 +27,7 @@ class ModelFactory:
     """
 
     app = App
+    category = Category
     comment = Comment
     gift = Gift
     movie = Movie

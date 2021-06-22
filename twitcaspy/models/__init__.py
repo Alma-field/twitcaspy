@@ -8,6 +8,8 @@ from .result import Result
 
 from .app import App
 
+from .category import Category
+
 from .comment import Comment
 
 from .gift import Gift
@@ -27,6 +29,6 @@ from .latelimit import LateLimit
 from .factory import ModelFactory
 
 __all__ = [
-    'App', 'Comment', 'ModelFactory', 'Gift',
+    'App', 'Category', 'Comment', 'ModelFactory', 'Gift',
     'LateLimit', 'Movie', 'Raw', 'SubCategory', 'Supporter', 'User'
 ]
