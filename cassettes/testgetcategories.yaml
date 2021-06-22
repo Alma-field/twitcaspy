@@ -1,0 +1,99 @@
+interactions:
+- request:
+    body: 'null'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '4'
+      User-Agent:
+      - Python/3.9.1 Requests/2.25.1 twitcaspy/0.0.0
+      X-Api-Version:
+      - '2.0'
+    method: GET
+    uri: https://apiv2.twitcasting.tv/categories?lang=ja
+  response:
+    body:
+      string: !!binary |
+        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
+        /B38/AMyIR7o5h0AAA==
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Connection:
+      - close
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2179'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 22 Jun 2021 08:22:28 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Set-Cookie:
+      - PHPSESSID=lqkr7vd6mv66tg546mo1ak48r6; path=/
+      Strict-Transport-Security:
+      - max-age=0
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.6.40
+      X-RateLimit-Limit:
+      - '60'
+      X-RateLimit-Remaining:
+      - '58'
+      X-RateLimit-Reset:
+      - '1624350160'
+      X-WE-ARE-HIRING:
+      - https://about.moi.st/ja/recruit/
+    status:
+      code: 200
+      message: OK
+version: 1

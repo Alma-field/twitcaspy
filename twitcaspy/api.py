@@ -895,3 +895,43 @@ class API:
         return self.request(
             'GET', f'/users/{target_id}/supporters',
             endpoint_parameters=('sort', 'offset', 'limit'), **kwargs)
+
+    @payload(categories=['category', True])
+    def get_categories(self, **kwargs):
+        """get_categories(lang='ja')
+
+        | Get only the categories being streamed.
+
+        Parameters
+        ----------
+        lang: :class:`str`
+            | Language to search
+            | `lang` must be one of the following:
+            | 'ja' : Japanese
+            | 'en' : English
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **categories** : :class:`list` of :class:`~twitcaspy.models.Category`
+
+        Raises
+        ------
+        TwitcaspyException
+            When lang is not a 'ja' or 'en'.
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-categories
+        """
+
+        if 'lang' in kwargs:
+            if not (kwargs['lang'] == 'ja' or kwargs['lang'] == 'en'):
+                raise TwitcaspyException("lang must be 'ja' or 'en', not "
+                                + kwargs['lang'])
+        else:
+            kwargs['lang'] = 'ja'
+        return self.request(
+            'GET', '/categories', endpoint_parameters=('lang'), **kwargs)

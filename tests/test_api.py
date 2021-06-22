@@ -101,3 +101,13 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         data = self.api.supporter_list(id=user_id)
         ok_(hasattr(data, 'total'))
         ok_(hasattr(data, 'supporters'))
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testgetcategories_raise.json')
+    def testgetcategories_raise(self):
+        data = self.api.get_categories(lang='fr')
+
+    @tape.use_cassette('testgetcategories.yaml', serializer='yaml')
+    def testgetcategories(self):
+        data = self.api.get_categories()
+        ok_(hasattr(data, 'categories'))

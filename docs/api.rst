@@ -66,6 +66,8 @@
     +--------------------------------------------------+-----------------------------------------+
     | `GET /users/:user_id/supporters`_                | :meth:`API.supporter_list`              |
     +--------------------------------------------------+-----------------------------------------+
+    | `GET /categories`_                               | :meth:`API.get_categories`              |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -86,6 +88,7 @@
 .. _PUT /unsupport: https://apiv2-doc.twitcasting.tv/#unsupport-user
 .. _GET /users/:user_id/supporting: https://apiv2-doc.twitcasting.tv/#supporting-list
 .. _GET /users/:user_id/supporters: https://apiv2-doc.twitcasting.tv/#supporter-list
+.. _GET /categories: https://apiv2-doc.twitcasting.tv/#get-categories
 
 User
 ----
@@ -180,3 +183,10 @@ supporting_list
 supporter_list
 ==============
 .. automethod:: API.supporter_list
+
+Category
+--------
+
+get_categories
+==============
+.. automethod:: API.get_categories
