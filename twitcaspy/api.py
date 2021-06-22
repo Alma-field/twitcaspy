@@ -832,3 +832,66 @@ class API:
         return self.request(
             'GET', f'/users/{target_id}/supporting',
             endpoint_parameters=('offset', 'limit'), **kwargs)
+
+    @payload(total=['raw', False], supporters=['supporter', True])
+    def supporter_list(self, sort='ranking', *, id=None, screen_id=None, **kwargs):
+        """supporter_list(sort='ranking', *, id=None, screen_id=None,\
+                offset=0, limit=20)
+
+        | Get a list of users who support the specified user.
+        | |id_screenid|
+
+        Parameters
+        ----------
+        sort: :class:`str`
+            | Sort order
+            | `sort` must be one of the following:
+            | 'new' : New arrival order
+            | 'ranking' : Contribution order
+        id: :class:`str`
+            |id|
+            |id_notice|
+        screen_id: :class:`str`
+            |screen_id|
+        offset(optional): :class:`int`
+            | Position from the beginning
+            | It can be specified in the range of 0 or more.(default is 0.)
+        limit(optional): :class:`int`
+            | Maximum number of acquisitions
+            | It can be specified in the range of 1 to 20.(default is 20.)
+            | (In some cases,
+              it may return less than the specified number of support users.)
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **total** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+              Total number of records.
+              (It may differ from the actual number that can be obtained)
+            | **supporters** : :class:`list` of :class:`~twitcaspy.models.Supporter`
+
+        Raises
+        ------
+        TwitcaspyException
+            If both id and screen_id are not specified.
+        TwitcaspyException
+            When sort is not a 'new' or 'ranking'.
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#supporter-list
+        """
+        target_id = id if id is not None else screen_id
+        if target_id is None:
+            raise TwitcaspyException(
+                'Either an id or screen_id is required for this method.')
+        if sort == 'new' or sort == 'ranking':
+            kwargs['sort'] = sort
+        else:
+            raise TwitcaspyException("sort must be 'new' or 'ranking', not "
+                            + sort)
+        return self.request(
+            'GET', f'/users/{target_id}/supporters',
+            endpoint_parameters=('sort', 'offset', 'limit'), **kwargs)

@@ -95,3 +95,9 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         data = self.api.supporting_list(id=user_id)
         ok_(hasattr(data, 'total'))
         ok_(hasattr(data, 'supporting'))
+
+    @tape.use_cassette('testsupporterlist.json')
+    def testsupporterlist(self):
+        data = self.api.supporter_list(id=user_id)
+        ok_(hasattr(data, 'total'))
+        ok_(hasattr(data, 'supporters'))
