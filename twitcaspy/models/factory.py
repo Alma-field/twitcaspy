@@ -12,6 +12,8 @@ from .movie import Movie
 
 from .raw import Raw
 
+from .subcategory import SubCategory
+
 from .supporter import Supporter
 
 from .user import User
@@ -27,5 +29,6 @@ class ModelFactory:
     gift = Gift
     movie = Movie
     raw = Raw
+    subcategory = SubCategory
     supporter = Supporter
     user = User

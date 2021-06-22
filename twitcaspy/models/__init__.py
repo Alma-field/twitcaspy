@@ -16,6 +16,8 @@ from .movie import Movie
 
 from .raw import Raw
 
+from .subcategory import SubCategory
+
 from .supporter import Supporter
 
 from .user import User
@@ -26,5 +28,5 @@ from .factory import ModelFactory
 
 __all__ = [
     'App', 'Comment', 'ModelFactory', 'Gift',
-    'LateLimit', 'Movie', 'Raw', 'Supporter', 'User'
+    'LateLimit', 'Movie', 'Raw', 'SubCategory', 'Supporter', 'User'
 ]
