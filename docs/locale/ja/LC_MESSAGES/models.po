@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 02:50+0900\n"
+"POT-Creation-Date: 2021-06-22 14:13+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,11 +28,12 @@ msgstr ""
 msgid "Model Base Class"
 msgstr ""
 
-#: of twitcaspy.models.app.App twitcaspy.models.comment.Comment
-#: twitcaspy.models.gift.Gift twitcaspy.models.latelimit.LateLimit
-#: twitcaspy.models.model.Model twitcaspy.models.movie.Movie
-#: twitcaspy.models.result.Result twitcaspy.models.supporter.Supporter
-#: twitcaspy.models.user.User
+#: of twitcaspy.models.app.App twitcaspy.models.category.Category
+#: twitcaspy.models.comment.Comment twitcaspy.models.gift.Gift
+#: twitcaspy.models.latelimit.LateLimit twitcaspy.models.model.Model
+#: twitcaspy.models.movie.Movie twitcaspy.models.result.Result
+#: twitcaspy.models.subcategory.SubCategory
+#: twitcaspy.models.supporter.Supporter twitcaspy.models.user.User
 msgid "type"
 msgstr "型"
 
@@ -48,10 +49,11 @@ msgstr "JSONオブジェクトをモデルインスタンスに解析します�
 msgid "Result class"
 msgstr ""
 
-#: of twitcaspy.models.app.App:1 twitcaspy.models.comment.Comment:1
-#: twitcaspy.models.gift.Gift:1 twitcaspy.models.movie.Movie:1
-#: twitcaspy.models.result.Result:1 twitcaspy.models.supporter.Supporter:1
-#: twitcaspy.models.user.User:1
+#: of twitcaspy.models.app.App:1 twitcaspy.models.category.Category:1
+#: twitcaspy.models.comment.Comment:1 twitcaspy.models.gift.Gift:1
+#: twitcaspy.models.movie.Movie:1 twitcaspy.models.result.Result:1
+#: twitcaspy.models.subcategory.SubCategory:1
+#: twitcaspy.models.supporter.Supporter:1 twitcaspy.models.user.User:1
 msgid "Bases: :class:`twitcaspy.models.model.Model`"
 msgstr ""
 
@@ -93,7 +95,8 @@ msgid "|id|"
 msgstr "ライブ配信者のユーザID"
 
 #: of twitcaspy.models.app.App:7 twitcaspy.models.app.App:13
-#: twitcaspy.models.app.App:19 twitcaspy.models.comment.Comment:7
+#: twitcaspy.models.app.App:19 twitcaspy.models.category.Category:7
+#: twitcaspy.models.category.Category:13 twitcaspy.models.comment.Comment:7
 #: twitcaspy.models.comment.Comment:13 twitcaspy.models.gift.Gift:7
 #: twitcaspy.models.gift.Gift:13 twitcaspy.models.gift.Gift:19
 #: twitcaspy.models.gift.Gift:34 twitcaspy.models.gift.Gift:40
@@ -103,7 +106,9 @@ msgstr "ライブ配信者のユーザID"
 #: twitcaspy.models.movie.Movie:13 twitcaspy.models.movie.Movie:19
 #: twitcaspy.models.movie.Movie:25 twitcaspy.models.movie.Movie:43
 #: twitcaspy.models.movie.Movie:67 twitcaspy.models.movie.Movie:73
-#: twitcaspy.models.movie.Movie:79 twitcaspy.models.supporter.Supporter:7
+#: twitcaspy.models.movie.Movie:79 twitcaspy.models.subcategory.SubCategory:7
+#: twitcaspy.models.subcategory.SubCategory:13
+#: twitcaspy.models.supporter.Supporter:7
 #: twitcaspy.models.supporter.Supporter:14
 #: twitcaspy.models.supporter.Supporter:20
 #: twitcaspy.models.supporter.Supporter:26
@@ -144,6 +149,7 @@ msgstr "ユーザのレベル"
 #: twitcaspy.models.latelimit.LateLimit:19 twitcaspy.models.movie.Movie:61
 #: twitcaspy.models.movie.Movie:85 twitcaspy.models.movie.Movie:110
 #: twitcaspy.models.movie.Movie:117 twitcaspy.models.movie.Movie:123
+#: twitcaspy.models.subcategory.SubCategory:19
 #: twitcaspy.models.supporter.Supporter:38
 #: twitcaspy.models.supporter.Supporter:58
 #: twitcaspy.models.supporter.Supporter:66
@@ -217,10 +223,11 @@ msgstr ""
 "`2018-08-03 更新 "
 "<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-08-03>`_"
 
-#: of twitcaspy.models.app.App:22 twitcaspy.models.comment.Comment:28
-#: twitcaspy.models.gift.Gift:73 twitcaspy.models.latelimit.LateLimit:28
-#: twitcaspy.models.movie.Movie:134 twitcaspy.models.supporter.Supporter:89
-#: twitcaspy.models.user.User:80
+#: of twitcaspy.models.app.App:22 twitcaspy.models.category.Category:22
+#: twitcaspy.models.comment.Comment:28 twitcaspy.models.gift.Gift:73
+#: twitcaspy.models.latelimit.LateLimit:28 twitcaspy.models.movie.Movie:134
+#: twitcaspy.models.subcategory.SubCategory:22
+#: twitcaspy.models.supporter.Supporter:89 twitcaspy.models.user.User:80
 msgid "References"
 msgstr ""
 
@@ -476,6 +483,54 @@ msgid "https://apiv2-doc.twitcasting.tv/#supporteruser-object"
 msgstr ""
 
 #: ../../models.rst:59
+msgid "Category class"
+msgstr ""
+
+#: of twitcaspy.models.category.Category:1
+msgid "Category Object"
+msgstr ""
+
+#: of twitcaspy.models.category.Category:5
+msgid "Category ID"
+msgstr "カテゴリID"
+
+#: of twitcaspy.models.category.Category:11
+msgid "Category name"
+msgstr "カテゴリ名"
+
+#: of twitcaspy.models.category.Category:19
+msgid ":class:`list` of :class:`~twitcaspy.models.SubCategory`"
+msgstr ":class:`~twitcaspy.models.SubCategory` の :class:`list`"
+
+#: of twitcaspy.models.category.Category:23
+msgid "https://apiv2-doc.twitcasting.tv/#category-object"
+msgstr ""
+
+#: ../../models.rst:64
+msgid "SubCategory class"
+msgstr ""
+
+#: of twitcaspy.models.subcategory.SubCategory:1
+msgid "SubCategory Object"
+msgstr ""
+
+#: of twitcaspy.models.subcategory.SubCategory:5
+msgid "SubCategory ID"
+msgstr "サブカテゴリID"
+
+#: of twitcaspy.models.subcategory.SubCategory:11
+msgid "SubCategory name"
+msgstr "サブカテゴリ名"
+
+#: of twitcaspy.models.subcategory.SubCategory:17
+msgid "Number of subcategory streams"
+msgstr "サブカテゴリ配信数"
+
+#: of twitcaspy.models.subcategory.SubCategory:23
+msgid "https://apiv2-doc.twitcasting.tv/#sub-category-object"
+msgstr ""
+
+#: ../../models.rst:69
 msgid "LateLimit class"
 msgstr ""
 
@@ -503,7 +558,7 @@ msgstr "resetを :class:`datetime.datetime` 型へ変換したもの"
 msgid "https://apiv2-doc.twitcasting.tv/#response-headers"
 msgstr ""
 
-#: ../../models.rst:65
+#: ../../models.rst:75
 msgid "ModelFactory class"
 msgstr ""
 
@@ -520,4 +575,3 @@ msgstr "独自のモデルを追加する場合は、このクラスを継承し
 
 #~ msgid "show-inheritance"
 #~ msgstr ""
-

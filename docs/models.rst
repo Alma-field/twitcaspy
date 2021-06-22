@@ -55,6 +55,16 @@ Supporter class
 .. autoclass:: twitcaspy.models.Supporter
     :show-inheritance:
 
+Category class
+--------------
+.. autoclass:: twitcaspy.models.Category
+    :show-inheritance:
+
+SubCategory class
+-----------------
+.. autoclass:: twitcaspy.models.SubCategory
+    :show-inheritance:
+
 LateLimit class
 ---------------
 .. autoclass:: twitcaspy.models.LateLimit
