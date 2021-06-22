@@ -28,7 +28,10 @@ class Category(Model):
         setattr(category, '_json', json)
         for k, v in json.items():
             if k == 'sub_categories':
-                setattr(category, k, SubCategory.parse(api, v))
+                sub_categories = []
+                for subcategory in v:
+                    sub_categories.append(SubCategory.parse(api, subcategory))
+                setattr(category, k, sub_categories)
             else:
                 setattr(category, k, v)
         return category
