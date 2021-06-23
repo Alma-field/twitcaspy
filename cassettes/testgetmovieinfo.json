@@ -5,7 +5,7 @@
             "request": {
                 "method": "GET",
                 "uri": "https://apiv2.twitcasting.tv/movies/189037369",
-                "body": null,
+                "body": "null",
                 "headers": {
                     "User-Agent": [
                         "Python/3.9.1 Requests/2.25.1 twitcaspy/0.0.0"
@@ -21,6 +21,9 @@
                     ],
                     "X-Api-Version": [
                         "2.0"
+                    ],
+                    "Content-Length": [
+                        "4"
                     ]
                 }
             },
@@ -30,54 +33,54 @@
                     "message": "OK"
                 },
                 "headers": {
-                    "Expires": [
-                        "Thu, 19 Nov 1981 08:52:00 GMT"
-                    ],
-                    "X-RateLimit-Remaining": [
-                        "59"
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
                     ],
                     "Strict-Transport-Security": [
                         "max-age=0"
                     ],
-                    "Set-Cookie": [
-                        "PHPSESSID=ocv14d9i5str7tsdmj5a0rj8f6; path=/"
+                    "Date": [
+                        "Wed, 23 Jun 2021 04:17:11 GMT"
                     ],
-                    "X-Powered-By": [
-                        "PHP/5.6.40"
-                    ],
-                    "Pragma": [
-                        "no-cache"
+                    "Expires": [
+                        "Thu, 19 Nov 1981 08:52:00 GMT"
                     ],
                     "Server": [
                         "Apache"
                     ],
-                    "X-RateLimit-Limit": [
-                        "60"
-                    ],
-                    "Date": [
-                        "Wed, 16 Jun 2021 12:33:59 GMT"
-                    ],
-                    "X-RateLimit-Reset": [
-                        "1623846899"
-                    ],
-                    "Content-Length": [
-                        "1484"
-                    ],
-                    "Content-Type": [
-                        "application/json;charset=utf-8"
+                    "Pragma": [
+                        "no-cache"
                     ],
                     "X-WE-ARE-HIRING": [
                         "https://about.moi.st/ja/recruit/"
+                    ],
+                    "X-RateLimit-Limit": [
+                        "60"
+                    ],
+                    "X-RateLimit-Remaining": [
+                        "59"
+                    ],
+                    "X-RateLimit-Reset": [
+                        "1624421891"
+                    ],
+                    "X-Powered-By": [
+                        "PHP/5.6.40"
+                    ],
+                    "Set-Cookie": [
+                        "PHPSESSID=etr9os6fk51ks4iknjdoqkrhc3; path=/"
                     ],
                     "Connection": [
                         "close"
                     ],
                     "Cache-Control": [
                         "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    ],
+                    "Content-Length": [
+                        "1480"
                     ]
                 },
                 "body": {
-                    "string": "{\"movie\":{\"id\":\"189037369\",\"user_id\":\"182224938\",\"title\":\"Live casma_jp\u3067\u914d\u4fe1\u3057\u307e\u3059 - \u300c\u30d7\u30ea\u30f3\u30bb\u30b9\u30b3\u30cd\u30af\u30c8\uff01Re:Dive\u300d\u4e00\u6319\u653e\u9001 #189037369\",\"subtitle\":\"casma_jp\u3067\u914d\u4fe1\u3057\u307e\u3059\",\"last_owner_comment\":\"moi! LIVE \u306e\u69d8\u5b50\u306f\u30b3\u30c1\u30e9\u306b\u3066\u914d\u4fe1\u4e2d\u3067\u3059\u3002\u3054\u8ff7\u60d1\u3092\u304a\u304b\u3051\u3057\u3066\u7533\u3057\u8a33\u3042\u308a\u307e\u305b\u3093\uff1b http://twitcasting.tv/casma_jp\",\"category\":null,\"link\":\"http://twitcasting.tv/twitcasting_jp/movie/189037369\",\"is_live\":false,\"is_recorded\":false,\"comment_count\":6409,\"large_thumbnail\":\"http://imagegw03.twitcasting.tv/image3/image.twitcasting.tv/image55_1/39/7b/0b447b39-1.jpg\",\"small_thumbnail\":\"http://imagegw03.twitcasting.tv/image3/image.twitcasting.tv/image55_1/39/7b/0b447b39-1-s.jpg\",\"country\":\"jp\",\"duration\":1186,\"created\":1438500282,\"is_collabo\":false,\"is_protected\":false,\"max_view_count\":1675,\"current_view_count\":0,\"total_view_count\":20848,\"hls_url\":null},\"broadcaster\":{\"id\":\"182224938\",\"screen_id\":\"twitcasting_jp\",\"name\":\"\u30c4\u30a4\u30ad\u30e3\u30b9\u516c\u5f0f\",\"image\":\"http://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1285073394094891008/127zPO4f_bigger.jpg\",\"profile\":\"\u30c4\u30a4\u30ad\u30e3\u30b9\u306e\u516c\u5f0f\u30a2\u30ab\u30a6\u30f3\u30c8\u3067\u3059\u3002\u30c4\u30a4\u30ad\u30e3\u30b9\u306b\u95a2\u3059\u308b\u304a\u77e5\u3089\u305b\u306a\u3069\u3092\u6295\u7a3f\u3057\u307e\u3059\u3002\u304a\u554f\u3044\u5408\u308f\u305b\u306f https://t.co/4gCf7XVm7N \u307e\u3067\u304a\u9858\u3044\u3057\u307e\u3059\u3002\",\"level\":50,\"last_movie_id\":\"686162671\",\"is_live\":false,\"supporter_count\":0,\"supporting_count\":0,\"created\":0},\"tags\":[\"\u30c4\u30a4\u30ad\u30e3\u30b9\u30a2\u30cb\u30e1\",\"\u30d7\u30ea\u30f3\u30bb\u30b9\u30b3\u30cd\u30af\"]}"
+                    "string": "{\"movie\":{\"id\":\"189037369\",\"user_id\":\"182224938\",\"title\":\"Live casma_jp\u3067\u914d\u4fe1\u3057\u307e\u3059 - \u30a2\u30cb\u30e1\u300c\u5f31\u30ad\u30e3\u30e9\u53cb\u5d0e\u304f\u3093\u300d\u4e00\u6319\u653e\u9001 #189037369\",\"subtitle\":\"casma_jp\u3067\u914d\u4fe1\u3057\u307e\u3059\",\"last_owner_comment\":\"moi! LIVE \u306e\u69d8\u5b50\u306f\u30b3\u30c1\u30e9\u306b\u3066\u914d\u4fe1\u4e2d\u3067\u3059\u3002\u3054\u8ff7\u60d1\u3092\u304a\u304b\u3051\u3057\u3066\u7533\u3057\u8a33\u3042\u308a\u307e\u305b\u3093\uff1b http://twitcasting.tv/casma_jp\",\"category\":null,\"link\":\"http://twitcasting.tv/twitcasting_jp/movie/189037369\",\"is_live\":false,\"is_recorded\":false,\"comment_count\":6409,\"large_thumbnail\":\"http://imagegw03.twitcasting.tv/image3/image.twitcasting.tv/image55_1/39/7b/0b447b39-1.jpg\",\"small_thumbnail\":\"http://imagegw03.twitcasting.tv/image3/image.twitcasting.tv/image55_1/39/7b/0b447b39-1-s.jpg\",\"country\":\"jp\",\"duration\":1186,\"created\":1438500282,\"is_collabo\":false,\"is_protected\":false,\"max_view_count\":1675,\"current_view_count\":0,\"total_view_count\":20848,\"hls_url\":null},\"broadcaster\":{\"id\":\"182224938\",\"screen_id\":\"twitcasting_jp\",\"name\":\"\u30c4\u30a4\u30ad\u30e3\u30b9\u516c\u5f0f\",\"image\":\"http://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1285073394094891008/127zPO4f_bigger.jpg\",\"profile\":\"\u30c4\u30a4\u30ad\u30e3\u30b9\u306e\u516c\u5f0f\u30a2\u30ab\u30a6\u30f3\u30c8\u3067\u3059\u3002\u30c4\u30a4\u30ad\u30e3\u30b9\u306b\u95a2\u3059\u308b\u304a\u77e5\u3089\u305b\u306a\u3069\u3092\u6295\u7a3f\u3057\u307e\u3059\u3002\u304a\u554f\u3044\u5408\u308f\u305b\u306f https://t.co/4gCf7XVm7N \u307e\u3067\u304a\u9858\u3044\u3057\u307e\u3059\u3002\",\"level\":50,\"last_movie_id\":\"688369803\",\"is_live\":false,\"supporter_count\":0,\"supporting_count\":0,\"created\":0},\"tags\":[\"\u30c4\u30a4\u30ad\u30e3\u30b9\u30a2\u30cb\u30e1\",\"\u5f31\u30ad\u30e3\u30e9\u53cb\u5d0e\u304f\u3093\"]}"
                 }
             }
         }

@@ -44,6 +44,10 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         eq_(data.broadcaster.screen_id, username)
         ok_(hasattr(data, 'tags'))
         ok_(isinstance(data.tags, list))
+        ok_(hasattr(data, 'live'))
+        ok_(hasattr(data.live, 'movie'))
+        ok_(hasattr(data.live, 'broadcaster'))
+        ok_(hasattr(data.live, 'tags'))
 
     @tape.use_cassette('testgetmoviesbyuser.yaml', serializer='yaml')
     def testgetmoviesbyuser(self):

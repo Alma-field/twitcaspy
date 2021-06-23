@@ -259,7 +259,9 @@ class API:
             parser=RawParser, require_auth=False,
             endpoint_parameters=('size', 'position'), **kwargs)
 
-    @payload('movie', broadcaster=['user', False], tags=['raw', False])
+    @payload(
+        'movie', broadcaster=['user', False],
+        tags=['raw', False], raw_data=['live', False])
     def get_movie_info(self, movie_id, **kwargs):
         """get_movie_info(movie_id)
 
@@ -278,6 +280,12 @@ class API:
             | **movie** : :class:`~twitcaspy.models.Movie`
             | **broadcaster** : :class:`~twitcaspy.models.User`
             | **tags** : :class:`~twitcaspy.models.Raw` (:class:`list`)
+            | **live** : :class:`~twitcaspy.models.Live`
+            | |live_attribute|
+            | **movie** : :class:`~twitcaspy.models.Movie`
+            | **broadcaster** : :class:`~twitcaspy.models.User`
+            | **tags** : :class:`~twitcaspy.models.Raw` (:class:`list`)
+            | `result.movie` is equivalent to` result.live.movie`.
 
         References
         ----------
@@ -340,7 +348,9 @@ class API:
             'GET', f'/users/{target_id}/movies',
             endpoint_parameters=('offset', 'limit', 'slice_id'), **kwargs)
 
-    @payload('movie', broadcaster=['user', False], tags=['raw', False])
+    @payload(
+        'movie', broadcaster=['user', False],
+        tags=['raw', False], raw_data=['live', False])
     def get_current_live(self, *, id=None, screen_id=None, **kwargs):
         """get_current_live(*, id=None, screen_id=None)
 
@@ -363,6 +373,12 @@ class API:
             | **movie** : :class:`~twitcaspy.models.Movie`
             | **broadcaster** : :class:`~twitcaspy.models.User`
             | **tags** : :class:`~twitcaspy.models.Raw` (:class:`list`)
+            | **live** : :class:`~twitcaspy.models.Live`
+            | |live_attribute|
+            | **movie** : :class:`~twitcaspy.models.Movie`
+            | **broadcaster** : :class:`~twitcaspy.models.User`
+            | **tags** : :class:`~twitcaspy.models.Raw` (:class:`list`)
+            | `result.movie` is equivalent to` result.live.movie`.
 
         Raises
         ------

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-23 12:40+0900\n"
+"POT-Creation-Date: 2021-06-23 13:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,9 +81,9 @@ msgstr "指定されたparserがParserインスタンスではない場合"
 
 #: of twitcaspy.api.API:16 twitcaspy.api.API.delete_comment:21
 #: twitcaspy.api.API.get_categories:17 twitcaspy.api.API.get_comments:32
-#: twitcaspy.api.API.get_current_live:20 twitcaspy.api.API.get_gifts:16
+#: twitcaspy.api.API.get_current_live:26 twitcaspy.api.API.get_gifts:16
 #: twitcaspy.api.API.get_live_thumbnail_image:22
-#: twitcaspy.api.API.get_movie_info:14 twitcaspy.api.API.get_movies_by_user:33
+#: twitcaspy.api.API.get_movie_info:20 twitcaspy.api.API.get_movies_by_user:33
 #: twitcaspy.api.API.get_supporting_status:21
 #: twitcaspy.api.API.get_user_info:22 twitcaspy.api.API.post_comment:26
 #: twitcaspy.api.API.search_users:25
@@ -401,8 +401,8 @@ msgid "Return type"
 msgstr "戻り値の型"
 
 #: of twitcaspy.api.API.delete_comment:18 twitcaspy.api.API.get_categories:12
-#: twitcaspy.api.API.get_comments:29 twitcaspy.api.API.get_current_live:15
-#: twitcaspy.api.API.get_gifts:13 twitcaspy.api.API.get_movie_info:11
+#: twitcaspy.api.API.get_comments:29 twitcaspy.api.API.get_current_live:21
+#: twitcaspy.api.API.get_gifts:13 twitcaspy.api.API.get_movie_info:17
 #: twitcaspy.api.API.get_movies_by_user:28
 #: twitcaspy.api.API.get_supporting_status:16
 #: twitcaspy.api.API.get_user_info:17 twitcaspy.api.API.post_comment:21
@@ -417,7 +417,7 @@ msgstr "戻り値の型"
 msgid ":class:`~twitcaspy.models.Result`"
 msgstr ""
 
-#: of twitcaspy.api.API.get_current_live:17
+#: of twitcaspy.api.API.get_current_live:23
 #: twitcaspy.api.API.get_live_thumbnail_image:19
 #: twitcaspy.api.API.get_movies_by_user:30
 #: twitcaspy.api.API.get_supporting_status:18
@@ -535,7 +535,12 @@ msgid ""
 "| |attribute| | |latelimit| | **movie** : "
 ":class:`~twitcaspy.models.Movie` | **broadcaster** : "
 ":class:`~twitcaspy.models.User` | **tags** : "
-":class:`~twitcaspy.models.Raw` (:class:`list`)"
+":class:`~twitcaspy.models.Raw` (:class:`list`) | **live** : "
+":class:`~twitcaspy.models.Live` | |live_attribute| | **movie** : "
+":class:`~twitcaspy.models.Movie` | **broadcaster** : "
+":class:`~twitcaspy.models.User` | **tags** : "
+":class:`~twitcaspy.models.Raw` (:class:`list`) | `result.movie` is "
+"equivalent to` result.live.movie`."
 msgstr ""
 
 #: of twitcaspy.api.API.get_current_live twitcaspy.api.API.get_movie_info
@@ -550,7 +555,19 @@ msgstr ""
 msgid "**tags** : :class:`~twitcaspy.models.Raw` (:class:`list`)"
 msgstr ""
 
-#: of twitcaspy.api.API.get_movie_info:15
+#: of twitcaspy.api.API.get_current_live twitcaspy.api.API.get_movie_info
+msgid "**live** : :class:`~twitcaspy.models.Live`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_current_live twitcaspy.api.API.get_movie_info
+msgid "|live_attribute|"
+msgstr "|live_attribute_ja|"
+
+#: of twitcaspy.api.API.get_current_live twitcaspy.api.API.get_movie_info
+msgid "`result.movie` is equivalent to` result.live.movie`."
+msgstr "`result.movie` は `result.live.movie` と等価です。"
+
+#: of twitcaspy.api.API.get_movie_info:21
 msgid "https://apiv2-doc.twitcasting.tv/#get-movie-info"
 msgstr ""
 
@@ -650,7 +667,7 @@ msgstr ""
 msgid "Returns live information if the user is streaming now."
 msgstr "ーザーが配信中の場合、ライブ情報を取得します。"
 
-#: of twitcaspy.api.API.get_current_live:21
+#: of twitcaspy.api.API.get_current_live:27
 msgid "https://apiv2-doc.twitcasting.tv/#get-current-live"
 msgstr ""
 

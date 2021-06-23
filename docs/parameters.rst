@@ -14,6 +14,8 @@
 .. |id_screenid| replace:: Either an id or screen_id is required for this method.
 .. |attribute| replace:: The attribute of :class:`~twitcaspy.models.Result` is as follows.
 .. |attribute_ja| replace:: 以下は :class:`~twitcaspy.models.Result` の属性です。
+.. |live_attribute| replace:: The attribute of :class:`~twitcaspy.models.Live` is as follows.
+.. |live_attribute_ja| replace:: 以下は :class:`~twitcaspy.models.Live` の属性です。
 .. |latelimit| replace:: **latelimit** : :class:`~twitcaspy.models.LateLimit`
 
 .. |google_translate_ja_en| replace:: (This sentence was translated by Google Translate.[ja->en])
