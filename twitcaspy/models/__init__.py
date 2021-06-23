@@ -14,6 +14,8 @@ from .comment import Comment
 
 from .gift import Gift
 
+from .live import Live
+
 from .movie import Movie
 
 from .raw import Raw
@@ -29,6 +31,6 @@ from .latelimit import LateLimit
 from .factory import ModelFactory
 
 __all__ = [
-    'App', 'Category', 'Comment', 'ModelFactory', 'Gift',
-    'LateLimit', 'Movie', 'Raw', 'SubCategory', 'Supporter', 'User'
+    'App', 'Category', 'Comment', 'ModelFactory', 'Gift', 'LateLimit',
+    'Live', 'Movie', 'Raw', 'SubCategory', 'Supporter', 'User'
 ]

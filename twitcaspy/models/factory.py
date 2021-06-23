@@ -10,6 +10,8 @@ from .comment import Comment
 
 from .gift import Gift
 
+from .live import Live
+
 from .movie import Movie
 
 from .raw import Raw
@@ -30,6 +32,7 @@ class ModelFactory:
     category = Category
     comment = Comment
     gift = Gift
+    live = Live
     movie = Movie
     raw = Raw
     subcategory = SubCategory

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 14:13+0900\n"
+"POT-Creation-Date: 2021-06-23 12:57+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,9 +30,9 @@ msgstr ""
 
 #: of twitcaspy.models.app.App twitcaspy.models.category.Category
 #: twitcaspy.models.comment.Comment twitcaspy.models.gift.Gift
-#: twitcaspy.models.latelimit.LateLimit twitcaspy.models.model.Model
-#: twitcaspy.models.movie.Movie twitcaspy.models.result.Result
-#: twitcaspy.models.subcategory.SubCategory
+#: twitcaspy.models.latelimit.LateLimit twitcaspy.models.live.Live
+#: twitcaspy.models.model.Model twitcaspy.models.movie.Movie
+#: twitcaspy.models.result.Result twitcaspy.models.subcategory.SubCategory
 #: twitcaspy.models.supporter.Supporter twitcaspy.models.user.User
 msgid "type"
 msgstr "型"
@@ -51,8 +51,8 @@ msgstr ""
 
 #: of twitcaspy.models.app.App:1 twitcaspy.models.category.Category:1
 #: twitcaspy.models.comment.Comment:1 twitcaspy.models.gift.Gift:1
-#: twitcaspy.models.movie.Movie:1 twitcaspy.models.result.Result:1
-#: twitcaspy.models.subcategory.SubCategory:1
+#: twitcaspy.models.live.Live:1 twitcaspy.models.movie.Movie:1
+#: twitcaspy.models.result.Result:1 twitcaspy.models.subcategory.SubCategory:1
 #: twitcaspy.models.supporter.Supporter:1 twitcaspy.models.user.User:1
 msgid "Bases: :class:`twitcaspy.models.model.Model`"
 msgstr ""
@@ -260,6 +260,26 @@ msgid "https://apiv2-doc.twitcasting.tv/#app-object"
 msgstr ""
 
 #: ../../models.rst:39
+msgid "Live class"
+msgstr ""
+
+#: of twitcaspy.models.live.Live:1
+msgid "Live Object"
+msgstr ""
+
+#: of twitcaspy.models.live.Live:7
+msgid ":class:`~twitcaspy.models.Movie`"
+msgstr ""
+
+#: of twitcaspy.models.comment.Comment:19 twitcaspy.models.live.Live:13
+msgid ":class:`~twitcaspy.models.User`"
+msgstr ""
+
+#: of twitcaspy.models.live.Live:19
+msgid ":class:`list`"
+msgstr ""
+
+#: ../../models.rst:44
 msgid "Movie class"
 msgstr ""
 
@@ -380,7 +400,7 @@ msgstr "hls_url パラメータの URL を http から https に変更しまし�
 msgid "https://apiv2-doc.twitcasting.tv/#movie-object"
 msgstr ""
 
-#: ../../models.rst:44
+#: ../../models.rst:49
 msgid "Comment class"
 msgstr ""
 
@@ -400,10 +420,6 @@ msgstr "コメント本文"
 msgid "Comment contributor information"
 msgstr "コメント投稿者の情報"
 
-#: of twitcaspy.models.comment.Comment:19
-msgid ":class:`~twitcaspy.models.User`"
-msgstr ""
-
 #: of twitcaspy.models.comment.Comment:23
 msgid ""
 "Converted Unix time stamp of comment posting date and time to "
@@ -414,7 +430,7 @@ msgstr "コメント投稿日時のunixタイムスタンプを :class:`datetime
 msgid "https://apiv2-doc.twitcasting.tv/#comment-object"
 msgstr ""
 
-#: ../../models.rst:49
+#: ../../models.rst:54
 msgid "Gift class"
 msgstr ""
 
@@ -462,7 +478,7 @@ msgstr "ヒューマンリーダブルな screen_id"
 msgid "https://apiv2-doc.twitcasting.tv/#gift-object"
 msgstr ""
 
-#: ../../models.rst:54
+#: ../../models.rst:59
 msgid "Supporter class"
 msgstr ""
 
@@ -482,7 +498,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#supporteruser-object"
 msgstr ""
 
-#: ../../models.rst:59
+#: ../../models.rst:64
 msgid "Category class"
 msgstr ""
 
@@ -506,7 +522,7 @@ msgstr ":class:`~twitcaspy.models.SubCategory` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#category-object"
 msgstr ""
 
-#: ../../models.rst:64
+#: ../../models.rst:69
 msgid "SubCategory class"
 msgstr ""
 
@@ -530,7 +546,7 @@ msgstr "サブカテゴリ配信数"
 msgid "https://apiv2-doc.twitcasting.tv/#sub-category-object"
 msgstr ""
 
-#: ../../models.rst:69
+#: ../../models.rst:74
 msgid "LateLimit class"
 msgstr ""
 
@@ -558,7 +574,7 @@ msgstr "resetを :class:`datetime.datetime` 型へ変換したもの"
 msgid "https://apiv2-doc.twitcasting.tv/#response-headers"
 msgstr ""
 
-#: ../../models.rst:75
+#: ../../models.rst:80
 msgid "ModelFactory class"
 msgstr ""
 

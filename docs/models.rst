@@ -35,6 +35,11 @@ App class
 .. autoclass:: twitcaspy.models.App
     :show-inheritance:
 
+Live class
+----------
+.. autoclass:: twitcaspy.models.Live
+    :show-inheritance:
+
 Movie class
 -----------
 .. autoclass:: twitcaspy.models.Movie
