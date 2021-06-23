@@ -135,3 +135,33 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
     @tape.use_cassette('testsearchusers_raise3.json')
     def testsearchusers_raise3(self):
         data = self.api.search_users(words=0)
+
+    @tape.use_cassette('testsearchmovies.yaml', serializer='yaml')
+    def testsearchmovies(self):
+        data = self.api.search_live_movies(type='new')
+        ok_(hasattr(data, 'movies'))
+        ok_(isinstance(data.movies, list))
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsearchmovies_raise1.json')
+    def testsearchmovies_raise1(self):
+        #When type are not specified.
+        data = self.api.search_live_movies()
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsearchmovies_raise2.json')
+    def testsearchmovies_raise2(self):
+        #When type is not a `tag`, `word`, `category`, `new` or `recommend`.
+        data = self.api.search_live_movies(type='error')
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsearchmovies_raise3.json')
+    def testsearchmovies_raise3(self):
+        #No context specified when type is tag, word or category.
+        data = self.api.search_live_movies(type='word')
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsearchmovies_raise4.json')
+    def testsearchmovies_raise4(self):
+        #When lang is not a 'ja'.
+        data = self.api.search_live_movies(type='new', lang='en')

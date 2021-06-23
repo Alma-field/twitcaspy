@@ -1012,3 +1012,99 @@ class API:
         return self.request(
             'GET', '/search/users',
             endpoint_parameters=('words', 'lang', 'limit'), **kwargs)
+
+    @payload(movies=['live', True])
+    def search_live_movies(self, **kwargs):
+        """search_live_movies(*, type='word', content)
+
+        | Search for live concerts being streamed.
+
+        Parameters
+        ----------
+        limit(optional): :class:`int`
+            | Maximum number of acquisitions
+            | It can be specified in the range of 1 to 100.(default is 10.)
+            | (In some cases,
+              it may return less than the specified number of support users.)
+        type: :class:`str`
+            | Search type
+            | `type` must be one of the following:
+            | 'tag' : Tag search
+            | 'word' : Word search
+            | 'category' : Subcategory ID match search
+            | 'new' : New Search
+            | 'recommend' : recommend search
+        context: :class:`int`, :class:`str`, :class:`list` or :class:`tuple`
+            | The type of context is as follows:
+            | When type is tag or word : :class:`str`, :class:`list` or :class:`tuple`
+            | When type is category : :class:`int`
+            | Not required when type is new or recommend.
+        lang: :class:`str`
+            | Language setting of the user to be searched.
+            | Currently only "ja" is supported.
+            | 'ja' : Japanese
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **movies** : :class:`list` of :class:`~twitcaspy.models.Live`
+
+        Raises
+        ------
+        TwitcaspyException
+            When type are not specified.
+        TwitcaspyException
+            When type is not a `tag`, `word`, `category`, `new` or `recommend`.
+        TwitcaspyException
+            No context specified when type is tag, word or category.
+        TwitcaspyException
+            When lang is not a 'ja'.
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#search-live-movies
+        """
+        #Is type specified
+        if 'type' in kwargs:
+            #Whether type is tag, word or category
+            if kwargs['type'] in ['tag', 'word', 'category']:
+                #Is context specified
+                if 'context' in kwargs:
+                    if kwargs['type'] == 'category':
+                        #When the type of type is not int
+                        if not isinstance(kwargs['context'], int):
+                            raise TwitcaspyException("context must be int, not "
+                                            + type(kwargs['context']).__name__)
+                    else:
+                        #Is the context type str
+                        if isinstance(kwargs['context'], str):
+                            pass
+                        #Is the context type list or tuple
+                        elif isinstance(kwargs['context'], (list, tuple)):
+                            kwargs['context'] = ' '.join(kwargs['context'])
+                        #When the type of type is not str, list or tuple
+                        else:
+                            raise TwitcaspyException("context must be str, list or tuple, not "
+                                            + type(kwargs['context']).__name__)
+                else:
+                    raise TwitcaspyException("You must specify `context`.")
+                kwargs['context'] = kwargs['context'].split(' ')
+            #Whether type is new or recommend
+            elif kwargs['type'] in ['new', 'recommend']:
+                pass
+            else:
+                raise TwitcaspyException("type must be `tag`, `word`, `category`, `new` or `recommend`, not "
+                                + type(kwargs['type']).__name__)
+        else:
+            raise TwitcaspyException("You must specify `type`.")
+        if 'lang' in kwargs:
+            if not kwargs['lang'] == 'ja':
+                raise TwitcaspyException("lang must be 'ja', not "
+                                + kwargs['lang'])
+        else:
+            kwargs['lang'] = 'ja'
+        return self.request(
+            'GET', '/search/lives',
+            endpoint_parameters=('limit', 'type', 'context', 'lang'), **kwargs)

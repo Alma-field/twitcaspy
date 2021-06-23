@@ -70,6 +70,8 @@
     +--------------------------------------------------+-----------------------------------------+
     | `GET /search/users`_                             | :meth:`API.search_users`                |
     +--------------------------------------------------+-----------------------------------------+
+    | `GET /search/lives`_                             | :meth:`API.search_live_movies`          |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -92,6 +94,7 @@
 .. _GET /users/:user_id/supporters: https://apiv2-doc.twitcasting.tv/#supporter-list
 .. _GET /categories: https://apiv2-doc.twitcasting.tv/#get-categories
 .. _GET /search/users: https://apiv2-doc.twitcasting.tv/#search-users
+.. _GET /search/lives: https://apiv2-doc.twitcasting.tv/#search-live-movies
 
 User
 ----
@@ -200,3 +203,7 @@ Search users and movies
 search_users
 ============
 .. automethod:: API.search_users
+
+search_live_movies
+==================
+.. automethod:: API.search_live_movies
