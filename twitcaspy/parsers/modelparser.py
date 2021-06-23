@@ -41,10 +41,15 @@ class ModelParser(Parser):
             for _name, _item in _payload_type.items():
                 _type, _list = _item
                 model = getattr(self.model_factory, _type)
-                if _list:
-                    data = [model.parse(api, _json) for _json in json[_name]]
+                if _name == 'raw_data':
+                    parse_data = json
+                    _name = _type
                 else:
-                    data = model.parse(api, json[_name])
+                    parse_data = json[_name]
+                if _list:
+                    data = [model.parse(api, _json) for _json in parse_data]
+                else:
+                    data = model.parse(api, parse_data)
                 setattr(result, _name, data)
         except KeyError:
             raise TwitcaspyException(
