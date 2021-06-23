@@ -59,7 +59,9 @@ class ModelParser(Parser):
                 f"Unable to parse response payload: {json}"
             )
 
-        if 'X-RateLimit-Limit' in payload.headers:
+        if not hasattr(payload, 'headers'):
+            pass
+        elif 'X-RateLimit-Limit' in payload.headers:
             setattr(result, 'late_limit', LateLimit.parse(payload.headers))
         else:
             setattr(result, 'late_limit', LateLimit())
