@@ -34,7 +34,10 @@ class ModelParser(Parser):
                     f'No model for this payload type: {_key}'
                 )
 
-        json = payload.json()
+        if hasattr(payload, 'json'):
+            json = payload.json()
+        else:
+            json = payload
 
         result = Result(api)
         try:
