@@ -223,6 +223,10 @@ class API:
         | Returns an offline image if the user is not streaming now.
         | |id_screenid|
 
+        Tip
+        ---
+        |no_auth|
+
         Parameters
         ----------
         id: :class:`str`
