@@ -1108,3 +1108,44 @@ class API:
         return self.request(
             'GET', '/search/lives',
             endpoint_parameters=('limit', 'type', 'context', 'lang'), **kwargs)
+
+    @payload('movie', signature=['raw', False], broadcaster=['user', False])
+    def incoming_webhook(self, data, **kwargs):
+        """incoming_webhook(data)
+
+        | Parses notifications to the specified WebHook URL.
+
+
+        Hint
+        ----
+        By using the WebHook API, it is possible to notify the distribution
+        start / end event of a specific distributor to the WebHook URL
+        specified in advance. |google_translate_ja_en|
+
+        Tip
+        ---
+        |no_auth|
+
+        Note
+        ----
+        Method : POST
+
+        Parameters
+        ----------
+        data: :class:`dict`
+            | WebHook Payload
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | **signature** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+            | **movie** : :class:`~twitcaspy.models.Movie`
+            | **broadcaster** : :class:`~twitcaspy.models.User`
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#incoming-webhook
+        """
+        return self.parser.parse(
+            data, api=self, payload_type=kwargs['payload_type'])

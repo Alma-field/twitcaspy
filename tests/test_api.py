@@ -165,3 +165,14 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
     def testsearchmovies_raise4(self):
         #When lang is not a 'ja'.
         data = self.api.search_live_movies(type='new', lang='en')
+
+    def testincomingwebhook(self):
+        from json import load
+        file_name = 'cassettes/testincomingwebhook.json'
+        with open(file_name, "r", encoding='utf-8') as file:
+            json = load(file)
+        data = self.api.incoming_webhook(json)
+        ok_(hasattr(data, 'signature'))
+        ok_(isinstance(data.signature, str))
+        ok_(hasattr(data, 'movie'))
+        ok_(hasattr(data, 'broadcaster'))

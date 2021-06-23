@@ -72,6 +72,8 @@
     +--------------------------------------------------+-----------------------------------------+
     | `GET /search/lives`_                             | :meth:`API.search_live_movies`          |
     +--------------------------------------------------+-----------------------------------------+
+    |                                                  | :meth:`API.incoming_webhook`            |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -207,3 +209,10 @@ search_users
 search_live_movies
 ==================
 .. automethod:: API.search_live_movies
+
+WebHook
+-------
+
+incoming_webhook
+================
+.. automethod:: API.incoming_webhook

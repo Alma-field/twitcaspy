@@ -17,6 +17,8 @@
 .. |live_attribute| replace:: The attribute of :class:`~twitcaspy.models.Live` is as follows.
 .. |live_attribute_ja| replace:: 以下は :class:`~twitcaspy.models.Live` の属性です。
 .. |latelimit| replace:: **latelimit** : :class:`~twitcaspy.models.LateLimit`
+.. |no_auth| replace:: No authentication required.
+.. |no_auth_ja| replace:: 認証は必要ありません。
 
 .. |google_translate_ja_en| replace:: (This sentence was translated by Google Translate.[ja->en])
 .. |google_translate_en_ja| replace:: (この文章はGoogle翻訳によって翻訳されました。[en->ja])
