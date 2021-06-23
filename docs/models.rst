@@ -70,6 +70,11 @@ SubCategory class
 .. autoclass:: twitcaspy.models.SubCategory
     :show-inheritance:
 
+WebHook class
+-------------
+.. autoclass:: twitcaspy.models.WebHook
+    :show-inheritance:
+
 LateLimit class
 ---------------
 .. autoclass:: twitcaspy.models.LateLimit

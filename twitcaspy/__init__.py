@@ -19,7 +19,7 @@ from twitcaspy.errors import (
 )
 from twitcaspy.models import (
     App, Category, Comment, ModelFactory, Gift, LateLimit,
-    Live, Movie, Raw, SubCategory, Supporter, User
+    Live, Movie, Raw, SubCategory, Supporter, User, WebHook
 )
 
 # Global, unauthenticated instance of API

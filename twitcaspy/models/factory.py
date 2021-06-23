@@ -22,6 +22,8 @@ from .supporter import Supporter
 
 from .user import User
 
+from .webhook import WebHook
+
 class ModelFactory:
     """
     | Used by parsers for creating instances of models.
@@ -38,3 +40,4 @@ class ModelFactory:
     subcategory = SubCategory
     supporter = Supporter
     user = User
+    webhook = WebHook

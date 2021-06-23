@@ -26,11 +26,13 @@ from .supporter import Supporter
 
 from .user import User
 
+from .webhook import WebHook
+
 from .latelimit import LateLimit
 
 from .factory import ModelFactory
 
 __all__ = [
     'App', 'Category', 'Comment', 'ModelFactory', 'Gift', 'LateLimit',
-    'Live', 'Movie', 'Raw', 'SubCategory', 'Supporter', 'User'
+    'Live', 'Movie', 'Raw', 'SubCategory', 'Supporter', 'User', 'WebHook'
 ]

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-23 12:57+0900\n"
+"POT-Creation-Date: 2021-06-24 00:19+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,7 @@ msgstr ""
 #: twitcaspy.models.model.Model twitcaspy.models.movie.Movie
 #: twitcaspy.models.result.Result twitcaspy.models.subcategory.SubCategory
 #: twitcaspy.models.supporter.Supporter twitcaspy.models.user.User
+#: twitcaspy.models.webhook.WebHook
 msgid "type"
 msgstr "型"
 
@@ -54,6 +55,7 @@ msgstr ""
 #: twitcaspy.models.live.Live:1 twitcaspy.models.movie.Movie:1
 #: twitcaspy.models.result.Result:1 twitcaspy.models.subcategory.SubCategory:1
 #: twitcaspy.models.supporter.Supporter:1 twitcaspy.models.user.User:1
+#: twitcaspy.models.webhook.WebHook:1
 msgid "Bases: :class:`twitcaspy.models.model.Model`"
 msgstr ""
 
@@ -115,6 +117,7 @@ msgstr "ライブ配信者のユーザID"
 #: twitcaspy.models.supporter.Supporter:32 twitcaspy.models.user.User:7
 #: twitcaspy.models.user.User:14 twitcaspy.models.user.User:20
 #: twitcaspy.models.user.User:26 twitcaspy.models.user.User:32
+#: twitcaspy.models.webhook.WebHook:7 twitcaspy.models.webhook.WebHook:16
 msgid ":class:`str`"
 msgstr ""
 
@@ -228,6 +231,7 @@ msgstr ""
 #: twitcaspy.models.latelimit.LateLimit:28 twitcaspy.models.movie.Movie:134
 #: twitcaspy.models.subcategory.SubCategory:22
 #: twitcaspy.models.supporter.Supporter:89 twitcaspy.models.user.User:80
+#: twitcaspy.models.webhook.WebHook:19
 msgid "References"
 msgstr ""
 
@@ -547,6 +551,38 @@ msgid "https://apiv2-doc.twitcasting.tv/#sub-category-object"
 msgstr ""
 
 #: ../../models.rst:74
+msgid "WebHook class"
+msgstr ""
+
+#: of twitcaspy.models.webhook.WebHook:1
+msgid "WebHook Object"
+msgstr ""
+
+#: of twitcaspy.models.webhook.WebHook:5
+msgid "User ID"
+msgstr "ユーザーID"
+
+#: of twitcaspy.models.webhook.WebHook:11
+msgid "Event type to hook"
+msgstr "フックするイベント種別"
+
+#: of twitcaspy.models.webhook.WebHook:12
+msgid "`event` must be one of the following:"
+msgstr "`event` は下記のいずれかである必要があります。"
+
+#: of twitcaspy.models.webhook.WebHook:13
+msgid "'livestart' : Live start"
+msgstr "'livestart' : ライブ開始"
+
+#: of twitcaspy.models.webhook.WebHook:14
+msgid "'liveend' : Live end"
+msgstr "'liveend' : ライブ終了"
+
+#: of twitcaspy.models.webhook.WebHook:20
+msgid "https://apiv2-doc.twitcasting.tv/#webhook-object"
+msgstr ""
+
+#: ../../models.rst:79
 msgid "LateLimit class"
 msgstr ""
 
@@ -574,7 +610,7 @@ msgstr "resetを :class:`datetime.datetime` 型へ変換したもの"
 msgid "https://apiv2-doc.twitcasting.tv/#response-headers"
 msgstr ""
 
-#: ../../models.rst:80
+#: ../../models.rst:85
 msgid "ModelFactory class"
 msgstr ""
 
