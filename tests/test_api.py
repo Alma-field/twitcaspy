@@ -111,3 +111,23 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
     def testgetcategories(self):
         data = self.api.get_categories()
         ok_(hasattr(data, 'categories'))
+
+    @tape.use_cassette('testsearchusers.yaml', serializer='yaml')
+    def testsearchusers(self):
+        data = self.api.search_users(words='ツイキャス 公式')
+        ok_(hasattr(data, 'users'))
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsearchusers_raise1.json')
+    def testsearchusers_raise1(self):
+        data = self.api.search_users(words='ツイキャス 公式', lang='en')
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsearchusers_raise2.json')
+    def testsearchusers_raise2(self):
+        data = self.api.search_users()
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testsearchusers_raise3.json')
+    def testsearchusers_raise3(self):
+        data = self.api.search_users(words=0)

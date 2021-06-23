@@ -68,6 +68,8 @@
     +--------------------------------------------------+-----------------------------------------+
     | `GET /categories`_                               | :meth:`API.get_categories`              |
     +--------------------------------------------------+-----------------------------------------+
+    | `GET /search/users`_                             | :meth:`API.search_users`                |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -89,6 +91,7 @@
 .. _GET /users/:user_id/supporting: https://apiv2-doc.twitcasting.tv/#supporting-list
 .. _GET /users/:user_id/supporters: https://apiv2-doc.twitcasting.tv/#supporter-list
 .. _GET /categories: https://apiv2-doc.twitcasting.tv/#get-categories
+.. _GET /search/users: https://apiv2-doc.twitcasting.tv/#search-users
 
 User
 ----
@@ -190,3 +193,10 @@ Category
 get_categories
 ==============
 .. automethod:: API.get_categories
+
+Search users and movies
+-----------------------
+
+search_users
+============
+.. automethod:: API.search_users

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 17:47+0900\n"
+"POT-Creation-Date: 2021-06-23 12:40+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 #: twitcaspy.api.API.get_live_thumbnail_image twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_supporting_status
 #: twitcaspy.api.API.get_user_info twitcaspy.api.API.post_comment
-#: twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unsupport_user
@@ -68,7 +68,7 @@ msgstr "使用されるユーザーエージェント"
 #: twitcaspy.api.API.get_live_thumbnail_image
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_supporting_status
 #: twitcaspy.api.API.get_user_info twitcaspy.api.API.post_comment
-#: twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unsupport_user
@@ -86,6 +86,7 @@ msgstr "指定されたparserがParserインスタンスではない場合"
 #: twitcaspy.api.API.get_movie_info:14 twitcaspy.api.API.get_movies_by_user:33
 #: twitcaspy.api.API.get_supporting_status:21
 #: twitcaspy.api.API.get_user_info:22 twitcaspy.api.API.post_comment:26
+#: twitcaspy.api.API.search_users:25
 #: twitcaspy.api.API.set_current_live_hashtag:18
 #: twitcaspy.api.API.set_current_live_subtitle:18
 #: twitcaspy.api.API.support_user:16 twitcaspy.api.API.supporter_list:35
@@ -268,11 +269,19 @@ msgstr ""
 msgid ":meth:`API.get_categories`"
 msgstr ""
 
-#: ../../api.rst:94
-msgid "User"
+#: ../../api.rst:71
+msgid "`GET /search/users`_"
+msgstr ""
+
+#: ../../api.rst:71
+msgid ":meth:`API.search_users`"
 msgstr ""
 
 #: ../../api.rst:97
+msgid "User"
+msgstr ""
+
+#: ../../api.rst:100
 msgid "get_user_info"
 msgstr ""
 
@@ -309,7 +318,8 @@ msgstr "ライブ配信者のID(例: @~~)"
 #: twitcaspy.api.API.get_gifts twitcaspy.api.API.get_live_thumbnail_image
 #: twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
 #: twitcaspy.api.API.get_supporting_status twitcaspy.api.API.get_user_info
-#: twitcaspy.api.API.post_comment twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.post_comment twitcaspy.api.API.search_users
+#: twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unset_current_live_hashtag
@@ -332,7 +342,7 @@ msgstr ""
 #: twitcaspy.api.API.get_gifts twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_supporting_status
 #: twitcaspy.api.API.get_user_info twitcaspy.api.API.post_comment
-#: twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unset_current_live_hashtag
@@ -346,7 +356,7 @@ msgstr "|attribute_ja|"
 #: twitcaspy.api.API.get_gifts twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_supporting_status
 #: twitcaspy.api.API.get_user_info twitcaspy.api.API.post_comment
-#: twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unset_current_live_hashtag
@@ -380,7 +390,8 @@ msgstr ""
 #: twitcaspy.api.API.get_gifts twitcaspy.api.API.get_live_thumbnail_image
 #: twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
 #: twitcaspy.api.API.get_supporting_status twitcaspy.api.API.get_user_info
-#: twitcaspy.api.API.post_comment twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.post_comment twitcaspy.api.API.search_users
+#: twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unset_current_live_hashtag
@@ -395,6 +406,7 @@ msgstr "戻り値の型"
 #: twitcaspy.api.API.get_movies_by_user:28
 #: twitcaspy.api.API.get_supporting_status:16
 #: twitcaspy.api.API.get_user_info:17 twitcaspy.api.API.post_comment:21
+#: twitcaspy.api.API.search_users:18
 #: twitcaspy.api.API.set_current_live_hashtag:13
 #: twitcaspy.api.API.set_current_live_subtitle:13
 #: twitcaspy.api.API.support_user:11 twitcaspy.api.API.supporter_list:29
@@ -417,7 +429,7 @@ msgstr "idとscreen_idの両方が指定されていないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#get-user-info"
 msgstr ""
 
-#: ../../api.rst:101
+#: ../../api.rst:104
 msgid "verify_credentials"
 msgstr ""
 
@@ -449,11 +461,11 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#verify-credentials"
 msgstr ""
 
-#: ../../api.rst:105
+#: ../../api.rst:108
 msgid "Live Thumbnail"
 msgstr ""
 
-#: ../../api.rst:108
+#: ../../api.rst:111
 msgid "get_live_thumbnail_image"
 msgstr ""
 
@@ -501,11 +513,11 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-live-thumbnail-image"
 msgstr ""
 
-#: ../../api.rst:112
+#: ../../api.rst:115
 msgid "Movie"
 msgstr ""
 
-#: ../../api.rst:115
+#: ../../api.rst:118
 msgid "get_movie_info"
 msgstr ""
 
@@ -542,7 +554,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-movie-info"
 msgstr ""
 
-#: ../../api.rst:119
+#: ../../api.rst:122
 msgid "get_movies_by_user"
 msgstr ""
 
@@ -575,7 +587,8 @@ msgid ""
 msgstr ""
 
 #: of twitcaspy.api.API.get_comments twitcaspy.api.API.get_movies_by_user
-#: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
+#: twitcaspy.api.API.search_users twitcaspy.api.API.supporter_list
+#: twitcaspy.api.API.supporting_list
 msgid "Maximum number of acquisitions"
 msgstr "最大取得件数"
 
@@ -629,7 +642,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-movies-by-user"
 msgstr ""
 
-#: ../../api.rst:123
+#: ../../api.rst:126
 msgid "get_current_live"
 msgstr ""
 
@@ -641,7 +654,7 @@ msgstr "ーザーが配信中の場合、ライブ情報を取得します。"
 msgid "https://apiv2-doc.twitcasting.tv/#get-current-live"
 msgstr ""
 
-#: ../../api.rst:127
+#: ../../api.rst:130
 msgid "set_current_live_subtitle"
 msgstr ""
 
@@ -694,7 +707,7 @@ msgstr "subtitleが1文字より少ないとき subtitleが17文字より多く�
 msgid "https://apiv2-doc.twitcasting.tv/#set-current-live-subtitle"
 msgstr ""
 
-#: ../../api.rst:131
+#: ../../api.rst:134
 msgid "unset_current_live_subtitle"
 msgstr ""
 
@@ -717,7 +730,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#unset-current-live-subtitle"
 msgstr ""
 
-#: ../../api.rst:135
+#: ../../api.rst:138
 msgid "set_current_live_hashtag"
 msgstr ""
 
@@ -758,7 +771,7 @@ msgstr "hashtagが1文字より少ないとき/hashtagが26文字より多く、
 msgid "https://apiv2-doc.twitcasting.tv/#set-current-live-hashtag"
 msgstr ""
 
-#: ../../api.rst:139
+#: ../../api.rst:142
 msgid "unset_current_live_hashtag"
 msgstr ""
 
@@ -781,11 +794,11 @@ msgstr "**hashtag** : :class:`~twitcaspy.models.Raw` (:class:`None`)"
 msgid "https://apiv2-doc.twitcasting.tv/#unset-current-live-hashtag"
 msgstr ""
 
-#: ../../api.rst:143
+#: ../../api.rst:146
 msgid "Comment"
 msgstr ""
 
-#: ../../api.rst:146
+#: ../../api.rst:149
 msgid "get_comments"
 msgstr ""
 
@@ -814,7 +827,7 @@ msgid ""
 "specified number of videos.)"
 msgstr ""
 
-#: of twitcaspy.api.API.get_comments
+#: of twitcaspy.api.API.get_comments twitcaspy.api.API.search_users
 msgid "It can be specified in the range of 1 to 50.(default is 10.)"
 msgstr "1から50の範囲で指定できます。(デフォルト: 10)"
 
@@ -866,7 +879,7 @@ msgstr "**comments** : :class:`~twitcaspy.models.Comment` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#get-comments"
 msgstr ""
 
-#: ../../api.rst:150
+#: ../../api.rst:153
 msgid "post_comment"
 msgstr ""
 
@@ -937,7 +950,7 @@ msgstr "comment が 1-140 文字でないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#post-comment"
 msgstr ""
 
-#: ../../api.rst:154
+#: ../../api.rst:157
 msgid "delete_comment"
 msgstr ""
 
@@ -978,11 +991,11 @@ msgstr "**comment_id** : :class:`~twitcaspy.models.Raw` (:class:`str`) 削除し
 msgid "https://apiv2-doc.twitcasting.tv/#delete-comment"
 msgstr ""
 
-#: ../../api.rst:158
+#: ../../api.rst:161
 msgid "Gift"
 msgstr ""
 
-#: ../../api.rst:161
+#: ../../api.rst:164
 msgid "get_gifts"
 msgstr ""
 
@@ -1030,11 +1043,11 @@ msgstr "**gifts** : :class:`~twitcaspy.models.Gift` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#get-gifts"
 msgstr ""
 
-#: ../../api.rst:165
+#: ../../api.rst:168
 msgid "Supporter"
 msgstr ""
 
-#: ../../api.rst:168
+#: ../../api.rst:171
 msgid "get_supporting_status"
 msgstr ""
 
@@ -1066,7 +1079,7 @@ msgstr "**target_user** : :class:`~twitcaspy.models.User` 対象ユーザ情報"
 msgid "https://apiv2-doc.twitcasting.tv/#get-supporting-status"
 msgstr ""
 
-#: ../../api.rst:172
+#: ../../api.rst:175
 msgid "support_user"
 msgstr ""
 
@@ -1111,7 +1124,7 @@ msgstr "target_user_idsが :class:`list` または :class:`tuple` ではない�
 msgid "https://apiv2-doc.twitcasting.tv/#support-user"
 msgstr ""
 
-#: ../../api.rst:176
+#: ../../api.rst:179
 msgid "unsupport_user"
 msgstr ""
 
@@ -1134,7 +1147,7 @@ msgstr ""
 "**removed_count** : :class:`~twitcaspy.models.Raw` (:class:`int`) "
 "サポーター解除を行った件数"
 
-#: ../../api.rst:180
+#: ../../api.rst:183
 msgid "supporting_list"
 msgstr ""
 
@@ -1153,7 +1166,8 @@ msgstr ""
 msgid "It can be specified in the range of 1 to 20.(default is 20.)"
 msgstr "1から20の範囲で指定できます。(デフォルト: 20)"
 
-#: of twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
+#: of twitcaspy.api.API.search_users twitcaspy.api.API.supporter_list
+#: twitcaspy.api.API.supporting_list
 msgid ""
 "(In some cases, it may return less than the specified number of support "
 "users.)"
@@ -1183,7 +1197,7 @@ msgstr "**supporting** : :class:`~twitcaspy.models.Supporter` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#supporting-list"
 msgstr ""
 
-#: ../../api.rst:184
+#: ../../api.rst:187
 msgid "supporter_list"
 msgstr ""
 
@@ -1237,11 +1251,11 @@ msgstr "sort が 'new' か 'ranking' でないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#supporter-list"
 msgstr ""
 
-#: ../../api.rst:188
+#: ../../api.rst:191
 msgid "Category"
 msgstr ""
 
-#: ../../api.rst:191
+#: ../../api.rst:194
 msgid "get_categories"
 msgstr ""
 
@@ -1257,13 +1271,13 @@ msgstr ""
 
 #: of twitcaspy.api.API.get_categories
 msgid "Language to search"
-msgstr "検索対象の言語	"
+msgstr "検索対象の言語\t"
 
 #: of twitcaspy.api.API.get_categories
 msgid "`lang` must be one of the following:"
 msgstr "`lang` は下記のいずれかである必要があります。"
 
-#: of twitcaspy.api.API.get_categories
+#: of twitcaspy.api.API.get_categories twitcaspy.api.API.search_users
 msgid "'ja' : Japanese"
 msgstr "'ja' : 日本語"
 
@@ -1287,4 +1301,71 @@ msgstr "sort が 'ja' か 'en' でないとき"
 
 #: of twitcaspy.api.API.get_categories:18
 msgid "https://apiv2-doc.twitcasting.tv/#get-categories"
+msgstr ""
+
+#: ../../api.rst:198
+msgid "Search users and movies"
+msgstr ""
+
+#: ../../api.rst:201
+msgid "search_users"
+msgstr ""
+
+#: of twitcaspy.api.API.search_users:1
+msgid "Search for users."
+msgstr "ユーザを検索する"
+
+#: of twitcaspy.api.API.search_users:3
+msgid "| Multiple words are ANDed by separating them with space."
+msgstr ""
+
+#: of twitcaspy.api.API.search_users
+msgid "Multiple words are ANDed by separating them with space."
+msgstr "複数単語は半角スペース区切りすることでAND検索となります。"
+
+#: of twitcaspy.api.API.search_users:5
+msgid ""
+"| Language setting of the user to be searched. | Currently only \"ja\" is"
+" supported. | 'ja' : Japanese"
+msgstr ""
+
+#: of twitcaspy.api.API.search_users
+msgid "Language setting of the user to be searched."
+msgstr "検索対象のユーザの言語設定"
+
+#: of twitcaspy.api.API.search_users
+msgid "Currently only \"ja\" is supported."
+msgstr "現在 \"ja\" のみ対応"
+
+#: of twitcaspy.api.API.search_users:9
+msgid ""
+"| Maximum number of acquisitions | It can be specified in the range of 1 "
+"to 50.(default is 10.) | (In some cases,   it may return less than the "
+"specified number of support users.)"
+msgstr ""
+
+#: of twitcaspy.api.API.search_users:15
+msgid ""
+"| |attribute| | |latelimit| | **users** : :class:`list` of "
+":class:`~twitcaspy.models.User`"
+msgstr ""
+
+#: of twitcaspy.api.API.search_users
+msgid "**users** : :class:`list` of :class:`~twitcaspy.models.User`"
+msgstr "**users** : :class:`~twitcaspy.models.User` の :class:`list`"
+
+#: of twitcaspy.api.API.search_users:20
+msgid "When lang is not a 'ja'."
+msgstr "lang が 'ja' でないとき"
+
+#: of twitcaspy.api.API.search_users:21
+msgid "When words are not specified"
+msgstr "`words` が指定されていないとき"
+
+#: of twitcaspy.api.API.search_users:22
+msgid "When words is not a :class:`str`, :class:`list` or :class:`tuple`"
+msgstr "words が :class:`str` または :class:`list` または :class:`tuple` ではないとき"
+
+#: of twitcaspy.api.API.search_users:26
+msgid "https://apiv2-doc.twitcasting.tv/#search-users"
 msgstr ""

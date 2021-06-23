@@ -935,3 +935,64 @@ class API:
             kwargs['lang'] = 'ja'
         return self.request(
             'GET', '/categories', endpoint_parameters=('lang'), **kwargs)
+
+    @payload(users=['user', True])
+    def search_users(self, **kwargs):
+        """search_users(words, *, limit=10, lang='ja')
+
+        | Search for users.
+
+        Parameters
+        ----------
+        words: :class:`str` or :class:`list` or :class:`tuple`
+            | Multiple words are ANDed by separating them with space.
+        lang: :class:`str`
+            | Language setting of the user to be searched.
+            | Currently only "ja" is supported.
+            | 'ja' : Japanese
+        limit(optional): :class:`int`
+            | Maximum number of acquisitions
+            | It can be specified in the range of 1 to 50.(default is 10.)
+            | (In some cases,
+              it may return less than the specified number of support users.)
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **users** : :class:`list` of :class:`~twitcaspy.models.User`
+
+        Raises
+        ------
+        TwitcaspyException
+            When lang is not a 'ja'.
+        TwitcaspyException
+            When words are not specified
+        TwitcaspyException
+            When words is not a :class:`str`, :class:`list` or :class:`tuple`
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#search-users
+        """
+        if 'words' in kwargs:
+            if isinstance(kwargs['words'], str):
+                kwargs['words'] = kwargs['words'].split(' ')
+            elif isinstance(kwargs['words'], (list, tuple)):
+                kwargs['words'] = kwargs['words']
+            else:
+                raise TwitcaspyException("words must be str, list or tuple, not "
+                                + type(kwargs['words']).__name__)
+        else:
+            raise TwitcaspyException("You must specify `words`.")
+        kwargs['words'] = ' '.join(kwargs['words'])
+        if 'lang' in kwargs:
+            if not kwargs['lang'] == 'ja':
+                raise TwitcaspyException("lang must be 'ja', not "
+                                + kwargs['lang'])
+        else:
+            kwargs['lang'] = 'ja'
+        return self.request(
+            'GET', '/search/users',
+            endpoint_parameters=('words', 'lang', 'limit'), **kwargs)
