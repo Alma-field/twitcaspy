@@ -658,7 +658,8 @@ class API:
         ----------
         https://apiv2-doc.twitcasting.tv/#delete-comment
         """
-        return self.request('DELETE', f'/movies/{movie_id}/comments/{comment_id}', **kwargs)
+        return self.request(
+            'DELETE', f'/movies/{movie_id}/comments/{comment_id}', **kwargs)
 
     @payload(slice_id=['raw', False], gifts=['gift', True])
     def get_gifts(self, **kwargs):
