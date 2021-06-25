@@ -1,0 +1,88 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "POST",
+                "uri": "https://apiv2.twitcasting.tv/webhooks",
+                "body": "{\"user_id\": \"182224938\", \"events\": [\"liveend\", \"livestart\"]}",
+                "headers": {
+                    "User-Agent": [
+                        "Python/3.9.1 Requests/2.25.1 twitcaspy/0.0.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-Api-Version": [
+                        "2.0"
+                    ],
+                    "Content-Length": [
+                        "60"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 201,
+                    "message": "Created"
+                },
+                "headers": {
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "X-RateLimit-Reset": [
+                        "1624619159"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "X-Powered-By": [
+                        "PHP/5.6.40"
+                    ],
+                    "X-WE-ARE-HIRING": [
+                        "https://about.moi.st/ja/recruit/"
+                    ],
+                    "Expires": [
+                        "Thu, 19 Nov 1981 08:52:00 GMT"
+                    ],
+                    "X-RateLimit-Remaining": [
+                        "59"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Cache-Control": [
+                        "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=0"
+                    ],
+                    "X-RateLimit-Limit": [
+                        "60"
+                    ],
+                    "Content-Length": [
+                        "62"
+                    ],
+                    "Date": [
+                        "Fri, 25 Jun 2021 11:04:59 GMT"
+                    ],
+                    "Set-Cookie": [
+                        "PHPSESSID=9tcp66anlnqg31sm2o742oka47; path=/"
+                    ],
+                    "Connection": [
+                        "close"
+                    ]
+                },
+                "body": {
+                    "string": "{\"user_id\":\"182224938\",\"added_events\":[\"liveend\",\"livestart\"]}"
+                }
+            }
+        }
+    ]
+}

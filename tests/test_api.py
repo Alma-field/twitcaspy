@@ -192,3 +192,23 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         ok_(isinstance(data.all_count, int))
         ok_(hasattr(data, 'webhooks'))
         ok_(isinstance(data.webhooks, list))
+
+    @tape.use_cassette('testregisterwebhook.json')
+    def testregisterwebhook(self):
+        events = ['livestart', 'liveend']
+        data = self.api.register_webhook(user_id=user_id, events=events)
+        ok_(hasattr(data, 'user_id'))
+        eq_(data.user_id, user_id)
+        ok_(hasattr(data, 'added_events'))
+        ok_(isinstance(data.added_events, list))
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testregisterwebhook_raise1.json')
+    def testregisterwebhook_raise1(self):
+        data = self.api.register_webhook(user_id=username, events='events')
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testregisterwebhook_raise2.json')
+    def testregisterwebhook_raise2(self):
+        events = ['livestart', 'liveend', 'none']
+        data = self.api.register_webhook(user_id=username, events=events)
