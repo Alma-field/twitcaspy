@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-23 23:12+0900\n"
+"POT-Creation-Date: 2021-06-25 17:18+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,9 +29,10 @@ msgstr ""
 #: twitcaspy.api.API.get_current_live twitcaspy.api.API.get_gifts
 #: twitcaspy.api.API.get_live_thumbnail_image twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_supporting_status
-#: twitcaspy.api.API.get_user_info twitcaspy.api.API.incoming_webhook
-#: twitcaspy.api.API.post_comment twitcaspy.api.API.search_live_movies
-#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.get_user_info twitcaspy.api.API.get_webhook_list
+#: twitcaspy.api.API.incoming_webhook twitcaspy.api.API.post_comment
+#: twitcaspy.api.API.search_live_movies twitcaspy.api.API.search_users
+#: twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unsupport_user
@@ -84,12 +85,12 @@ msgstr "指定されたparserがParserインスタンスではない場合"
 #: of twitcaspy.api.API:16 twitcaspy.api.API.delete_comment:21
 #: twitcaspy.api.API.get_categories:17 twitcaspy.api.API.get_comments:32
 #: twitcaspy.api.API.get_current_live:26 twitcaspy.api.API.get_gifts:16
-#: twitcaspy.api.API.get_live_thumbnail_image:22
+#: twitcaspy.api.API.get_live_thumbnail_image:24
 #: twitcaspy.api.API.get_movie_info:20 twitcaspy.api.API.get_movies_by_user:33
 #: twitcaspy.api.API.get_supporting_status:21
-#: twitcaspy.api.API.get_user_info:22 twitcaspy.api.API.incoming_webhook:24
-#: twitcaspy.api.API.post_comment:26 twitcaspy.api.API.search_live_movies:37
-#: twitcaspy.api.API.search_users:25
+#: twitcaspy.api.API.get_user_info:22 twitcaspy.api.API.get_webhook_list:34
+#: twitcaspy.api.API.incoming_webhook:24 twitcaspy.api.API.post_comment:26
+#: twitcaspy.api.API.search_live_movies:37 twitcaspy.api.API.search_users:25
 #: twitcaspy.api.API.set_current_live_hashtag:18
 #: twitcaspy.api.API.set_current_live_subtitle:18
 #: twitcaspy.api.API.support_user:16 twitcaspy.api.API.supporter_list:35
@@ -292,11 +293,19 @@ msgstr ""
 msgid ":meth:`API.incoming_webhook`"
 msgstr ""
 
-#: ../../api.rst:102
-msgid "User"
+#: ../../api.rst:77
+msgid "`GET /webhooks`_"
+msgstr ""
+
+#: ../../api.rst:77
+msgid ":meth:`API.get_webhook_list`"
 msgstr ""
 
 #: ../../api.rst:105
+msgid "User"
+msgstr ""
+
+#: ../../api.rst:108
 msgid "get_user_info"
 msgstr ""
 
@@ -313,7 +322,7 @@ msgid "|id_screenid|"
 msgstr "idまたはscreen_idのいずれかを指定する必要があります。"
 
 #: of twitcaspy.api.API.get_current_live:4
-#: twitcaspy.api.API.get_live_thumbnail_image:5
+#: twitcaspy.api.API.get_live_thumbnail_image:7
 #: twitcaspy.api.API.get_movies_by_user:5
 #: twitcaspy.api.API.get_supporting_status:4 twitcaspy.api.API.get_user_info:4
 #: twitcaspy.api.API.supporter_list:9 twitcaspy.api.API.supporting_list:4
@@ -321,7 +330,7 @@ msgid "|id| |id_notice|"
 msgstr "ライブ配信者のユーザID **このパラメータを指定した場合、screen_idは無視されます。**"
 
 #: of twitcaspy.api.API.get_current_live:7
-#: twitcaspy.api.API.get_live_thumbnail_image:8
+#: twitcaspy.api.API.get_live_thumbnail_image:10
 #: twitcaspy.api.API.get_movies_by_user:8
 #: twitcaspy.api.API.get_supporting_status:7 twitcaspy.api.API.get_user_info:7
 #: twitcaspy.api.API.supporter_list:12 twitcaspy.api.API.supporting_list:7
@@ -333,9 +342,9 @@ msgstr "ライブ配信者のID(例: @~~)"
 #: twitcaspy.api.API.get_gifts twitcaspy.api.API.get_live_thumbnail_image
 #: twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
 #: twitcaspy.api.API.get_supporting_status twitcaspy.api.API.get_user_info
-#: twitcaspy.api.API.incoming_webhook twitcaspy.api.API.post_comment
-#: twitcaspy.api.API.search_live_movies twitcaspy.api.API.search_users
-#: twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.get_webhook_list twitcaspy.api.API.incoming_webhook
+#: twitcaspy.api.API.post_comment twitcaspy.api.API.search_live_movies
+#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unset_current_live_hashtag
@@ -357,9 +366,10 @@ msgstr ""
 #: twitcaspy.api.API.get_comments twitcaspy.api.API.get_current_live
 #: twitcaspy.api.API.get_gifts twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_supporting_status
-#: twitcaspy.api.API.get_user_info twitcaspy.api.API.incoming_webhook
-#: twitcaspy.api.API.post_comment twitcaspy.api.API.search_live_movies
-#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.get_user_info twitcaspy.api.API.get_webhook_list
+#: twitcaspy.api.API.incoming_webhook twitcaspy.api.API.post_comment
+#: twitcaspy.api.API.search_live_movies twitcaspy.api.API.search_users
+#: twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unset_current_live_hashtag
@@ -372,9 +382,9 @@ msgstr "|attribute_ja|"
 #: twitcaspy.api.API.get_comments twitcaspy.api.API.get_current_live
 #: twitcaspy.api.API.get_gifts twitcaspy.api.API.get_movie_info
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_supporting_status
-#: twitcaspy.api.API.get_user_info twitcaspy.api.API.post_comment
-#: twitcaspy.api.API.search_live_movies twitcaspy.api.API.search_users
-#: twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.get_user_info twitcaspy.api.API.get_webhook_list
+#: twitcaspy.api.API.post_comment twitcaspy.api.API.search_live_movies
+#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unset_current_live_hashtag
@@ -408,9 +418,9 @@ msgstr ""
 #: twitcaspy.api.API.get_gifts twitcaspy.api.API.get_live_thumbnail_image
 #: twitcaspy.api.API.get_movie_info twitcaspy.api.API.get_movies_by_user
 #: twitcaspy.api.API.get_supporting_status twitcaspy.api.API.get_user_info
-#: twitcaspy.api.API.incoming_webhook twitcaspy.api.API.post_comment
-#: twitcaspy.api.API.search_live_movies twitcaspy.api.API.search_users
-#: twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.get_webhook_list twitcaspy.api.API.incoming_webhook
+#: twitcaspy.api.API.post_comment twitcaspy.api.API.search_live_movies
+#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unset_current_live_hashtag
@@ -424,9 +434,9 @@ msgstr "戻り値の型"
 #: twitcaspy.api.API.get_gifts:13 twitcaspy.api.API.get_movie_info:17
 #: twitcaspy.api.API.get_movies_by_user:28
 #: twitcaspy.api.API.get_supporting_status:16
-#: twitcaspy.api.API.get_user_info:17 twitcaspy.api.API.incoming_webhook:21
-#: twitcaspy.api.API.post_comment:21 twitcaspy.api.API.search_live_movies:29
-#: twitcaspy.api.API.search_users:18
+#: twitcaspy.api.API.get_user_info:17 twitcaspy.api.API.get_webhook_list:31
+#: twitcaspy.api.API.incoming_webhook:21 twitcaspy.api.API.post_comment:21
+#: twitcaspy.api.API.search_live_movies:29 twitcaspy.api.API.search_users:18
 #: twitcaspy.api.API.set_current_live_hashtag:13
 #: twitcaspy.api.API.set_current_live_subtitle:13
 #: twitcaspy.api.API.support_user:11 twitcaspy.api.API.supporter_list:29
@@ -438,7 +448,7 @@ msgid ":class:`~twitcaspy.models.Result`"
 msgstr ""
 
 #: of twitcaspy.api.API.get_current_live:23
-#: twitcaspy.api.API.get_live_thumbnail_image:19
+#: twitcaspy.api.API.get_live_thumbnail_image:21
 #: twitcaspy.api.API.get_movies_by_user:30
 #: twitcaspy.api.API.get_supporting_status:18
 #: twitcaspy.api.API.get_user_info:19 twitcaspy.api.API.supporting_list:26
@@ -449,7 +459,7 @@ msgstr "idとscreen_idの両方が指定されていないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#get-user-info"
 msgstr ""
 
-#: ../../api.rst:109
+#: ../../api.rst:112
 msgid "verify_credentials"
 msgstr ""
 
@@ -481,11 +491,11 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#verify-credentials"
 msgstr ""
 
-#: ../../api.rst:113
+#: ../../api.rst:116
 msgid "Live Thumbnail"
 msgstr ""
 
-#: ../../api.rst:116
+#: ../../api.rst:119
 msgid "get_live_thumbnail_image"
 msgstr ""
 
@@ -497,7 +507,12 @@ msgstr "指定されたユーザーにおける配信中のライブのサムネ
 msgid "Returns an offline image if the user is not streaming now."
 msgstr "ユーザーが配信中でない場合はオフライン画像を返します。"
 
-#: of twitcaspy.api.API.get_live_thumbnail_image:10
+#: of twitcaspy.api.API.get_live_thumbnail_image:5
+#: twitcaspy.api.API.incoming_webhook:10
+msgid "|no_auth|"
+msgstr "|no_auth_ja|"
+
+#: of twitcaspy.api.API.get_live_thumbnail_image:12
 msgid "| image size | 'large' or 'small' can be specified.(default is 'small'.)"
 msgstr ""
 
@@ -509,7 +524,7 @@ msgstr "画像サイズ"
 msgid "'large' or 'small' can be specified.(default is 'small'.)"
 msgstr "画像サイズは大('large')または小('small')が指定可能です。(デフォルト: 'small')"
 
-#: of twitcaspy.api.API.get_live_thumbnail_image:13
+#: of twitcaspy.api.API.get_live_thumbnail_image:15
 msgid "| 'beginning' or 'latest' can be specified.(default is 'latest'.)"
 msgstr ""
 
@@ -517,7 +532,7 @@ msgstr ""
 msgid "'beginning' or 'latest' can be specified.(default is 'latest'.)"
 msgstr "ライブ開始時点(beginning)または最新('latest')を指定可能です。(デフォルト: 'latest')"
 
-#: of twitcaspy.api.API.get_live_thumbnail_image:16
+#: of twitcaspy.api.API.get_live_thumbnail_image:18
 msgid "| Image data is stored in the content attribute."
 msgstr ""
 
@@ -525,19 +540,19 @@ msgstr ""
 msgid "Image data is stored in the content attribute."
 msgstr "画像データはcontent属性に格納されています。"
 
-#: of twitcaspy.api.API.get_live_thumbnail_image:17
+#: of twitcaspy.api.API.get_live_thumbnail_image:19
 msgid ":class:`requests.models.Response`"
 msgstr ""
 
-#: of twitcaspy.api.API.get_live_thumbnail_image:23
+#: of twitcaspy.api.API.get_live_thumbnail_image:25
 msgid "https://apiv2-doc.twitcasting.tv/#get-live-thumbnail-image"
 msgstr ""
 
-#: ../../api.rst:120
+#: ../../api.rst:123
 msgid "Movie"
 msgstr ""
 
-#: ../../api.rst:123
+#: ../../api.rst:126
 msgid "get_movie_info"
 msgstr ""
 
@@ -593,7 +608,7 @@ msgstr "`result.movie` は `result.live.movie` と等価です。"
 msgid "https://apiv2-doc.twitcasting.tv/#get-movie-info"
 msgstr ""
 
-#: ../../api.rst:127
+#: ../../api.rst:130
 msgid "get_movies_by_user"
 msgstr ""
 
@@ -610,7 +625,8 @@ msgid ""
 msgstr ""
 
 #: of twitcaspy.api.API.get_comments twitcaspy.api.API.get_movies_by_user
-#: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
+#: twitcaspy.api.API.get_webhook_list twitcaspy.api.API.supporter_list
+#: twitcaspy.api.API.supporting_list
 msgid "Position from the beginning"
 msgstr "先頭からの位置"
 
@@ -626,8 +642,9 @@ msgid ""
 msgstr ""
 
 #: of twitcaspy.api.API.get_comments twitcaspy.api.API.get_movies_by_user
-#: twitcaspy.api.API.search_live_movies twitcaspy.api.API.search_users
-#: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
+#: twitcaspy.api.API.get_webhook_list twitcaspy.api.API.search_live_movies
+#: twitcaspy.api.API.search_users twitcaspy.api.API.supporter_list
+#: twitcaspy.api.API.supporting_list
 msgid "Maximum number of acquisitions"
 msgstr "最大取得件数"
 
@@ -681,7 +698,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#get-movies-by-user"
 msgstr ""
 
-#: ../../api.rst:131
+#: ../../api.rst:134
 msgid "get_current_live"
 msgstr ""
 
@@ -693,7 +710,7 @@ msgstr "ーザーが配信中の場合、ライブ情報を取得します。"
 msgid "https://apiv2-doc.twitcasting.tv/#get-current-live"
 msgstr ""
 
-#: ../../api.rst:135
+#: ../../api.rst:138
 msgid "set_current_live_subtitle"
 msgstr ""
 
@@ -746,7 +763,7 @@ msgstr "subtitleが1文字より少ないとき subtitleが17文字より多く�
 msgid "https://apiv2-doc.twitcasting.tv/#set-current-live-subtitle"
 msgstr ""
 
-#: ../../api.rst:139
+#: ../../api.rst:142
 msgid "unset_current_live_subtitle"
 msgstr ""
 
@@ -769,7 +786,7 @@ msgstr ""
 msgid "https://apiv2-doc.twitcasting.tv/#unset-current-live-subtitle"
 msgstr ""
 
-#: ../../api.rst:143
+#: ../../api.rst:146
 msgid "set_current_live_hashtag"
 msgstr ""
 
@@ -810,7 +827,7 @@ msgstr "hashtagが1文字より少ないとき/hashtagが26文字より多く、
 msgid "https://apiv2-doc.twitcasting.tv/#set-current-live-hashtag"
 msgstr ""
 
-#: ../../api.rst:147
+#: ../../api.rst:150
 msgid "unset_current_live_hashtag"
 msgstr ""
 
@@ -833,11 +850,11 @@ msgstr "**hashtag** : :class:`~twitcaspy.models.Raw` (:class:`None`)"
 msgid "https://apiv2-doc.twitcasting.tv/#unset-current-live-hashtag"
 msgstr ""
 
-#: ../../api.rst:151
+#: ../../api.rst:154
 msgid "Comment"
 msgstr ""
 
-#: ../../api.rst:154
+#: ../../api.rst:157
 msgid "get_comments"
 msgstr ""
 
@@ -847,15 +864,15 @@ msgid ""
 "date and time."
 msgstr "指定した動画のコメントの一覧を作成日時の降順で取得します。"
 
-#: of twitcaspy.api.API.get_comments:6 twitcaspy.api.API.supporter_list:14
-#: twitcaspy.api.API.supporting_list:9
+#: of twitcaspy.api.API.get_comments:6 twitcaspy.api.API.get_webhook_list:10
+#: twitcaspy.api.API.supporter_list:14 twitcaspy.api.API.supporting_list:9
 msgid ""
 "| Position from the beginning | It can be specified in the range of 0 or "
 "more.(default is 0.)"
 msgstr ""
 
-#: of twitcaspy.api.API.get_comments twitcaspy.api.API.supporter_list
-#: twitcaspy.api.API.supporting_list
+#: of twitcaspy.api.API.get_comments twitcaspy.api.API.get_webhook_list
+#: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 msgid "It can be specified in the range of 0 or more.(default is 0.)"
 msgstr "0以上の範囲で指定できます。(デフォルト: 0)"
 
@@ -918,7 +935,7 @@ msgstr "**comments** : :class:`~twitcaspy.models.Comment` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#get-comments"
 msgstr ""
 
-#: ../../api.rst:158
+#: ../../api.rst:161
 msgid "post_comment"
 msgstr ""
 
@@ -989,7 +1006,7 @@ msgstr "comment が 1-140 文字でないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#post-comment"
 msgstr ""
 
-#: ../../api.rst:162
+#: ../../api.rst:165
 msgid "delete_comment"
 msgstr ""
 
@@ -1030,11 +1047,11 @@ msgstr "**comment_id** : :class:`~twitcaspy.models.Raw` (:class:`str`) 削除し
 msgid "https://apiv2-doc.twitcasting.tv/#delete-comment"
 msgstr ""
 
-#: ../../api.rst:166
+#: ../../api.rst:169
 msgid "Gift"
 msgstr ""
 
-#: ../../api.rst:169
+#: ../../api.rst:172
 msgid "get_gifts"
 msgstr ""
 
@@ -1082,11 +1099,11 @@ msgstr "**gifts** : :class:`~twitcaspy.models.Gift` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#get-gifts"
 msgstr ""
 
-#: ../../api.rst:173
+#: ../../api.rst:176
 msgid "Supporter"
 msgstr ""
 
-#: ../../api.rst:176
+#: ../../api.rst:179
 msgid "get_supporting_status"
 msgstr ""
 
@@ -1118,7 +1135,7 @@ msgstr "**target_user** : :class:`~twitcaspy.models.User` 対象ユーザ情報"
 msgid "https://apiv2-doc.twitcasting.tv/#get-supporting-status"
 msgstr ""
 
-#: ../../api.rst:180
+#: ../../api.rst:183
 msgid "support_user"
 msgstr ""
 
@@ -1163,7 +1180,7 @@ msgstr "target_user_idsが :class:`list` または :class:`tuple` ではない�
 msgid "https://apiv2-doc.twitcasting.tv/#support-user"
 msgstr ""
 
-#: ../../api.rst:184
+#: ../../api.rst:187
 msgid "unsupport_user"
 msgstr ""
 
@@ -1186,7 +1203,7 @@ msgstr ""
 "**removed_count** : :class:`~twitcaspy.models.Raw` (:class:`int`) "
 "サポーター解除を行った件数"
 
-#: ../../api.rst:188
+#: ../../api.rst:191
 msgid "supporting_list"
 msgstr ""
 
@@ -1236,7 +1253,7 @@ msgstr "**supporting** : :class:`~twitcaspy.models.Supporter` の :class:`list`"
 msgid "https://apiv2-doc.twitcasting.tv/#supporting-list"
 msgstr ""
 
-#: ../../api.rst:192
+#: ../../api.rst:195
 msgid "supporter_list"
 msgstr ""
 
@@ -1290,11 +1307,11 @@ msgstr "sort が 'new' か 'ranking' でないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#supporter-list"
 msgstr ""
 
-#: ../../api.rst:196
+#: ../../api.rst:199
 msgid "Category"
 msgstr ""
 
-#: ../../api.rst:199
+#: ../../api.rst:202
 msgid "get_categories"
 msgstr ""
 
@@ -1343,11 +1360,11 @@ msgstr "sort が 'ja' か 'en' でないとき"
 msgid "https://apiv2-doc.twitcasting.tv/#get-categories"
 msgstr ""
 
-#: ../../api.rst:203
+#: ../../api.rst:206
 msgid "Search users and movies"
 msgstr ""
 
-#: ../../api.rst:206
+#: ../../api.rst:209
 msgid "search_users"
 msgstr ""
 
@@ -1410,7 +1427,7 @@ msgstr "words が :class:`str` または :class:`list` または :class:`tuple` 
 msgid "https://apiv2-doc.twitcasting.tv/#search-users"
 msgstr ""
 
-#: ../../api.rst:210
+#: ../../api.rst:213
 msgid "search_live_movies"
 msgstr ""
 
@@ -1513,11 +1530,11 @@ msgstr "type が tag, word, category のいずれかで、 content が指定さ�
 msgid "https://apiv2-doc.twitcasting.tv/#search-live-movies"
 msgstr ""
 
-#: ../../api.rst:214
+#: ../../api.rst:217
 msgid "WebHook"
 msgstr ""
 
-#: ../../api.rst:217
+#: ../../api.rst:220
 msgid "incoming_webhook"
 msgstr ""
 
@@ -1531,10 +1548,6 @@ msgid ""
 " / end event of a specific distributor to the WebHook URL specified in "
 "advance. |google_translate_ja_en|"
 msgstr "WebHook API を利用すると、特定の配信者の配信開始・終了イベントを予め指定した WebHook URL へ通知することが出来ます。"
-
-#: of twitcaspy.api.API.incoming_webhook:10
-msgid "|no_auth|"
-msgstr "|no_auth_ja|"
 
 #: of twitcaspy.api.API.incoming_webhook:12
 msgid "Method : POST"
@@ -1561,4 +1574,75 @@ msgstr "**signature** : :class:`~twitcaspy.models.Raw` (:class:`str`)"
 
 #: of twitcaspy.api.API.incoming_webhook:25
 msgid "https://apiv2-doc.twitcasting.tv/#incoming-webhook"
+msgstr ""
+
+#: ../../api.rst:224
+msgid "get_webhook_list"
+msgstr ""
+
+#: of twitcaspy.api.API.get_webhook_list:1
+msgid "Get the list of WebHooks associated with the application."
+msgstr "アプリケーションに紐づく WebHook の一覧を取得する。"
+
+#: of twitcaspy.api.API.get_webhook_list
+msgid "It can only be executed on an Application-only authentication."
+msgstr "アプリケーション単位でのみ実行可能です。"
+
+#: of twitcaspy.api.API.get_webhook_list:5
+msgid ""
+"| Maximum number of acquisitions | It can be specified in the range of 1 "
+"to 50.(default is 50.) | (In some cases,   it may return less than the "
+"specified number of webhooks.)"
+msgstr ""
+
+#: of twitcaspy.api.API.get_webhook_list
+msgid "It can be specified in the range of 1 to 50.(default is 50.)"
+msgstr "1から50の範囲で指定できます。(デフォルト: 50)"
+
+#: of twitcaspy.api.API.get_webhook_list
+msgid "(In some cases, it may return less than the specified number of webhooks.)"
+msgstr "(場合により、指定件数に満たない数のウェブホックを返す可能性があります。)"
+
+#: of twitcaspy.api.API.get_webhook_list:13
+msgid "| Target user id"
+msgstr ""
+
+#: of twitcaspy.api.API.get_webhook_list
+msgid "Target user id"
+msgstr "対象ユーザの id"
+
+#: of twitcaspy.api.API.get_webhook_list
+msgid ""
+"The limit and offset parameters are valid only if user_id is not "
+"specified."
+msgstr "limit 及び offset パラメータは、 user_id の指定が無い場合のみ有効です。"
+
+#: of twitcaspy.api.API.get_webhook_list
+msgid ""
+"For user_id, you can specify a numeric id (e.g.: 182224938) or a "
+"character string (e.g.: twitcasting_jp)."
+msgstr "user_idは数字のid(例: 182224938)か文字列(例: twitcasting_jp)を指定することが可能です。"
+
+#: of twitcaspy.api.API.get_webhook_list:26
+msgid ""
+"| |attribute| | |latelimit| | **all_count** : "
+":class:`~twitcaspy.models.Raw` (:class:`int`)   Number of registered "
+"WebHooks | **webhooks** : :class:`list` of "
+":class:`~twitcaspy.models.WebHook`"
+msgstr ""
+
+#: of twitcaspy.api.API.get_webhook_list
+msgid ""
+"**all_count** : :class:`~twitcaspy.models.Raw` (:class:`int`) Number of "
+"registered WebHooks"
+msgstr ""
+"**all_count** : :class:`~twitcaspy.models.Raw` (:class:`int`) "
+"登録済みWebHook件数"
+
+#: of twitcaspy.api.API.get_webhook_list
+msgid "**webhooks** : :class:`list` of :class:`~twitcaspy.models.WebHook`"
+msgstr "**webhooks** : :class:`~twitcaspy.models.WebHook` の :class:`list`"
+
+#: of twitcaspy.api.API.get_webhook_list:35
+msgid "https://apiv2-doc.twitcasting.tv/#get-webhook-list"
 msgstr ""

@@ -176,3 +176,19 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         ok_(isinstance(data.signature, str))
         ok_(hasattr(data, 'movie'))
         ok_(hasattr(data, 'broadcaster'))
+
+    @tape.use_cassette('testgetwebhooklist.json')
+    def testgetwebhooklist(self):
+        data = self.api.get_webhook_list()
+        ok_(hasattr(data, 'all_count'))
+        ok_(isinstance(data.all_count, int))
+        ok_(hasattr(data, 'webhooks'))
+        ok_(isinstance(data.webhooks, list))
+
+    @tape.use_cassette('testgetwebhooklist_idstring.json')
+    def testgetwebhooklist_idstring(self):
+        data = self.api.get_webhook_list(user_id=username)
+        ok_(hasattr(data, 'all_count'))
+        ok_(isinstance(data.all_count, int))
+        ok_(hasattr(data, 'webhooks'))
+        ok_(isinstance(data.webhooks, list))

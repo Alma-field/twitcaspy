@@ -74,6 +74,8 @@
     +--------------------------------------------------+-----------------------------------------+
     |                                                  | :meth:`API.incoming_webhook`            |
     +--------------------------------------------------+-----------------------------------------+
+    | `GET /webhooks`_                                 | :meth:`API.get_webhook_list`            |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -97,6 +99,7 @@
 .. _GET /categories: https://apiv2-doc.twitcasting.tv/#get-categories
 .. _GET /search/users: https://apiv2-doc.twitcasting.tv/#search-users
 .. _GET /search/lives: https://apiv2-doc.twitcasting.tv/#search-live-movies
+.. _GET /webhooks: https://apiv2-doc.twitcasting.tv/#get-webhook-list
 
 User
 ----
@@ -216,3 +219,7 @@ WebHook
 incoming_webhook
 ================
 .. automethod:: API.incoming_webhook
+
+get_webhook_list
+================
+.. automethod:: API.get_webhook_list

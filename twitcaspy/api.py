@@ -1154,3 +1154,53 @@ class API:
         """
         return self.parser.parse(
             data, api=self, payload_type=kwargs['payload_type'])
+
+    @payload(all_count=['raw', False], webhooks=['webhook', True])
+    def get_webhook_list(self, **kwargs):
+        """get_webhook_list(limit=50, offset=0, user_id)
+
+        | Get the list of WebHooks associated with the application.
+
+        Tip
+        ---
+        | It can only be executed on an Application-only authentication.
+
+        Parameters
+        ----------
+        limit(optional): :class:`int`
+            | Maximum number of acquisitions
+            | It can be specified in the range of 1 to 50.(default is 50.)
+            | (In some cases,
+              it may return less than the specified number of webhooks.)
+        offset(optional): :class:`int`
+            | Position from the beginning
+            | It can be specified in the range of 0 or more.(default is 0.)
+        user_id(optional): :class:`str`
+            | Target user id
+
+        Hint
+        ----
+        | The limit and offset parameters are valid
+          only if user_id is not specified.
+
+        Note
+        ----
+        | For user_id, you can specify a numeric id (e.g.: 182224938) or
+          a character string (e.g.: twitcasting_jp).
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **all_count** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+              Number of registered WebHooks
+            | **webhooks** : :class:`list` of :class:`~twitcaspy.models.WebHook`
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-webhook-list
+        """
+        return self.request(
+            'GET', '/webhooks',
+            endpoint_parameters=('limit', 'offset', 'user_id'), **kwargs)

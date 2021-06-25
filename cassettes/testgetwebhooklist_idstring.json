@@ -1,0 +1,88 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://apiv2.twitcasting.tv/webhooks?user_id=twitcasting_jp",
+                "body": "null",
+                "headers": {
+                    "User-Agent": [
+                        "Python/3.9.1 Requests/2.25.1 twitcaspy/0.0.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-Api-Version": [
+                        "2.0"
+                    ],
+                    "Content-Length": [
+                        "4"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Server": [
+                        "Apache"
+                    ],
+                    "Expires": [
+                        "Thu, 19 Nov 1981 08:52:00 GMT"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=0"
+                    ],
+                    "Connection": [
+                        "close"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Content-Length": [
+                        "29"
+                    ],
+                    "Cache-Control": [
+                        "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    ],
+                    "X-WE-ARE-HIRING": [
+                        "https://about.moi.st/ja/recruit/"
+                    ],
+                    "X-RateLimit-Reset": [
+                        "1624608944"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "Set-Cookie": [
+                        "PHPSESSID=5delralm09b4c5lbr5euh7j125; path=/"
+                    ],
+                    "X-RateLimit-Remaining": [
+                        "59"
+                    ],
+                    "Date": [
+                        "Fri, 25 Jun 2021 08:14:44 GMT"
+                    ],
+                    "X-RateLimit-Limit": [
+                        "60"
+                    ],
+                    "X-Powered-By": [
+                        "PHP/5.6.40"
+                    ]
+                },
+                "body": {
+                    "string": "{\"all_count\":0,\"webhooks\":[]}"
+                }
+            }
+        }
+    ]
+}
