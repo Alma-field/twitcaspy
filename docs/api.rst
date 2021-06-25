@@ -82,6 +82,8 @@
     +--------------------------------------------------+-----------------------------------------+
     | `GET /rtmp_url`_                                 | :meth:`API.get_rtmp_url`                |
     +--------------------------------------------------+-----------------------------------------+
+    | `GET /webm_url`_                                 | :meth:`API.get_webm_url`                |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -109,6 +111,7 @@
 .. _POST /webhooks: https://apiv2-doc.twitcasting.tv/#register-webhook
 .. _DELETE /webhooks: https://apiv2-doc.twitcasting.tv/#remove-webhook
 .. _GET /rtmp_url: https://apiv2-doc.twitcasting.tv/#get-rtmp-url
+.. _GET /webm_url: https://apiv2-doc.twitcasting.tv/#get-webm-url
 
 User
 ----
@@ -247,3 +250,7 @@ Broadcasting
 get_rtmp_url
 ============
 .. automethod:: API.get_rtmp_url
+
+get_webm_url
+============
+.. automethod:: API.get_webm_url

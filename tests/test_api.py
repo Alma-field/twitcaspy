@@ -242,3 +242,11 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         ok_(isinstance(data.url, (str, None)))
         ok_(hasattr(data, 'stream_key'))
         ok_(isinstance(data.stream_key, (str, None)))
+
+    @tape.use_cassette('testgetwebmurl.json')
+    def testgetwebmurl(self):
+        data = self.api.get_webm_url()
+        ok_(hasattr(data, 'enabled'))
+        ok_(isinstance(data.enabled, bool))
+        ok_(hasattr(data, 'url'))
+        ok_(isinstance(data.url, (str, None)))

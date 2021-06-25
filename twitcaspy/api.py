@@ -1345,7 +1345,7 @@ class API:
               Whether RTMP stream is enabled
             | **url** : :class:`str` of :class:`None`
               URL for RTMP stream
-            | **stream_key** : :class:`str` of :class:`None`
+            | **stream_key** : :class:`str` or :class:`None`
               RTMP stream key
 
         References
@@ -1353,3 +1353,30 @@ class API:
         https://apiv2-doc.twitcasting.tv/#get-rtmp-url
         """
         return self.request('GET', '/rtmp_url', **kwargs)
+
+    @payload(
+        enabled=['raw', False], url=['raw', False])
+    def get_webm_url(self, **kwargs):
+        """get_webm_url()
+
+        | Obtain the URL (WebM, WebSocket) for stream of the user associated with the access token.
+
+        Tip
+        ---
+        | It can only be executed on an non-Application-only authentication.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **enabled** : :class:`~twitcaspy.models.Raw` (:class:`bool`)
+              Whether WebM stream is enabled
+            | **url** : :class:`str` or :class:`None`
+              URL for WebM stream
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-webm-url
+        """
+        return self.request('GET', '/webm_url', **kwargs)
