@@ -16,4 +16,9 @@ Python用Twitcattingクライアントライブラリ
  - [開発版 (v0.0.0)](https://twitcaspy.alma-field.com/docs/ja/dev/index.html)
  - [v0.0.0](https://twitcaspy.alma-field.com/docs/ja/0.0.0/index.html)
 
+## 出典
+このライブラリは以下を参考にしています:
+ - [tweepy/tweepy](https://github.com/tweepy/tweepy) - Twitter for Python!
+ - [tamago324/PyTwitcasting](https://github.com/tamago324/PyTwitcasting) - PyTwitcasting is a library for API v2 (β) of Twitcasting.
+
 Python 3.7 - 3.9 がサポートされています。

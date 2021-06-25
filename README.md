@@ -16,4 +16,9 @@ Twitcatting for Python
  - [develop-version (v0.0.0)](https://twitcaspy.alma-field.com/docs/en/dev/index.html)
  - [v0.0.0](https://twitcaspy.alma-field.com/docs/en/0.0.0/index.html)
 
+## Source
+This library is based on:
+ - [tweepy/tweepy](https://github.com/tweepy/tweepy) - Twitter for Python!
+ - [tamago324/PyTwitcasting](https://github.com/tamago324/PyTwitcasting) - PyTwitcasting is a library for API v2 (β) of Twitcasting.
+
 Python 3.7 - 3.9 are supported.
