@@ -12,7 +12,8 @@ Python用Twitcattingクライアントライブラリ
 
 ## ドキュメント
  - "Read The Docs"ドキュメントは準備中です。
- - [latest (v0.0.0)](https://twitcaspy.alma-field.com/docs/ja/latest/index.html)
+ - [最新版 (v0.0.0)](https://twitcaspy.alma-field.com/docs/ja/latest/index.html)
+ - [開発版 (v0.0.0)](https://twitcaspy.alma-field.com/docs/ja/dev/index.html)
  - [v0.0.0](https://twitcaspy.alma-field.com/docs/ja/0.0.0/index.html)
 
 Python 3.7 - 3.9 がサポートされています。
