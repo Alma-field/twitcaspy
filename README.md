@@ -25,3 +25,4 @@ This library is based on:
 
 ## Links
  - [Twitcasting API Documentation](https://apiv2-doc.twitcasting.tv/)
+ - [API ChangeLog](https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md)
