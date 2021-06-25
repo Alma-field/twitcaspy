@@ -2,6 +2,8 @@
 # Copyright 2021 Alma-field
 # See LICENSE for details.
 
+from ..errors import TwitcaspyException
+
 from ..models.result import Result
 
 from ..models.latelimit import LateLimit
