@@ -219,8 +219,8 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         data = self.api.remove_webhook(user_id=user_id, events=events)
         ok_(hasattr(data, 'user_id'))
         eq_(data.user_id, user_id)
-        ok_(hasattr(data, 'removed_events'))
-        ok_(isinstance(data.removed_events, list))
+        ok_(hasattr(data, 'deleted_events'))
+        ok_(isinstance(data.deleted_events, list))
 
     @raises(TwitcaspyException)
     @tape.use_cassette('testremovewebhook_raise1.json')
