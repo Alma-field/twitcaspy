@@ -232,3 +232,13 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
     def testremovewebhook_raise2(self):
         events = ['livestart', 'liveend', 'none']
         data = self.api.remove_webhook(user_id=username, events=events)
+
+    @tape.use_cassette('testgetrtmpurl.json')
+    def testgetrtmpurl(self):
+        data = self.api.get_rtmp_url()
+        ok_(hasattr(data, 'enabled'))
+        ok_(isinstance(data.enabled, bool))
+        ok_(hasattr(data, 'url'))
+        ok_(isinstance(data.url, (str, None)))
+        ok_(hasattr(data, 'stream_key'))
+        ok_(isinstance(data.stream_key, (str, None)))

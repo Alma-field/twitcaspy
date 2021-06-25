@@ -1324,3 +1324,32 @@ class API:
         return self.request(
             'DELETE', '/webhooks',
             endpoint_parameters=('user_id', 'events[]'), **kwargs)
+
+    @payload(
+        enabled=['raw', False], url=['raw', False], stream_key=['raw', False])
+    def get_rtmp_url(self, **kwargs):
+        """get_rtmp_url()
+
+        | Obtain the URL (RTMP) for stream of the user associated with the access token.
+
+        Tip
+        ---
+        | It can only be executed on an non-Application-only authentication.
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **enabled** : :class:`~twitcaspy.models.Raw` (:class:`bool`)
+              Whether RTMP stream is enabled
+            | **url** : :class:`str` of :class:`None`
+              URL for RTMP stream
+            | **stream_key** : :class:`str` of :class:`None`
+              RTMP stream key
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#get-rtmp-url
+        """
+        return self.request('GET', '/rtmp_url', **kwargs)
