@@ -107,7 +107,7 @@ class API:
                 continue
             if k not in endpoint_parameters:
                 log.warning(f'Unexpected parameter: {k}')
-            params[k] = str(arg)
+            params[k] = arg
         log.debug("PARAMS: %r", params)
 
         if parser is None:
