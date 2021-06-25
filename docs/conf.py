@@ -21,10 +21,20 @@ project = 'twitcaspy'
 copyright = '2021, Alma-field'
 author = 'Alma-field'
 
-from twitcaspy import __version__
-version = __version__
+import re
+VERSION_FILE = "../twitcaspy/__init__.py"
+with open(VERSION_FILE) as version_file:
+    match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
+                      version_file.read(), re.MULTILINE)
+
+if match:
+    version = match.group(1)
+else:
+    raise RuntimeError(f"Unable to find version string in {VERSION_FILE}.")
+
+version = version
 # The full version, including alpha/beta/rc tags.
-release = __version__
+release = version
 
 
 # -- General configuration ---------------------------------------------------
