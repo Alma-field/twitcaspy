@@ -1263,3 +1263,64 @@ class API:
         post_data = {'user_id': user_id, 'events': events}
         return self.request(
             'POST', '/webhooks', post_data=post_data, **kwargs)
+
+    @payload(user_id=['raw', False], deleted_events=['raw', True])
+    def remove_webhook(self, user_id, events, **kwargs):
+        """remove_webhook(user_id, event)
+
+        | Remove WebHook.
+
+        Tip
+        ---
+        | It can only be executed on an Application-only authentication.
+
+        Parameters
+        ----------
+        user_id: :class:`str`
+            | Target user id
+        events: :class:`list` or :class:`tuple`
+            | Event type to hook
+            | The content of the events must be :class:`str`.
+            | The content of the events must be one of the following:
+            | 'livestart' : Live start
+            | 'liveend' : Live end
+
+        Note
+        ----
+        | For user_id, you can specify a numeric id (e.g.: 182224938) or
+          a character string (e.g.: twitcasting_jp).
+
+        Returns
+        -------
+        :class:`~twitcaspy.models.Result`
+            | |attribute|
+            | |latelimit|
+            | **user_id** : :class:`~twitcaspy.models.Raw` (:class:`str`)
+              User ID
+            | **deleted_events** : :class:`list` of :class:`str`
+              Event type to delete hook
+
+        Raises
+        ------
+        TwitcaspyException
+            When events is not a :class:`list` or :class:`tuple`
+        TwitcaspyException
+            When events is not a `livestart`, `liveend`.
+
+        References
+        ----------
+        https://apiv2-doc.twitcasting.tv/#remove-webhook
+        """
+        if not isinstance(events, (list, tuple)):
+            raise TwitcaspyException("events must be list or tuple, not "
+                            + type(events).__name__)
+        events = list(set(events))
+        for event in events:
+            if event not in ['livestart', 'liveend']:
+                raise TwitcaspyException("events must be `livestart` or `liveend`, not "
+                                + event)
+        kwargs['user_id'] = user_id
+        kwargs['events[]'] = events#'&'.join([f'events[]={event}' for event in events])
+        return self.request(
+            'DELETE', '/webhooks',
+            endpoint_parameters=('user_id', 'events[]'), **kwargs)

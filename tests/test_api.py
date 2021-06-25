@@ -212,3 +212,23 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
     def testregisterwebhook_raise2(self):
         events = ['livestart', 'liveend', 'none']
         data = self.api.register_webhook(user_id=username, events=events)
+
+    @tape.use_cassette('testremovewebhook.json')
+    def testremovewebhook(self):
+        events = ['livestart', 'liveend']
+        data = self.api.remove_webhook(user_id=user_id, events=events)
+        ok_(hasattr(data, 'user_id'))
+        eq_(data.user_id, user_id)
+        ok_(hasattr(data, 'removed_events'))
+        ok_(isinstance(data.removed_events, list))
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testremovewebhook_raise1.json')
+    def testremovewebhook_raise1(self):
+        data = self.api.remove_webhook(user_id=username, events='events')
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testremovewebhook_raise2.json')
+    def testremovewebhook_raise2(self):
+        events = ['livestart', 'liveend', 'none']
+        data = self.api.remove_webhook(user_id=username, events=events)

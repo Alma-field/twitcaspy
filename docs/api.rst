@@ -78,6 +78,8 @@
     +--------------------------------------------------+-----------------------------------------+
     | `POST /webhooks`_                                | :meth:`API.register_webhook`            |
     +--------------------------------------------------+-----------------------------------------+
+    | `DELETE /webhooks`_                              | :meth:`API.remove_webhook`              |
+    +--------------------------------------------------+-----------------------------------------+
 
 .. _GET /users/:user_id: https://apiv2-doc.twitcasting.tv/#get-user-info
 .. _GET /verify_credentials: https://apiv2-doc.twitcasting.tv/#verify-credentials
@@ -103,6 +105,7 @@
 .. _GET /search/lives: https://apiv2-doc.twitcasting.tv/#search-live-movies
 .. _GET /webhooks: https://apiv2-doc.twitcasting.tv/#get-webhook-list
 .. _POST /webhooks: https://apiv2-doc.twitcasting.tv/#register-webhook
+.. _DELETE /webhooks: https://apiv2-doc.twitcasting.tv/#remove-webhook
 
 User
 ----
@@ -230,3 +233,7 @@ get_webhook_list
 register_webhook
 ================
 .. automethod:: API.register_webhook
+
+remove_webhook
+==============
+.. automethod:: API.remove_webhook

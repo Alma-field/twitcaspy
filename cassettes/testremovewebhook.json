@@ -1,0 +1,88 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "DELETE",
+                "uri": "https://apiv2.twitcasting.tv/webhooks?user_id=182224938&events%5B%5D=liveend&events%5B%5D=livestart",
+                "body": "null",
+                "headers": {
+                    "User-Agent": [
+                        "Python/3.9.1 Requests/2.25.1 twitcaspy/0.0.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-Api-Version": [
+                        "2.0"
+                    ],
+                    "Content-Length": [
+                        "4"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Connection": [
+                        "close"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "X-RateLimit-Reset": [
+                        "1624620284"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ],
+                    "X-WE-ARE-HIRING": [
+                        "https://about.moi.st/ja/recruit/"
+                    ],
+                    "Content-Type": [
+                        "application/json;charset=utf-8"
+                    ],
+                    "Cache-Control": [
+                        "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=0"
+                    ],
+                    "X-Powered-By": [
+                        "PHP/5.6.40"
+                    ],
+                    "Date": [
+                        "Fri, 25 Jun 2021 11:23:44 GMT"
+                    ],
+                    "X-RateLimit-Remaining": [
+                        "59"
+                    ],
+                    "Content-Length": [
+                        "64"
+                    ],
+                    "Set-Cookie": [
+                        "PHPSESSID=5v153i3fpls7800bn5s6g9jgm6; path=/"
+                    ],
+                    "X-RateLimit-Limit": [
+                        "60"
+                    ],
+                    "Expires": [
+                        "Thu, 19 Nov 1981 08:52:00 GMT"
+                    ]
+                },
+                "body": {
+                    "string": "{\"user_id\":\"182224938\",\"deleted_events\":[\"liveend\",\"livestart\"]}"
+                }
+            }
+        }
+    ]
+}
