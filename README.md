@@ -3,6 +3,7 @@
 [![test](https://github.com/Alma-field/twitcaspy/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/Alma-field/twitcaspy/actions/workflows/test.yml)
 [![GitHub issues open](https://img.shields.io/github/issues/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues close](https://img.shields.io/github/issues-closed-raw/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aclose+is%3Aissue)
+[![Documentation Status](https://readthedocs.org/projects/twitcaspy/badge/?version=latest)](http://twitcaspy.alma-field.com/en/latest/?badge=latest)
 
 Twitcatting for Python
 
