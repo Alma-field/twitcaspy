@@ -171,11 +171,20 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         file_name = 'cassettes/testincomingwebhook.json'
         with open(file_name, "r", encoding='utf-8') as file:
             json = load(file)
+        self.api.signature = json['signature']
         data = self.api.incoming_webhook(json)
         ok_(hasattr(data, 'signature'))
         ok_(isinstance(data.signature, str))
         ok_(hasattr(data, 'movie'))
         ok_(hasattr(data, 'broadcaster'))
+
+    @raises(TwitcaspyException)
+    def testincomingwebhook_raise(self):
+        from json import load
+        file_name = 'cassettes/testincomingwebhook.json'
+        with open(file_name, "r", encoding='utf-8') as file:
+            json = load(file)
+        data = self.api.incoming_webhook(json)
 
     @tape.use_cassette('testgetwebhooklist.json')
     def testgetwebhooklist(self):

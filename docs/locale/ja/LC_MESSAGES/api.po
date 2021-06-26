@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 22:25+0900\n"
+"POT-Creation-Date: 2021-06-26 11:58+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,32 +66,36 @@ msgstr "デフォルトはModelParserのインスタンスです。"
 msgid "The UserAgent to be used"
 msgstr "使用されるユーザーエージェント"
 
+#: of twitcaspy.api.API:12
+msgid "Key to prove that it is a legitimate request in webhook."
+msgstr "WebHookの正規のリクエストであることを証明するキー"
+
 #: of twitcaspy.api.API twitcaspy.api.API.get_categories
 #: twitcaspy.api.API.get_current_live
 #: twitcaspy.api.API.get_live_thumbnail_image
 #: twitcaspy.api.API.get_movies_by_user twitcaspy.api.API.get_supporting_status
-#: twitcaspy.api.API.get_user_info twitcaspy.api.API.post_comment
-#: twitcaspy.api.API.register_webhook twitcaspy.api.API.remove_webhook
-#: twitcaspy.api.API.search_live_movies twitcaspy.api.API.search_users
-#: twitcaspy.api.API.set_current_live_hashtag
+#: twitcaspy.api.API.get_user_info twitcaspy.api.API.incoming_webhook
+#: twitcaspy.api.API.post_comment twitcaspy.api.API.register_webhook
+#: twitcaspy.api.API.remove_webhook twitcaspy.api.API.search_live_movies
+#: twitcaspy.api.API.search_users twitcaspy.api.API.set_current_live_hashtag
 #: twitcaspy.api.API.set_current_live_subtitle twitcaspy.api.API.support_user
 #: twitcaspy.api.API.supporter_list twitcaspy.api.API.supporting_list
 #: twitcaspy.api.API.unsupport_user
 msgid "Raises"
 msgstr "発生する例外"
 
-#: of twitcaspy.api.API:13
+#: of twitcaspy.api.API:15
 msgid "If the given parser is not a Parser instance"
 msgstr "指定されたparserがParserインスタンスではない場合"
 
-#: of twitcaspy.api.API:16 twitcaspy.api.API.delete_comment:21
+#: of twitcaspy.api.API:18 twitcaspy.api.API.delete_comment:21
 #: twitcaspy.api.API.get_categories:17 twitcaspy.api.API.get_comments:32
 #: twitcaspy.api.API.get_current_live:26 twitcaspy.api.API.get_gifts:16
 #: twitcaspy.api.API.get_live_thumbnail_image:24
 #: twitcaspy.api.API.get_movie_info:20 twitcaspy.api.API.get_movies_by_user:33
 #: twitcaspy.api.API.get_rtmp_url:16 twitcaspy.api.API.get_supporting_status:21
 #: twitcaspy.api.API.get_user_info:22 twitcaspy.api.API.get_webhook_list:34
-#: twitcaspy.api.API.get_webm_url:14 twitcaspy.api.API.incoming_webhook:24
+#: twitcaspy.api.API.get_webm_url:14 twitcaspy.api.API.incoming_webhook:27
 #: twitcaspy.api.API.post_comment:26 twitcaspy.api.API.register_webhook:31
 #: twitcaspy.api.API.remove_webhook:31 twitcaspy.api.API.search_live_movies:37
 #: twitcaspy.api.API.search_users:25
@@ -105,7 +109,7 @@ msgstr "指定されたparserがParserインスタンスではない場合"
 msgid "References"
 msgstr ""
 
-#: of twitcaspy.api.API:17
+#: of twitcaspy.api.API:19
 msgid "https://apiv2-doc.twitcasting.tv/"
 msgstr ""
 
@@ -479,7 +483,7 @@ msgstr "戻り値の型"
 #: twitcaspy.api.API.get_movies_by_user:28 twitcaspy.api.API.get_rtmp_url:13
 #: twitcaspy.api.API.get_supporting_status:16
 #: twitcaspy.api.API.get_user_info:17 twitcaspy.api.API.get_webhook_list:31
-#: twitcaspy.api.API.get_webm_url:11 twitcaspy.api.API.incoming_webhook:21
+#: twitcaspy.api.API.get_webm_url:11 twitcaspy.api.API.incoming_webhook:22
 #: twitcaspy.api.API.post_comment:21 twitcaspy.api.API.register_webhook:25
 #: twitcaspy.api.API.remove_webhook:25 twitcaspy.api.API.search_live_movies:29
 #: twitcaspy.api.API.search_users:18
@@ -554,7 +558,7 @@ msgid "Returns an offline image if the user is not streaming now."
 msgstr "ユーザーが配信中でない場合はオフライン画像を返します。"
 
 #: of twitcaspy.api.API.get_live_thumbnail_image:5
-#: twitcaspy.api.API.incoming_webhook:10
+#: twitcaspy.api.API.incoming_webhook:9
 msgid "|no_auth|"
 msgstr "|no_auth_ja|"
 
@@ -1588,18 +1592,18 @@ msgstr ""
 msgid "Parses notifications to the specified WebHook URL."
 msgstr "指定したWebHook URLへの通知をパースします。"
 
-#: of twitcaspy.api.API.incoming_webhook:6
+#: of twitcaspy.api.API.incoming_webhook:5
 msgid ""
 "By using the WebHook API, it is possible to notify the distribution start"
 " / end event of a specific distributor to the WebHook URL specified in "
 "advance. |google_translate_ja_en|"
 msgstr "WebHook API を利用すると、特定の配信者の配信開始・終了イベントを予め指定した WebHook URL へ通知することが出来ます。"
 
-#: of twitcaspy.api.API.incoming_webhook:12
+#: of twitcaspy.api.API.incoming_webhook:11
 msgid "Method : POST"
 msgstr ""
 
-#: of twitcaspy.api.API.incoming_webhook:14
+#: of twitcaspy.api.API.incoming_webhook:13
 msgid "| WebHook Payload"
 msgstr ""
 
@@ -1607,7 +1611,15 @@ msgstr ""
 msgid "WebHook Payload"
 msgstr ""
 
-#: of twitcaspy.api.API.incoming_webhook:17
+#: of twitcaspy.api.API.incoming_webhook:15
+msgid "| Enable signature verification function setting."
+msgstr ""
+
+#: of twitcaspy.api.API.incoming_webhook
+msgid "Enable signature verification function setting."
+msgstr "signatureの検証機能の有効化設定"
+
+#: of twitcaspy.api.API.incoming_webhook:18
 msgid ""
 "| |attribute| | **signature** : :class:`~twitcaspy.models.Raw` "
 "(:class:`str`) | **movie** : :class:`~twitcaspy.models.Movie` | "
@@ -1618,7 +1630,11 @@ msgstr ""
 msgid "**signature** : :class:`~twitcaspy.models.Raw` (:class:`str`)"
 msgstr "**signature** : :class:`~twitcaspy.models.Raw` (:class:`str`)"
 
-#: of twitcaspy.api.API.incoming_webhook:25
+#: of twitcaspy.api.API.incoming_webhook:24
+msgid "When `secure` is true and `signature` do not match."
+msgstr "`secure` が真でかつ `signature` が一致しないとき"
+
+#: of twitcaspy.api.API.incoming_webhook:28
 msgid "https://apiv2-doc.twitcasting.tv/#incoming-webhook"
 msgstr ""
 

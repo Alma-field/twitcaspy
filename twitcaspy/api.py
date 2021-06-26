@@ -44,6 +44,8 @@ class API:
         | defaults to an instance of ModelParser
     user_agent: :class:`str`
         The UserAgent to be used
+    signature: :class:`str`
+        Key to prove that it is a legitimate request in webhook.
 
     Raises
     ------
@@ -57,10 +59,11 @@ class API:
 
     def __init__(
         self, auth=None, *, host='apiv2.twitcasting.tv',
-        parser=None, user_agent=None
+        parser=None, user_agent=None, signature=None
     ):
         self.auth = auth
         self.host = host
+        self.signature = signature
 
         if parser is None:
             parser = ModelParser()
@@ -1115,11 +1118,10 @@ class API:
             endpoint_parameters=('limit', 'type', 'context', 'lang'), **kwargs)
 
     @payload('movie', signature=['raw', False], broadcaster=['user', False])
-    def incoming_webhook(self, data, **kwargs):
-        """incoming_webhook(data)
+    def incoming_webhook(self, data, secure=True, **kwargs):
+        """incoming_webhook(data, secure=True)
 
         | Parses notifications to the specified WebHook URL.
-
 
         Hint
         ----
@@ -1139,6 +1141,8 @@ class API:
         ----------
         data: :class:`dict`
             | WebHook Payload
+        secure: :class:`bool`
+            | Enable signature verification function setting.
 
         Returns
         -------
@@ -1148,12 +1152,20 @@ class API:
             | **movie** : :class:`~twitcaspy.models.Movie`
             | **broadcaster** : :class:`~twitcaspy.models.User`
 
+        Raises
+        ------
+        TwitcaspyException
+            When `secure` is true and `signature` do not match.
+
         References
         ----------
         https://apiv2-doc.twitcasting.tv/#incoming-webhook
         """
-        return self.parser.parse(
+        webhook = self.parser.parse(
             data, api=self, payload_type=kwargs['payload_type'])
+        if secure and self.signature != webhook.signature:
+            raise TwitcaspyException('Invalid signature')
+        return webhook
 
     @payload(all_count=['raw', False], webhooks=['webhook', True])
     def get_webhook_list(self, **kwargs):
