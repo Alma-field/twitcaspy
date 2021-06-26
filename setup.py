@@ -20,6 +20,10 @@ tests_require = [
     "python-dotenv>=0.17.1,<1",
 ]
 
+examples_require = [
+    "flask>=2.0.1,<3"
+]
+
 setup(
     name="twitcaspy",
     version=version,
@@ -43,6 +47,7 @@ setup(
     tests_require=tests_require,
     extras_require={
         "test": tests_require,
+        "example": examples_require,
     },
     test_suite="nose.collector",
     keywords="twitcasting library",
