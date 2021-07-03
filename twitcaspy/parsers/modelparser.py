@@ -42,6 +42,7 @@ class ModelParser(Parser):
             json = payload
 
         result = Result(api)
+        setattr(result, '_json', json)
         try:
             for _name, _item in _payload_type.items():
                 _type, _list = _item
