@@ -37,7 +37,7 @@ class ModelParser(Parser):
                 )
 
         if hasattr(payload, 'json'):
-            json = payload.json()
+            json = payload.json
         else:
             json = payload
 
