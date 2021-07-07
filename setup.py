@@ -35,7 +35,7 @@ setup(
     author_email="",
     url="https://github.com/Alma-field/twitcaspy",
     project_urls={
-        "Documentation": "https://github.com/Alma-field/twitcaspy/blob/master/README.md",
+        "Documentation": "https://twitcaspy.alma-field.com/",
         "Issue Tracker": "https://github.com/Alma-field/twitcaspy/issues",
         "Source Code": "https://github.com/Alma-field/twitcaspy",
     },
