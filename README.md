@@ -13,8 +13,8 @@ Twitcatting for Python
  - [Japanese/日本語](README_JA.md)
 
 ## Document
- - [latest (v0.0.0)](https://twitcaspy.alma-field.com/en/latest)
- - [v0.0.0](https://twitcaspy.alma-field.com/en/0.0.0)
+ - [latest (v1.0.0)](https://twitcaspy.alma-field.com/en/latest)
+ - [v1.0.0](https://twitcaspy.alma-field.com/en/1.0.0)
 
 ## Installation
 You can also use Git to clone the repository from GitHub to install the latest

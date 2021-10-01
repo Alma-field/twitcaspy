@@ -14,8 +14,8 @@ Python用Twitcattingクライアントライブラリ
 
 ## ドキュメント
  - "Read The Docs"ドキュメントは準備中です。
- - [最新版 (v0.0.0)](https://twitcaspy.alma-field.com/ja/latest)
- - [v0.0.0](https://twitcaspy.alma-field.com/ja/0.0.0)
+ - [最新版 (v1.0.0)](https://twitcaspy.alma-field.com/ja/latest)
+ - [v1.0.0](https://twitcaspy.alma-field.com/ja/1.0.0)
 
 ## インストール
 GitHubからリポジトリのクローンを作成することで、最新の開発バージョンをインストールすることもできます。
