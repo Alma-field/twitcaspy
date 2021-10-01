@@ -1,10 +1,10 @@
 # twitcaspy
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Alma-field/twitcaspy/blob/master/LICENSE)
 [![test](https://github.com/Alma-field/twitcaspy/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/Alma-field/twitcaspy/actions/workflows/test.yml)
+[![Deploy](https://github.com/Alma-field/twitcaspy/actions/workflows/deploy.yml/badge.svg)](https://github.com/Alma-field/twitcaspy/actions/workflows/deploy.yml)
 [![Documentation Status](https://readthedocs.org/projects/twitcaspy/badge/?version=latest)](http://twitcaspy.alma-field.com/en/latest/?badge=latest)
 [![GitHub issues open](https://img.shields.io/github/issues/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues close](https://img.shields.io/github/issues-closed-raw/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aclose+is%3Aissue)
-[![Documentation Status](https://readthedocs.org/projects/twitcaspy/badge/?version=latest)](https://twitcaspy.alma-field.com/ja/latest/?badge=latest)
 [![PyPI Version](https://img.shields.io/pypi/v/twitcaspy?label=PyPI)](https://pypi.org/project/twitcaspy/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/twitcaspy?label=Python)](https://pypi.org/project/twitcaspy/)
 
@@ -16,7 +16,6 @@ Twitcatting for Python
 
 ## Document
  - [latest (v1.0.0)](https://twitcaspy.alma-field.com/en/latest)
- - [v1.0.0](https://twitcaspy.alma-field.com/en/1.0.0)
 
 ## Installation
 The easiest way to install the latest version from PyPI is by using pip:
