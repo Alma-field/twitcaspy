@@ -19,6 +19,11 @@ Twitcatting for Python
  - [v1.0.0](https://twitcaspy.alma-field.com/en/1.0.0)
 
 ## Installation
+The easiest way to install the latest version from PyPI is by using pip:
+```
+pip install twitcaspy
+```
+
 You can also use Git to clone the repository from GitHub to install the latest
 development version:
 ```

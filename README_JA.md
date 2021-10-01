@@ -20,6 +20,11 @@ Python用Twitcattingクライアントライブラリ
  - [v1.0.0](https://twitcaspy.alma-field.com/ja/1.0.0)
 
 ## インストール
+PyPIから最新バージョンはpipを用いてインストールできます。
+```
+pip install twitcaspy
+```
+
 GitHubからリポジトリのクローンを作成することで、最新の開発バージョンをインストールすることもできます。
 ```
 git clone https://github.com/Alma-field/twitcaspy.git
