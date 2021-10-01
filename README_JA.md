@@ -4,6 +4,9 @@
 [![Documentation Status](https://readthedocs.org/projects/twitcaspy/badge/?version=latest)](http://twitcaspy.alma-field.com/ja/latest/?badge=latest)
 [![GitHub issues open](https://img.shields.io/github/issues/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues close](https://img.shields.io/github/issues-closed-raw/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aclose+is%3Aissue)
+[![Documentation Status](https://readthedocs.org/projects/twitcaspy/badge/?version=latest)](https://twitcaspy.alma-field.com/ja/latest/?badge=latest)
+[![PyPI Version](https://img.shields.io/pypi/v/twitcaspy?label=PyPI)](https://pypi.org/project/twitcaspy/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/twitcaspy?label=Python)](https://pypi.org/project/twitcaspy/)
 
 Python用Twitcattingクライアントライブラリ
 
@@ -13,10 +16,15 @@ Python用Twitcattingクライアントライブラリ
 
 ## ドキュメント
  - "Read The Docs"ドキュメントは準備中です。
- - [最新版 (v0.0.0)](https://twitcaspy.alma-field.com/ja/latest)
- - [v0.0.0](https://twitcaspy.alma-field.com/ja/0.0.0)
+ - [最新版 (v1.0.0)](https://twitcaspy.alma-field.com/ja/latest)
+ - [v1.0.0](https://twitcaspy.alma-field.com/ja/1.0.0)
 
 ## インストール
+PyPIから最新バージョンはpipを用いてインストールできます。
+```
+pip install twitcaspy
+```
+
 GitHubからリポジトリのクローンを作成することで、最新の開発バージョンをインストールすることもできます。
 ```
 git clone https://github.com/Alma-field/twitcaspy.git

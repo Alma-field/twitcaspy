@@ -4,19 +4,26 @@
 [![Documentation Status](https://readthedocs.org/projects/twitcaspy/badge/?version=latest)](http://twitcaspy.alma-field.com/en/latest/?badge=latest)
 [![GitHub issues open](https://img.shields.io/github/issues/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub issues close](https://img.shields.io/github/issues-closed-raw/Alma-field/twitcaspy.svg)](https://github.com/Alma-field/twitcaspy/issues?q=is%3Aclose+is%3Aissue)
+[![Documentation Status](https://readthedocs.org/projects/twitcaspy/badge/?version=latest)](https://twitcaspy.alma-field.com/ja/latest/?badge=latest)
+[![PyPI Version](https://img.shields.io/pypi/v/twitcaspy?label=PyPI)](https://pypi.org/project/twitcaspy/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/twitcaspy?label=Python)](https://pypi.org/project/twitcaspy/)
 
 Twitcatting for Python
 
-## Other language version/他言語版
- - [English/英語](README.md)
- - [Japanese/日本語](README_JA.md)
+## Other language version
+ - [English](https://github.com/Alma-field/twitcaspy/blob/master/README.md)
+ - [Japanese](https://github.com/Alma-field/twitcaspy/blob/master/README_JA.md)
 
 ## Document
- - The "Read The Docs" document is in preparation.
- - [latest (v0.0.0)](https://twitcaspy.alma-field.com/en/latest)
- - [v0.0.0](https://twitcaspy.alma-field.com/en/0.0.0)
+ - [latest (v1.0.0)](https://twitcaspy.alma-field.com/en/latest)
+ - [v1.0.0](https://twitcaspy.alma-field.com/en/1.0.0)
 
 ## Installation
+The easiest way to install the latest version from PyPI is by using pip:
+```
+pip install twitcaspy
+```
+
 You can also use Git to clone the repository from GitHub to install the latest
 development version:
 ```
