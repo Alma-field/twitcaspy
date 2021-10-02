@@ -15,10 +15,8 @@ Python用Twitcattingクライアントライブラリ
  - [Japanese/日本語](README_JA.md)
 
 ## ドキュメント
- - "Read The Docs"ドキュメントは準備中です。
  - [最新版 (v1.0.1)](https://twitcaspy.alma-field.com/ja/latest)
  - [v1.0.1](https://twitcaspy.alma-field.com/ja/1.0.1)
- - [v1.0.0](https://twitcaspy.alma-field.com/ja/1.0.0)
 
 ## インストール
 PyPIから最新バージョンはpipを用いてインストールできます。
