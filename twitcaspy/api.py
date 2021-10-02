@@ -697,7 +697,7 @@ class API:
     @payload(is_supporting=['raw', False], target_user=['user', False])
     def get_supporting_status(
             self, target_user_id, *, id=None, screen_id=None, **kwargs):
-        """get_supporting_status(*, id=None, screen_id=None)
+        """get_supporting_status(target_user_id, *, id=None, screen_id=None)
 
         | Gets the status of whether a user is a supporter of another user.
         | |id_screenid|
@@ -709,6 +709,8 @@ class API:
             |id_notice|
         screen_id: :class:`str`
             |screen_id|
+        target_user_id: :class:`str`
+            | target user id or screen_id
 
         Returns
         -------
@@ -716,7 +718,7 @@ class API:
             | |attribute|
             | |latelimit|
             | **is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`)
-              Whether it is a supporter.
+              The status of whether (id/screen_id) supported target_user_id.
             | **target_user** : :class:`~twitcaspy.models.User`
               Target user information
 
