@@ -695,7 +695,8 @@ class API:
             endpoint_parameters=('slice_id'), **kwargs)
 
     @payload(is_supporting=['raw', False], target_user=['user', False])
-    def get_supporting_status(self, *, id=None, screen_id=None, **kwargs):
+    def get_supporting_status(
+            self, target_user_id, *, id=None, screen_id=None, **kwargs):
         """get_supporting_status(*, id=None, screen_id=None)
 
         | Gets the status of whether a user is a supporter of another user.
@@ -732,8 +733,10 @@ class API:
         if target_id is None:
             raise TwitcaspyException(
                 'Either an id or screen_id is required for this method.')
+        kwargs['target_user_id'] = target_user_id
         return self.request(
-            'GET', f'/users/{target_id}/supporting_status', **kwargs)
+            'GET', f'/users/{target_id}/supporting_status',
+            endpoint_parameters=('target_user_id'), **kwargs)
 
     @payload(added_count=['raw', False])
     def support_user(self, target_user_ids=None, **kwargs):
