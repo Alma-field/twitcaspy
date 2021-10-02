@@ -15,7 +15,9 @@ Twitcatting for Python
  - [Japanese](https://github.com/Alma-field/twitcaspy/blob/master/README_JA.md)
 
 ## Document
- - [latest (v1.0.0)](https://twitcaspy.alma-field.com/en/latest)
+ - [latest (v1.0.1)](https://twitcaspy.alma-field.com/en/latest)
+ - [v1.0.1](https://twitcaspy.alma-field.com/en/1.0.1)
+ - [v1.0.0](https://twitcaspy.alma-field.com/en/1.0.0)
 
 ## Installation
 The easiest way to install the latest version from PyPI is by using pip:
