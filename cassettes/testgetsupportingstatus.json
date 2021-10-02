@@ -1,0 +1,85 @@
+{
+    "version": 1,
+    "interactions": [
+        {
+            "request": {
+                "method": "GET",
+                "uri": "https://apiv2.twitcasting.tv/users/182224938/supporting_status?target_user_id=twitcasting_dev",
+                "body": "null",
+                "headers": {
+                    "User-Agent": [
+                        "Python/3.9.1 Requests/2.25.1 twitcaspy/1.0.0"
+                    ],
+                    "Accept-Encoding": [
+                        "gzip, deflate"
+                    ],
+                    "Accept": [
+                        "*/*"
+                    ],
+                    "Connection": [
+                        "keep-alive"
+                    ],
+                    "X-Api-Version": [
+                        "2.0"
+                    ],
+                    "Content-Length": [
+                        "4"
+                    ]
+                }
+            },
+            "response": {
+                "status": {
+                    "code": 200,
+                    "message": "OK"
+                },
+                "headers": {
+                    "Date": [
+                        "Sat, 02 Oct 2021 06:57:38 GMT"
+                    ],
+                    "Connection": [
+                        "close"
+                    ],
+                    "Set-Cookie": [
+                        "PHPSESSID=gh1nedp7be36plp7nlflpape53; path=/"
+                    ],
+                    "Content-Type": [
+                        "application/json"
+                    ],
+                    "Expires": [
+                        "Thu, 19 Nov 1981 08:52:00 GMT"
+                    ],
+                    "X-RateLimit-Limit": [
+                        "60"
+                    ],
+                    "Content-Length": [
+                        "439"
+                    ],
+                    "X-RateLimit-Reset": [
+                        "1633157918"
+                    ],
+                    "X-WE-ARE-HIRING": [
+                        "https://about.moi.st/ja/recruit/"
+                    ],
+                    "X-RateLimit-Remaining": [
+                        "59"
+                    ],
+                    "Strict-Transport-Security": [
+                        "max-age=0"
+                    ],
+                    "Cache-Control": [
+                        "no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Server": [
+                        "Apache"
+                    ]
+                },
+                "body": {
+                    "string": "{\"is_supporting\":false,\"supported\":null,\"target_user\":{\"id\":\"1025221958827311105\",\"screen_id\":\"twitcasting_dev\",\"name\":\"\u30c4\u30a4\u30ad\u30e3\u30b9DEV\",\"image\":\"http://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1025280415228026880/-RWjIg9M_bigger.jpg\",\"profile\":\"\u958b\u767a\u8005\u5411\u3051\u306e\u60c5\u5831\u3092\u3054\u6848\u5185\u3059\u308b\u30a2\u30ab\u30a6\u30f3\u30c8\u3067\u3059\u3002\",\"level\":1,\"last_movie_id\":null,\"is_live\":false,\"supporter_count\":0,\"supporting_count\":0,\"created\":0}}"
+                }
+            }
+        }
+    ]
+}

@@ -80,6 +80,23 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         ok_(hasattr(data, 'all_count'))
         ok_(hasattr(data, 'comments'))
 
+    @tape.use_cassette('testgetsupportingstatus.json')
+    def testgetsupportingstatus(self):
+        from twitcaspy.models import User
+        target_user_id = 'twitcasting_dev'
+        data = self.api.get_supporting_status(
+            target_user_id=target_user_id, id=user_id)
+        ok_(hasattr(data, 'is_supporting'))
+        ok_(hasattr(data, 'target_user'))
+        ok_(isinstance(data.target_user, User))
+        eq_(data.target_user.screen_id, target_user_id)
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testgetsupportingstatus_raise.json')
+    def testgetsupportingstatus_raise(self):
+        target_user_id = 'twitcasting_dev'
+        data = self.api.get_supporting_status(target_user_id=target_user_id)
+
     @tape.use_cassette('testsupportuser.json')
     def testsupportuser(self):
         target_user_ids = ['twitcasting_jp']
