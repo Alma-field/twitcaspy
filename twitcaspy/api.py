@@ -110,6 +110,7 @@ class API:
                 continue
             if k not in endpoint_parameters:
                 log.warning(f'Unexpected parameter: {k}')
+                continue
             params[k] = arg
         log.debug("PARAMS: %r", params)
 
@@ -125,7 +126,8 @@ class API:
                     auth=self.auth.auth
                 )
             except Exception as e:
-                raise TwitcaspyException(f'Failed to send request: {e}').with_traceback(sys.exc_info()[2])
+                raise TwitcaspyException(f'Failed to send request: {e}')\
+                    .with_traceback(sys.exc_info()[2])
 
             # If an error was returned, throw an exception
             self.last_response = response
@@ -583,14 +585,16 @@ class API:
             endpoint_parameters=('offset', 'limit', 'slice_id'), **kwargs)
 
     @payload('comment', movie_id=['raw', False], all_count=['raw', False])
-    def post_comment(self, comment, **kwargs):
-        """post_comment(comment, *, sns='none')
+    def post_comment(self, movie_id, comment, **kwargs):
+        """post_comment(movie_id, comment, *, sns='none')
 
         | Post a comment.
         | It can be executed only on a user-by-user basis.
 
         Parameters
         ----------
+        movie_id: :class:`str`
+            |movie_id|
         comment: :class:`str`
             | Comment text to post.
             | Must be 1 to 140 characters.
@@ -621,11 +625,16 @@ class API:
         ----------
         https://apiv2-doc.twitcasting.tv/#post-comment
         """
-        if not 1 <= len(hashtag) <= 140:
+        if not 1 <= len(comment) <= 140:
             raise TwitcaspyException(
                 '`comment` must be in the range 1-140 characters.')
         else:
             post_data = {'comment': comment}
+        if 'sns' in kwargs:
+            if kwargs['sns'] in ['none', 'normal', 'reply']:
+                post_data['sns'] = kwargs['sns']
+            else:
+                post_data['sns'] = 'none'
         return self.request(
             'POST', f'/movies/{movie_id}/comments',
             post_data=post_data, **kwargs)

@@ -5,7 +5,7 @@
 """
 Twitcaspy : Twitcasting API library
 """
-__version__ = '1.0.1'
+__version__ = '1.0.2'
 __author__ = 'Alma-field'
 __license__ = 'MIT'
 

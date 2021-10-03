@@ -18,7 +18,7 @@ msgstr ""
 
 #: ../../exceptions.rst:5
 msgid "Exceptions"
-msgstr ""
+msgstr "例外"
 
 #: ../../exceptions.rst:7
 msgid ""
