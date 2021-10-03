@@ -110,6 +110,7 @@ class API:
                 continue
             if k not in endpoint_parameters:
                 log.warning(f'Unexpected parameter: {k}')
+                continue
             params[k] = arg
         log.debug("PARAMS: %r", params)
 
@@ -125,7 +126,8 @@ class API:
                     auth=self.auth.auth
                 )
             except Exception as e:
-                raise TwitcaspyException(f'Failed to send request: {e}').with_traceback(sys.exc_info()[2])
+                raise TwitcaspyException(f'Failed to send request: {e}')\
+                    .with_traceback(sys.exc_info()[2])
 
             # If an error was returned, throw an exception
             self.last_response = response
