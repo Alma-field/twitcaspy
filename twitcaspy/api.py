@@ -583,8 +583,8 @@ class API:
             endpoint_parameters=('offset', 'limit', 'slice_id'), **kwargs)
 
     @payload('comment', movie_id=['raw', False], all_count=['raw', False])
-    def post_comment(self, comment, **kwargs):
-        """post_comment(comment, *, sns='none')
+    def post_comment(self, movie_id, comment, **kwargs):
+        """post_comment(movie_id, comment, *, sns='none')
 
         | Post a comment.
         | It can be executed only on a user-by-user basis.
