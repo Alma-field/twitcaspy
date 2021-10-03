@@ -591,6 +591,8 @@ class API:
 
         Parameters
         ----------
+        movie_id: :class:`str`
+            |movie_id|
         comment: :class:`str`
             | Comment text to post.
             | Must be 1 to 140 characters.
