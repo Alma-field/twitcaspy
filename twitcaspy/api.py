@@ -626,6 +626,11 @@ class API:
                 '`comment` must be in the range 1-140 characters.')
         else:
             post_data = {'comment': comment}
+        if 'sns' in kwargs:
+            if kwargs['sns'] in ['none', 'normal', 'reply']:
+                post_data['sns'] = kwargs['sns']
+            else:
+                post_data['sns'] = 'none'
         return self.request(
             'POST', f'/movies/{movie_id}/comments',
             post_data=post_data, **kwargs)
