@@ -80,6 +80,23 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         ok_(hasattr(data, 'all_count'))
         ok_(hasattr(data, 'comments'))
 
+    @tape.use_cassette('testpostcomment.json')
+    def testpostcomment(self):
+        movie_id = '189037369'
+        data = self.api.post_comment(
+            movie_id=movie_id, comment='モイ！', sns='none')
+        ok_(hasattr(data, 'movie_id'))
+        eq_(data.movie_id, movie_id)
+        ok_(hasattr(data, 'all_count'))
+        ok_(hasattr(data, 'comment'))
+
+    @raises(TwitcaspyException)
+    @tape.use_cassette('testpostcomment_raise.json')
+    def testpostcomment_raise(self):
+        movie_id = '189037369'
+        data = self.api.post_comment(
+            movie_id=movie_id, comment='1234567890'*15, sns='none')
+
     @tape.use_cassette('testgetsupportingstatus.json')
     def testgetsupportingstatus(self):
         from twitcaspy.models import User
