@@ -22,7 +22,7 @@ msgstr "コンテンツ:"
 
 #: ../../index.rst:7
 msgid "Twitcaspy Documentation"
-msgstr ""
+msgstr "Twitcaspy ドキュメント"
 
 #: ../../index.rst:20
 msgid "Indices and tables"
