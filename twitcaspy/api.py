@@ -621,7 +621,7 @@ class API:
         ----------
         https://apiv2-doc.twitcasting.tv/#post-comment
         """
-        if not 1 <= len(hashtag) <= 140:
+        if not 1 <= len(comment) <= 140:
             raise TwitcaspyException(
                 '`comment` must be in the range 1-140 characters.')
         else:
