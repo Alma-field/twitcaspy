@@ -110,6 +110,7 @@ class API:
                 continue
             if k not in endpoint_parameters:
                 log.warning(f'Unexpected parameter: {k}')
+                continue
             params[k] = arg
         log.debug("PARAMS: %r", params)
 
