@@ -9,6 +9,7 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/twitcaspy?label=Python)](https://pypi.org/project/twitcaspy/)
 
 Python用Twitcattingクライアントライブラリ
+Python 3.7 - 3.9 がサポートされています。
 
 ## Other language version/他言語版
  - [English/英語](README.md)
@@ -39,7 +40,28 @@ pip install .
 pip install git+https://github.com/Alma-field/twitcaspy.git
 ```
 
-Python 3.7 - 3.9 がサポートされています。
+## 例
+アプリケーションスコープでの実行例です。    
+***@twitcasting_jp*** のアカウント名を取得します。
+```python
+from twitcaspy import API, AppAuthHandler
+auth = AppAuthHandler(client_id, client_secret)
+api = API(auth)
+
+print(api.get_user_info(id='twitcasting_jp').user.name)
+# > ツイキャス公式
+```
+
+その他の例やコード全体は[examples](https://github.com/Alma-field/twitcaspy/tree/master/examples)内のコードをご覧ください。
+### 含まれている例
+ - [Authorization](https://github.com/Alma-field/twitcaspy/tree/master/examples/auth)
+   - [AppAuthHandler](https://github.com/Alma-field/twitcaspy/tree/master/examples/auth/app.py)
+   - [GrantAuthHandler](https://github.com/Alma-field/twitcaspy/tree/master/examples/auth/grant.py)
+   - [ImplicitAuthHandler](https://github.com/Alma-field/twitcaspy/tree/master/examples/auth/implicit.py)
+ - [Realtime API](https://github.com/Alma-field/twitcaspy/blob/master/examples/realtime)
+ - [Webhook](https://github.com/Alma-field/twitcaspy/blob/master/examples/webhook)
+   - [Server](https://github.com/Alma-field/twitcaspy/blob/master/examples/webhook/server.py)
+   - [Client](https://github.com/Alma-field/twitcaspy/blob/master/examples/webhook/client.py)
 
 ## 出典
 このライブラリは以下を参考にしています:
