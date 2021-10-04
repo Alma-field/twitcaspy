@@ -28,6 +28,12 @@ class Supporter(User):
         | The last live ID by the user
     is_live: :class:`bool`
         | Whether it is currently live streamed
+    supported: :class:`datetime`
+        | Unix time stamp of supported datetime
+        | `2021-09-29 update <https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2021-09-29>`_
+        | Added 'unix time stamp <supported> of supported datetime' to SupporterUser object of response |google_translate_ja_en|
+    supported_time: :class:`datetime.datetime`
+        | Converted supported to :class:`datetime.datetime` type
     supporter_count(deprecated): :class:`int`
         | Number of user supporters.
         | Returns a fixed value of 0.
