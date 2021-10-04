@@ -2,6 +2,8 @@
 # Copyright 2021 Alma-field
 # See LICENSE for details.
 
+from ..utils import fromtimestamp
+
 from .user import User
 
 class Supporter(User):
@@ -53,5 +55,9 @@ class Supporter(User):
         supporter = cls(api)
         setattr(supporter, '_json', json)
         for k, v in json.items():
-            setattr(supporter, k, v)
+            if k == 'supported':
+                setattr(supporter, k, v)
+                setattr(supporter, f'{k}_time', fromtimestamp(v))
+            else:
+                setattr(supporter, k, v)
         return supporter
