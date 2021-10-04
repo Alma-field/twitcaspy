@@ -104,6 +104,7 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         data = self.api.get_supporting_status(
             target_user_id=target_user_id, id=user_id)
         ok_(hasattr(data, 'is_supporting'))
+        ok_(hasattr(data, 'supported'))
         ok_(hasattr(data, 'target_user'))
         ok_(isinstance(data.target_user, User))
         eq_(data.target_user.screen_id, target_user_id)
