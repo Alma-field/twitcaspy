@@ -14,14 +14,11 @@ from twitcaspy import api, TwitcaspyException
 @app.route('/', methods=['GET', 'POST'])
 def main():
     if request.method == 'POST':
-        try:
-            webhook = api.incoming_webhook(request.json)
-            #Show Parse Result
-            print(f'signature : {webhook.signature}')
-            print(f'user_id : {webhook.broadcaster.id}')
-            print(f'title : {webhook.movie.title}')
-        except TwitcaspyException:
-            abort(404)
+        webhook = api.incoming_webhook(request.json)
+        #Show Parse Result
+        print(f'signature : {webhook.signature}')
+        print(f'user_id : {webhook.broadcaster.id}')
+        print(f'title : {webhook.movie.title}')
     return make_response(jsonify({'message':'OK'}))
 
 if __name__ == '__main__':
