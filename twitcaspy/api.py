@@ -703,7 +703,10 @@ class API:
             'GET', '/gifts',
             endpoint_parameters=('slice_id'), **kwargs)
 
-    @payload(is_supporting=['raw', False], target_user=['user', False])
+    @payload(
+        is_supporting=['raw', False],
+        supported=['raw', False],
+        target_user=['user', False])
     def get_supporting_status(
             self, target_user_id, *, id=None, screen_id=None, **kwargs):
         """get_supporting_status(target_user_id, *, id=None, screen_id=None)
