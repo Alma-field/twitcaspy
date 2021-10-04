@@ -724,6 +724,11 @@ class API:
         target_user_id: :class:`str`
             | target user id or screen_id
 
+        Warnings
+        --------
+        Note that unlike: class:`~twitcaspy.models.Supporter`,
+        there is no supported_time attribute.
+
         Returns
         -------
         :class:`~twitcaspy.models.Result`
@@ -731,6 +736,8 @@ class API:
             | |latelimit|
             | **is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`)
               The status of whether (id/screen_id) supported target_user_id.
+            | **supported** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+              Unix time stamp of supported datetime
             | **target_user** : :class:`~twitcaspy.models.User`
               Target user information
 
