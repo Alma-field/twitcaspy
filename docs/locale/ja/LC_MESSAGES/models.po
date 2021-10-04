@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 16:30+0900\n"
+"POT-Creation-Date: 2021-10-04 16:54+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,8 +54,7 @@ msgstr ""
 #: twitcaspy.models.comment.Comment:1 twitcaspy.models.gift.Gift:1
 #: twitcaspy.models.live.Live:1 twitcaspy.models.movie.Movie:1
 #: twitcaspy.models.result.Result:1 twitcaspy.models.subcategory.SubCategory:1
-#: twitcaspy.models.supporter.Supporter:1 twitcaspy.models.user.User:1
-#: twitcaspy.models.webhook.WebHook:1
+#: twitcaspy.models.user.User:1 twitcaspy.models.webhook.WebHook:1
 msgid "Bases: :class:`twitcaspy.models.model.Model`"
 msgstr ""
 
@@ -486,6 +485,10 @@ msgstr ""
 #: ../../models.rst:59
 msgid "Supporter class"
 msgstr ""
+
+#: of twitcaspy.models.supporter.Supporter:1
+msgid "Bases: :class:`twitcaspy.models.user.User`"
+msgstr "ベースクラス: :class:`~twitcaspy.models.User`"
 
 #: of twitcaspy.models.supporter.Supporter:1
 msgid "Supporter Object"

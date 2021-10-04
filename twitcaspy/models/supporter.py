@@ -2,9 +2,9 @@
 # Copyright 2021 Alma-field
 # See LICENSE for details.
 
-from .model import Model
+from .user import User
 
-class Supporter(Model):
+class Supporter(User):
     """Supporter Object
 
     Attributes
