@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-02 16:29+0900\n"
+"POT-Creation-Date: 2021-10-04 15:58+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,7 +96,7 @@ msgstr "指定されたparserがParserインスタンスではない場合"
 #: twitcaspy.api.API.get_rtmp_url:16 twitcaspy.api.API.get_supporting_status:23
 #: twitcaspy.api.API.get_user_info:22 twitcaspy.api.API.get_webhook_list:34
 #: twitcaspy.api.API.get_webm_url:14 twitcaspy.api.API.incoming_webhook:27
-#: twitcaspy.api.API.post_comment:26 twitcaspy.api.API.register_webhook:31
+#: twitcaspy.api.API.post_comment:28 twitcaspy.api.API.register_webhook:31
 #: twitcaspy.api.API.remove_webhook:31 twitcaspy.api.API.search_live_movies:37
 #: twitcaspy.api.API.search_users:25
 #: twitcaspy.api.API.set_current_live_hashtag:18
@@ -484,7 +484,7 @@ msgstr "戻り値の型"
 #: twitcaspy.api.API.get_supporting_status:18
 #: twitcaspy.api.API.get_user_info:17 twitcaspy.api.API.get_webhook_list:31
 #: twitcaspy.api.API.get_webm_url:11 twitcaspy.api.API.incoming_webhook:22
-#: twitcaspy.api.API.post_comment:21 twitcaspy.api.API.register_webhook:25
+#: twitcaspy.api.API.post_comment:23 twitcaspy.api.API.register_webhook:25
 #: twitcaspy.api.API.remove_webhook:25 twitcaspy.api.API.search_live_movies:29
 #: twitcaspy.api.API.search_users:18
 #: twitcaspy.api.API.set_current_live_hashtag:13
@@ -611,7 +611,7 @@ msgid "Returns information about the specified movie."
 msgstr "ライブ情報を取得します。"
 
 #: of twitcaspy.api.API.delete_comment:9 twitcaspy.api.API.get_comments:4
-#: twitcaspy.api.API.get_movie_info:3
+#: twitcaspy.api.API.get_movie_info:3 twitcaspy.api.API.post_comment:4
 msgid "|movie_id|"
 msgstr "ライブのID"
 
@@ -997,7 +997,7 @@ msgstr "コメントを投稿します。"
 msgid "It can be executed only on a user-by-user basis."
 msgstr "ユーザ単位でのみ実行可能です。"
 
-#: of twitcaspy.api.API.post_comment:4
+#: of twitcaspy.api.API.post_comment:6
 msgid "| Comment text to post. | Must be 1 to 140 characters."
 msgstr ""
 
@@ -1009,7 +1009,7 @@ msgstr "投稿するコメント文章"
 msgid "Must be 1 to 140 characters."
 msgstr "1〜140文字である必要があります。"
 
-#: of twitcaspy.api.API.post_comment:7
+#: of twitcaspy.api.API.post_comment:9
 msgid ""
 "| Simultaneous posting to SNS. | (Valid only when the user is linked with"
 " Twitter or Facebook.) | 'reply' : Post in a format that replies to the "
@@ -1036,7 +1036,7 @@ msgstr "'normal' : 通常の投稿"
 msgid "'none' : No SNS posts."
 msgstr "'none' : SNS投稿無し"
 
-#: of twitcaspy.api.API.post_comment:14
+#: of twitcaspy.api.API.post_comment:16
 msgid ""
 "| |attribute| | |latelimit| | **movie_id** : "
 ":class:`~twitcaspy.models.Raw` (:class:`str`)   |movie_id| | "
@@ -1048,11 +1048,11 @@ msgstr ""
 msgid "**comment** : :class:`~twitcaspy.models.Comment`"
 msgstr ""
 
-#: of twitcaspy.api.API.post_comment:23
+#: of twitcaspy.api.API.post_comment:25
 msgid "When comment is not 1-140 characters."
 msgstr "comment が 1-140 文字でないとき"
 
-#: of twitcaspy.api.API.post_comment:27
+#: of twitcaspy.api.API.post_comment:29
 msgid "https://apiv2-doc.twitcasting.tv/#post-comment"
 msgstr ""
 
@@ -1165,10 +1165,6 @@ msgstr "ユーザーが、ある別のユーザのサポーターであるかの
 msgid "| target user id or screen_id"
 msgstr "対象ユーザの id または screen_id"
 
-#: of twitcaspy.api.API.get_supporting_status
-msgid "target user id or screen_id"
-msgstr "対象ユーザの id または screen_id"
-
 #: of twitcaspy.api.API.get_supporting_status:12
 msgid ""
 "| |attribute| | |latelimit| | **is_supporting** : "
@@ -1179,8 +1175,8 @@ msgstr ""
 
 #: of twitcaspy.api.API.get_supporting_status
 msgid ""
-"**is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`) "
-"The status of whether (id/screen_id) supported target_user_id."
+"**is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`) The "
+"status of whether (id/screen_id) supported target_user_id."
 msgstr ""
 "**is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`) "
 "(id/screen_id)がtarget_user_idをサポートしているかの状況を取得します。"
