@@ -10,10 +10,6 @@ tests_require = [
     "python-dotenv>=0.19.0,<1",
 ]
 
-examples_require = [
-    "flask>=2.0.1,<3"
-]
-
 setup(
     long_description=long_description,
     project_urls={
