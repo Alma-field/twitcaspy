@@ -16,8 +16,8 @@ Python 3.7 - 3.9 are supported.
  - [Japanese](https://github.com/Alma-field/twitcaspy/blob/master/README_JA.md)
 
 ## Document
- - [develop](https://twitcaspy.alma-field.com/en/latest)
- - [latest (v1.0.2)](https://twitcaspy.alma-field.com/en/stable)
+ - [develop version](https://twitcaspy.alma-field.com/en/latest)
+ - [latest version(v1.1.0)](https://twitcaspy.alma-field.com/en/stable)
  - [v1.1.0](https://twitcaspy.alma-field.com/en/1.1.0)
  - [v1.0.2](https://twitcaspy.alma-field.com/en/1.0.2)
  - [v1.0.1](https://twitcaspy.alma-field.com/en/1.0.1)
