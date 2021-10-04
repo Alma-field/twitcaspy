@@ -1,3 +1,7 @@
+# Twitcaspy
+# Copyright 2021 Alma-field
+# See LICENSE for details.
+
 import re
 from setuptools import find_packages, setup
 
