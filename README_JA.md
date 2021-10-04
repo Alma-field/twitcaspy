@@ -18,6 +18,7 @@ Python 3.7 - 3.9 がサポートされています。
 ## ドキュメント
  - [開発版](https://twitcaspy.alma-field.com/ja/latest)
  - [最新版 (v1.0.2)](https://twitcaspy.alma-field.com/ja/stable)
+ - [v1.1.0](https://twitcaspy.alma-field.com/ja/1.1.0)
  - [v1.0.2](https://twitcaspy.alma-field.com/ja/1.0.2)
  - [v1.0.1](https://twitcaspy.alma-field.com/ja/1.0.1)
  - [v1.0.0](https://twitcaspy.alma-field.com/ja/1.0.0)

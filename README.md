@@ -18,6 +18,7 @@ Python 3.7 - 3.9 are supported.
 ## Document
  - [develop](https://twitcaspy.alma-field.com/en/latest)
  - [latest (v1.0.2)](https://twitcaspy.alma-field.com/en/stable)
+ - [v1.1.0](https://twitcaspy.alma-field.com/en/1.1.0)
  - [v1.0.2](https://twitcaspy.alma-field.com/en/1.0.2)
  - [v1.0.1](https://twitcaspy.alma-field.com/en/1.0.1)
  - [v1.0.0](https://twitcaspy.alma-field.com/en/1.0.0)
