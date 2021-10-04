@@ -2,6 +2,10 @@
 # Copyright 2021 Alma-field
 # See LICENSE for details.
 
+# Before running this code, run the following command:
+# このコードを実行する前に、以下のコマンドを実行してください。
+# pip install twitcaspy[realtime]
+
 from base64 import b64encode
 # The client id and/or secret can be found on your application's Details page
 # located at select app in https://twitcasting.tv/developer.php
