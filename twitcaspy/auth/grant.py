@@ -62,3 +62,6 @@ class GrantAuthHandler(AuthHandler):
             self.auth = OAuth2Bearer(self.oauth.token['access_token'])
         except Exception as e:
             raise TwitcaspyException(e)
+
+    def set_access_token(self, bearer_token):
+        self.auth = OAuth2Bearer(bearer_token)
