@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-20 17:17+0900\n"
+"POT-Creation-Date: 2021-10-04 15:58+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,9 @@ msgstr ""
 
 #: of twitcaspy.auth.app.AppAuthHandler twitcaspy.auth.auth.AuthHandler
 #: twitcaspy.auth.grant.GrantAuthHandler
+#: twitcaspy.auth.grant.GrantAuthHandler.set_access_token
 #: twitcaspy.auth.implicit.ImplicitAuthHandler
+#: twitcaspy.auth.implicit.ImplicitAuthHandler.set_access_token
 #: twitcaspy.auth.oauth.basic.OAuth2Basic
 #: twitcaspy.auth.oauth.bearer.OAuth2Bearer
 msgid "Parameters"
@@ -106,6 +108,31 @@ msgstr ""
 #: twitcaspy.auth.implicit.ImplicitAuthHandler.get_authorization_url:1
 msgid "Get the authorization URL to redirect the user"
 msgstr "ユーザー認証のためのリダイレクトURLを取得します"
+
+#: of twitcaspy.auth.grant.GrantAuthHandler.set_access_token:1
+#: twitcaspy.auth.implicit.ImplicitAuthHandler.set_access_token:1
+msgid "Set bearer_token."
+msgstr "Bearerトークンをセットします。"
+
+#: of twitcaspy.auth.grant.GrantAuthHandler.set_access_token:3
+#: twitcaspy.auth.implicit.ImplicitAuthHandler.set_access_token:3
+msgid "bearer_token to use"
+msgstr "使用するBearerトークン"
+
+#: of twitcaspy.auth.grant.GrantAuthHandler.set_access_token
+#: twitcaspy.auth.implicit.ImplicitAuthHandler.set_access_token
+msgid "Returns"
+msgstr ""
+
+#: of twitcaspy.auth.grant.GrantAuthHandler.set_access_token
+#: twitcaspy.auth.implicit.ImplicitAuthHandler.set_access_token
+msgid "Return type"
+msgstr ""
+
+#: of twitcaspy.auth.grant.GrantAuthHandler.set_access_token:7
+#: twitcaspy.auth.implicit.ImplicitAuthHandler.set_access_token:7
+msgid ":class:`None`"
+msgstr ""
 
 #: ../../auth.rst:35
 msgid "Implicit handler"
