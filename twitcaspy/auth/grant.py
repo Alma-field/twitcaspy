@@ -64,4 +64,17 @@ class GrantAuthHandler(AuthHandler):
             raise TwitcaspyException(e)
 
     def set_access_token(self, bearer_token):
+        """set_access_token(bearer_token)
+
+        | Set bearer_token.
+
+        Parameters
+        ----------
+        bearer_token: :class:`str`
+            bearer_token to use
+
+        Returns
+        -------
+        :class:`None`
+        """
         self.auth = OAuth2Bearer(bearer_token)
