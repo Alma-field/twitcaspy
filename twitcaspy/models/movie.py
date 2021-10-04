@@ -39,8 +39,10 @@ class Movie(Model):
         | stream area (country code)
     duration: :class:`int`
         | stream time (seconds)
-    created: :class:`datetime.datetime`
-        | Converted Unix time stamp of stream start date and time to :class:`datetime.datetime` type
+    created: :class:`int`
+        | Unix time stamp of stream start datetime
+    created_time: :class:`datetime.datetime`
+        | Converted created to :class:`datetime.datetime` type
     is_collabo: :class:`bool`
         | Whether it is a collaboration stream
     is_protected: :class:`bool`
