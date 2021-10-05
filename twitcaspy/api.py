@@ -733,7 +733,7 @@ class API:
 
         Warnings
         --------
-        Note that unlike: class:`~twitcaspy.models.Supporter`,
+        Note that unlike :class:`~twitcaspy.models.Supporter`,
         there is no supported_time attribute.
 
         Returns
