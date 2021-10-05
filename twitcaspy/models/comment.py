@@ -35,8 +35,8 @@ class Comment(Model):
         setattr(comment, '_json', json)
         for k, v in json.items():
             if k == 'created':
-                setattr(comment, k, v)
-                setattr(comment, f'{k}_time', fromtimestamp(v))
+                setattr(comment, k, fromtimestamp(v))
+                setattr(comment, f'{k}_time', v)
             elif k == 'from_user':
                 setattr(comment, k, User.parse(api, v))
             else:

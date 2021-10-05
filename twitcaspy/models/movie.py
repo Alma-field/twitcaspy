@@ -71,8 +71,8 @@ class Movie(Model):
         setattr(movie, '_json', json)
         for k, v in json.items():
             if k == 'created':
-                setattr(movie, k, v)
-                setattr(movie, f'{k}_time', fromtimestamp(v))
+                setattr(movie, k, fromtimestamp(v))
+                setattr(movie, f'{k}_time', v)
             else:
                 setattr(movie, k, v)
         return movie
