@@ -19,10 +19,10 @@ class Comment(Model):
         | comment text
     from_user: :class:`~twitcaspy.models.User`
         | Comment contributor information
-    created: :class:`int`
+    created: :class:`datetime.datetime`
+        | Converted created_time to :class:`datetime.datetime` type
+    created_time: :class:`int`
         | Unix time stamp of comment posting datetime
-    created_time: :class:`datetime.datetime`
-        | Converted created to :class:`datetime.datetime` type
 
     References
     ----------
