@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-24 00:19+0900\n"
+"POT-Creation-Date: 2021-10-05 14:01+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,8 +54,7 @@ msgstr ""
 #: twitcaspy.models.comment.Comment:1 twitcaspy.models.gift.Gift:1
 #: twitcaspy.models.live.Live:1 twitcaspy.models.movie.Movie:1
 #: twitcaspy.models.result.Result:1 twitcaspy.models.subcategory.SubCategory:1
-#: twitcaspy.models.supporter.Supporter:1 twitcaspy.models.user.User:1
-#: twitcaspy.models.webhook.WebHook:1
+#: twitcaspy.models.user.User:1 twitcaspy.models.webhook.WebHook:1
 msgid "Bases: :class:`twitcaspy.models.model.Model`"
 msgstr ""
 
@@ -147,18 +146,19 @@ msgstr "プロフィール文章"
 msgid "User level"
 msgstr "ユーザのレベル"
 
-#: of twitcaspy.models.latelimit.LateLimit:7
+#: of twitcaspy.models.comment.Comment:31
+#: twitcaspy.models.latelimit.LateLimit:7
 #: twitcaspy.models.latelimit.LateLimit:13
 #: twitcaspy.models.latelimit.LateLimit:19 twitcaspy.models.movie.Movie:61
-#: twitcaspy.models.movie.Movie:85 twitcaspy.models.movie.Movie:110
-#: twitcaspy.models.movie.Movie:117 twitcaspy.models.movie.Movie:123
-#: twitcaspy.models.subcategory.SubCategory:19
+#: twitcaspy.models.movie.Movie:85 twitcaspy.models.movie.Movie:97
+#: twitcaspy.models.movie.Movie:116 twitcaspy.models.movie.Movie:123
+#: twitcaspy.models.movie.Movie:129 twitcaspy.models.subcategory.SubCategory:19
 #: twitcaspy.models.supporter.Supporter:38
-#: twitcaspy.models.supporter.Supporter:58
-#: twitcaspy.models.supporter.Supporter:66
 #: twitcaspy.models.supporter.Supporter:72
-#: twitcaspy.models.supporter.Supporter:78
-#: twitcaspy.models.supporter.Supporter:86 twitcaspy.models.user.User:38
+#: twitcaspy.models.supporter.Supporter:80
+#: twitcaspy.models.supporter.Supporter:86
+#: twitcaspy.models.supporter.Supporter:92
+#: twitcaspy.models.supporter.Supporter:100 twitcaspy.models.user.User:38
 #: twitcaspy.models.user.User:59 twitcaspy.models.user.User:68
 #: twitcaspy.models.user.User:77
 msgid ":class:`int`"
@@ -169,7 +169,7 @@ msgid "The last live ID by the user"
 msgstr "ユーザが最後に配信したライブのID"
 
 #: of twitcaspy.models.gift.Gift:28 twitcaspy.models.movie.Movie:31
-#: twitcaspy.models.movie.Movie:37 twitcaspy.models.movie.Movie:131
+#: twitcaspy.models.movie.Movie:37 twitcaspy.models.movie.Movie:137
 #: twitcaspy.models.supporter.Supporter:44 twitcaspy.models.user.User:44
 msgid ":class:`str` or :class:`None`"
 msgstr ""
@@ -179,12 +179,12 @@ msgid "Whether it is currently live streamed"
 msgstr "現在ライブ配信中かどうか"
 
 #: of twitcaspy.models.movie.Movie:49 twitcaspy.models.movie.Movie:55
-#: twitcaspy.models.movie.Movie:97 twitcaspy.models.movie.Movie:103
+#: twitcaspy.models.movie.Movie:103 twitcaspy.models.movie.Movie:109
 #: twitcaspy.models.supporter.Supporter:50 twitcaspy.models.user.User:50
 msgid ":class:`bool`"
 msgstr ""
 
-#: of twitcaspy.models.supporter.Supporter:54 twitcaspy.models.user.User:54
+#: of twitcaspy.models.supporter.Supporter:68 twitcaspy.models.user.User:54
 msgid "Number of user supporters."
 msgstr "ユーザーのサポーターの数"
 
@@ -196,25 +196,25 @@ msgstr ""
 "`2018-09-03 更新 "
 "<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-09-03>`_"
 
-#: of twitcaspy.models.supporter.Supporter:55
-#: twitcaspy.models.supporter.Supporter:63
-#: twitcaspy.models.supporter.Supporter:83 twitcaspy.models.user.User:56
+#: of twitcaspy.models.supporter.Supporter:69
+#: twitcaspy.models.supporter.Supporter:77
+#: twitcaspy.models.supporter.Supporter:97 twitcaspy.models.user.User:56
 #: twitcaspy.models.user.User:65 twitcaspy.models.user.User:74
 msgid "Returns a fixed value of 0."
 msgstr "固定値0を返します。"
 
-#: of twitcaspy.models.supporter.Supporter:56
-#: twitcaspy.models.supporter.Supporter:64
-#: twitcaspy.models.supporter.Supporter:84 twitcaspy.models.user.User:57
+#: of twitcaspy.models.supporter.Supporter:70
+#: twitcaspy.models.supporter.Supporter:78
+#: twitcaspy.models.supporter.Supporter:98 twitcaspy.models.user.User:57
 #: twitcaspy.models.user.User:66 twitcaspy.models.user.User:75
 msgid "This parameter is deprecated."
 msgstr "このパラメータは非推奨です。"
 
-#: of twitcaspy.models.supporter.Supporter:62 twitcaspy.models.user.User:63
+#: of twitcaspy.models.supporter.Supporter:76 twitcaspy.models.user.User:63
 msgid "Number supported user by the user."
 msgstr "ユーザーがサポートしている数"
 
-#: of twitcaspy.models.supporter.Supporter:82 twitcaspy.models.user.User:72
+#: of twitcaspy.models.supporter.Supporter:96 twitcaspy.models.user.User:72
 msgid "Date and time when this account was created."
 msgstr "このアカウントの作成日時"
 
@@ -227,10 +227,10 @@ msgstr ""
 "<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2018-08-03>`_"
 
 #: of twitcaspy.models.app.App:22 twitcaspy.models.category.Category:22
-#: twitcaspy.models.comment.Comment:28 twitcaspy.models.gift.Gift:73
-#: twitcaspy.models.latelimit.LateLimit:28 twitcaspy.models.movie.Movie:134
+#: twitcaspy.models.comment.Comment:34 twitcaspy.models.gift.Gift:73
+#: twitcaspy.models.latelimit.LateLimit:28 twitcaspy.models.movie.Movie:140
 #: twitcaspy.models.subcategory.SubCategory:22
-#: twitcaspy.models.supporter.Supporter:89 twitcaspy.models.user.User:80
+#: twitcaspy.models.supporter.Supporter:103 twitcaspy.models.user.User:80
 #: twitcaspy.models.webhook.WebHook:19
 msgid "References"
 msgstr ""
@@ -343,50 +343,54 @@ msgstr "配信地域(国コード)"
 msgid "stream time (seconds)"
 msgstr "配信時間(秒)"
 
-#: of twitcaspy.models.movie.Movie:89
-msgid ""
-"Converted Unix time stamp of stream start date and time to "
-":class:`datetime.datetime` type"
-msgstr "配信開始日時のunixタイムスタンプを :class:`datetime.datetime` 型へ変換したもの"
+#: of twitcaspy.models.comment.Comment:23 twitcaspy.models.movie.Movie:89
+msgid "Converted created_time to :class:`datetime.datetime` type"
+msgstr "created_timeを :class:`datetime.datetime` 型へ変換したもの"
 
 #: of twitcaspy.models.comment.Comment:25
 #: twitcaspy.models.latelimit.LateLimit:25 twitcaspy.models.movie.Movie:91
+#: twitcaspy.models.supporter.Supporter:58
+#: twitcaspy.models.supporter.Supporter:64
 msgid ":class:`datetime.datetime`"
 msgstr ":class:`datetime.datetime`"
 
 #: of twitcaspy.models.movie.Movie:95
+msgid "Unix time stamp of stream start datetime"
+msgstr "配信開始日時のunixタイムスタンプ"
+
+#: of twitcaspy.models.movie.Movie:101
 msgid "Whether it is a collaboration stream"
 msgstr "コラボ配信かどうか"
 
-#: of twitcaspy.models.movie.Movie:101
+#: of twitcaspy.models.movie.Movie:107
 msgid "Whether to need the secret word"
 msgstr "合言葉配信かどうか"
 
-#: of twitcaspy.models.movie.Movie:107
+#: of twitcaspy.models.movie.Movie:113
 msgid "Maximum number of simultaneous viewers"
 msgstr "最大同時視聴数"
 
-#: of twitcaspy.models.movie.Movie:108
+#: of twitcaspy.models.movie.Movie:114
 msgid "(0 if streaming now.)"
 msgstr "(配信中の場合0)"
 
-#: of twitcaspy.models.movie.Movie:114
+#: of twitcaspy.models.movie.Movie:120
 msgid "Current number of simultaneous viewers"
 msgstr "現在の同時視聴者数"
 
-#: of twitcaspy.models.movie.Movie:115
+#: of twitcaspy.models.movie.Movie:121
 msgid "(0 if not streaming now.)"
 msgstr "(配信中ではない場合0)"
 
-#: of twitcaspy.models.movie.Movie:121
+#: of twitcaspy.models.movie.Movie:127
 msgid "Total number of viewers"
 msgstr "総視聴者数"
 
-#: of twitcaspy.models.movie.Movie:127
+#: of twitcaspy.models.movie.Movie:133
 msgid "URL for HTTP Live Streaming playback"
 msgstr "HTTP Live Streaming再生用のURL"
 
-#: of twitcaspy.models.movie.Movie:128
+#: of twitcaspy.models.movie.Movie:134
 msgid ""
 "`2019-04-17 update "
 "<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2019-04-17>`_"
@@ -394,13 +398,13 @@ msgstr ""
 "`2019-04-17 更新 "
 "<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2019-04-17>`_"
 
-#: of twitcaspy.models.movie.Movie:129
+#: of twitcaspy.models.movie.Movie:135
 msgid ""
 "Changed the URL of the hls_url parameter from `http` to `https` "
 "|google_translate_ja_en|"
 msgstr "hls_url パラメータの URL を http から https に変更しました。"
 
-#: of twitcaspy.models.movie.Movie:135
+#: of twitcaspy.models.movie.Movie:141
 msgid "https://apiv2-doc.twitcasting.tv/#movie-object"
 msgstr ""
 
@@ -424,13 +428,11 @@ msgstr "コメント本文"
 msgid "Comment contributor information"
 msgstr "コメント投稿者の情報"
 
-#: of twitcaspy.models.comment.Comment:23
-msgid ""
-"Converted Unix time stamp of comment posting date and time to "
-":class:`datetime.datetime` type"
-msgstr "コメント投稿日時のunixタイムスタンプを :class:`datetime.datetime` 型へ変換したもの"
-
 #: of twitcaspy.models.comment.Comment:29
+msgid "Unix time stamp of comment posting datetime"
+msgstr "コメント投稿日時のunixタイムスタンプ"
+
+#: of twitcaspy.models.comment.Comment:35
 msgid "https://apiv2-doc.twitcasting.tv/#comment-object"
 msgstr ""
 
@@ -487,18 +489,44 @@ msgid "Supporter class"
 msgstr ""
 
 #: of twitcaspy.models.supporter.Supporter:1
+msgid "Bases: :class:`twitcaspy.models.user.User`"
+msgstr "ベースクラス: :class:`~twitcaspy.models.User`"
+
+#: of twitcaspy.models.supporter.Supporter:1
 msgid "Supporter Object"
 msgstr ""
 
-#: of twitcaspy.models.supporter.Supporter:70
+#: of twitcaspy.models.supporter.Supporter:54
+msgid "Unix time stamp of supported datetime"
+msgstr "サポートした日時のunixタイムスタンプ"
+
+#: of twitcaspy.models.supporter.Supporter:55
+msgid ""
+"`2021-09-29 update "
+"<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2021-09-29>`_"
+msgstr ""
+"`2021-09-29 更新 "
+"<https://github.com/twitcasting/PublicApiV2/blob/master/CHANGELOG.md#2021-09-29>`_"
+
+#: of twitcaspy.models.supporter.Supporter:56
+msgid ""
+"Added 'unix time stamp <supported> of supported datetime' to "
+"SupporterUser object of response |google_translate_ja_en|"
+msgstr "レスポンスの SupporterUser object にサポートした日時のunixタイムスタンプ supported を追加しました"
+
+#: of twitcaspy.models.supporter.Supporter:62
+msgid "Converted supported to :class:`datetime.datetime` type"
+msgstr "supportedを :class:`datetime.datetime` 型へ変換したもの"
+
+#: of twitcaspy.models.supporter.Supporter:84
 msgid "Item score"
 msgstr ""
 
-#: of twitcaspy.models.supporter.Supporter:76
+#: of twitcaspy.models.supporter.Supporter:90
 msgid "Cumulative score"
 msgstr ""
 
-#: of twitcaspy.models.supporter.Supporter:90
+#: of twitcaspy.models.supporter.Supporter:104
 msgid "https://apiv2-doc.twitcasting.tv/#supporteruser-object"
 msgstr ""
 
@@ -621,9 +649,3 @@ msgstr "パーサーがモデルのインスタンスを作成するために使
 #: of twitcaspy.models.factory.ModelFactory:2
 msgid "You may subclass this factory to add your own extended models."
 msgstr "独自のモデルを追加する場合は、このクラスを継承してください。"
-
-#~ msgid "..autoclass:: twitcaspy.models.Comment"
-#~ msgstr ""
-
-#~ msgid "show-inheritance"
-#~ msgstr ""

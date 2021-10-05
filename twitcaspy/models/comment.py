@@ -20,7 +20,9 @@ class Comment(Model):
     from_user: :class:`~twitcaspy.models.User`
         | Comment contributor information
     created: :class:`datetime.datetime`
-        | Converted Unix time stamp of comment posting date and time to :class:`datetime.datetime` type
+        | Converted created_time to :class:`datetime.datetime` type
+    created_time: :class:`int`
+        | Unix time stamp of comment posting datetime
 
     References
     ----------
@@ -34,6 +36,7 @@ class Comment(Model):
         for k, v in json.items():
             if k == 'created':
                 setattr(comment, k, fromtimestamp(v))
+                setattr(comment, f'{k}_time', v)
             elif k == 'from_user':
                 setattr(comment, k, User.parse(api, v))
             else:

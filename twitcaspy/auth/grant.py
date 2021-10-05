@@ -1,6 +1,9 @@
 # Twitcaspy
 # Copyright 2021 Alma-field
 # See LICENSE for details.
+#
+# based on tweepy(https://github.com/tweepy/tweepy)
+# Copyright (c) 2009-2021 Joshua Roesslein
 
 from requests_oauthlib import OAuth2Session
 
@@ -62,3 +65,19 @@ class GrantAuthHandler(AuthHandler):
             self.auth = OAuth2Bearer(self.oauth.token['access_token'])
         except Exception as e:
             raise TwitcaspyException(e)
+
+    def set_access_token(self, bearer_token):
+        """set_access_token(bearer_token)
+
+        | Set bearer_token.
+
+        Parameters
+        ----------
+        bearer_token: :class:`str`
+            bearer_token to use
+
+        Returns
+        -------
+        :class:`None`
+        """
+        self.auth = OAuth2Bearer(bearer_token)

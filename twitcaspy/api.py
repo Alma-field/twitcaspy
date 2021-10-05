@@ -1,3 +1,10 @@
+# Twitcaspy
+# Copyright 2021 Alma-field
+# See LICENSE for details.
+#
+# based on tweepy(https://github.com/tweepy/tweepy)
+# Copyright (c) 2009-2021 Joshua Roesslein
+
 import functools
 import logging
 import json
@@ -703,7 +710,10 @@ class API:
             'GET', '/gifts',
             endpoint_parameters=('slice_id'), **kwargs)
 
-    @payload(is_supporting=['raw', False], target_user=['user', False])
+    @payload(
+        is_supporting=['raw', False],
+        supported=['raw', False],
+        target_user=['user', False])
     def get_supporting_status(
             self, target_user_id, *, id=None, screen_id=None, **kwargs):
         """get_supporting_status(target_user_id, *, id=None, screen_id=None)
@@ -721,6 +731,11 @@ class API:
         target_user_id: :class:`str`
             | target user id or screen_id
 
+        Warnings
+        --------
+        Note that unlike :class:`~twitcaspy.models.Supporter`,
+        there is no supported_time attribute.
+
         Returns
         -------
         :class:`~twitcaspy.models.Result`
@@ -728,6 +743,8 @@ class API:
             | |latelimit|
             | **is_supporting** : :class:`~twitcaspy.models.Raw` (:class:`bool`)
               The status of whether (id/screen_id) supported target_user_id.
+            | **supported** : :class:`~twitcaspy.models.Raw` (:class:`int`)
+              Unix time stamp of supported datetime
             | **target_user** : :class:`~twitcaspy.models.User`
               Target user information
 

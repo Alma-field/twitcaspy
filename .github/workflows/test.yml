@@ -1,3 +1,10 @@
+# Twitcaspy
+# Copyright 2021 Alma-field
+# See LICENSE for details.
+#
+# based on tweepy(https://github.com/tweepy/tweepy)
+# Copyright (c) 2009-2021 Joshua Roesslein
+
 name: test
 
 on: [push, pull_request]
@@ -18,7 +25,7 @@ jobs:
               - name: Install dependencies
                 run: |
                     python -m pip install --upgrade pip
-                    pip install .[dev,test]
+                    pip install .[test]
               - name: Run tests
                 run: |
                     python setup.py nosetests

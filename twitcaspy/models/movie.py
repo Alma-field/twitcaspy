@@ -40,7 +40,9 @@ class Movie(Model):
     duration: :class:`int`
         | stream time (seconds)
     created: :class:`datetime.datetime`
-        | Converted Unix time stamp of stream start date and time to :class:`datetime.datetime` type
+        | Converted created_time to :class:`datetime.datetime` type
+    created_time: :class:`int`
+        | Unix time stamp of stream start datetime
     is_collabo: :class:`bool`
         | Whether it is a collaboration stream
     is_protected: :class:`bool`
@@ -70,6 +72,7 @@ class Movie(Model):
         for k, v in json.items():
             if k == 'created':
                 setattr(movie, k, fromtimestamp(v))
+                setattr(movie, f'{k}_time', v)
             else:
                 setattr(movie, k, v)
         return movie

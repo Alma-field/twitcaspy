@@ -9,14 +9,16 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/twitcaspy?label=Python)](https://pypi.org/project/twitcaspy/)
 
 Twitcatting for Python
+Python 3.7 - 3.9 are supported.
 
 ## Other language version
  - [English](https://github.com/Alma-field/twitcaspy/blob/master/README.md)
  - [Japanese](https://github.com/Alma-field/twitcaspy/blob/master/README_JA.md)
 
 ## Document
- - [develop](https://twitcaspy.alma-field.com/en/latest)
- - [latest (v1.0.2)](https://twitcaspy.alma-field.com/en/stable)
+ - [develop version](https://twitcaspy.alma-field.com/en/latest)
+ - [latest version(v1.1.0)](https://twitcaspy.alma-field.com/en/stable)
+ - [v1.1.0](https://twitcaspy.alma-field.com/en/1.1.0)
  - [v1.0.2](https://twitcaspy.alma-field.com/en/1.0.2)
  - [v1.0.1](https://twitcaspy.alma-field.com/en/1.0.1)
  - [v1.0.0](https://twitcaspy.alma-field.com/en/1.0.0)
@@ -40,7 +42,28 @@ Alternatively, install directly from the GitHub repository:
 pip install git+https://github.com/Alma-field/twitcaspy.git
 ```
 
-Python 3.7 - 3.9 are supported.
+## Examples
+This is an execution example in the application scope.  
+Get the account name of ***@twitcasting_jp***.
+```python
+from twitcaspy import API, AppAuthHandler
+auth = AppAuthHandler(client_id, client_secret)
+api = API(auth)
+
+print(api.get_user_info(id='twitcasting_jp').user.name)
+# > ツイキャス公式
+```
+
+See in [examples](https://github.com/Alma-field/twitcaspy/tree/master/examples) for other examples and the entire code.
+### Included example
+ - [Authorization](https://github.com/Alma-field/twitcaspy/tree/master/examples/auth)
+   - [AppAuthHandler](https://github.com/Alma-field/twitcaspy/tree/master/examples/auth/app.py)
+   - [GrantAuthHandler](https://github.com/Alma-field/twitcaspy/tree/master/examples/auth/grant.py)
+   - [ImplicitAuthHandler](https://github.com/Alma-field/twitcaspy/tree/master/examples/auth/implicit.py)
+ - [Realtime API](https://github.com/Alma-field/twitcaspy/blob/master/examples/realtime)
+ - [Webhook](https://github.com/Alma-field/twitcaspy/blob/master/examples/webhook)
+   - [Server](https://github.com/Alma-field/twitcaspy/blob/master/examples/webhook/server.py)
+   - [Client](https://github.com/Alma-field/twitcaspy/blob/master/examples/webhook/client.py)
 
 ## Source
 This library is based on:

@@ -19,3 +19,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+based on tweepy(https://github.com/tweepy/tweepy):
+Copyright (c) 2009-2021 Joshua Roesslein
+Released under the MIT license
+https://github.com/tweepy/tweepy/blob/master/LICENSE

@@ -1,3 +1,10 @@
+# Twitcaspy
+# Copyright 2021 Alma-field
+# See LICENSE for details.
+#
+# based on tweepy(https://github.com/tweepy/tweepy)
+# Copyright (c) 2009-2021 Joshua Roesslein
+
 from nose.tools import ok_, eq_, raises
 
 from twitcaspy import API
@@ -104,6 +111,7 @@ class TwitcaspyAPITests(TwitcaspyTestCase):
         data = self.api.get_supporting_status(
             target_user_id=target_user_id, id=user_id)
         ok_(hasattr(data, 'is_supporting'))
+        ok_(hasattr(data, 'supported'))
         ok_(hasattr(data, 'target_user'))
         ok_(isinstance(data.target_user, User))
         eq_(data.target_user.screen_id, target_user_id)
