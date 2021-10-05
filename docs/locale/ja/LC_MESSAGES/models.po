@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 17:23+0900\n"
+"POT-Creation-Date: 2021-10-05 14:01+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -146,11 +146,11 @@ msgstr "プロフィール文章"
 msgid "User level"
 msgstr "ユーザのレベル"
 
-#: of twitcaspy.models.comment.Comment:25
+#: of twitcaspy.models.comment.Comment:31
 #: twitcaspy.models.latelimit.LateLimit:7
 #: twitcaspy.models.latelimit.LateLimit:13
 #: twitcaspy.models.latelimit.LateLimit:19 twitcaspy.models.movie.Movie:61
-#: twitcaspy.models.movie.Movie:85 twitcaspy.models.movie.Movie:91
+#: twitcaspy.models.movie.Movie:85 twitcaspy.models.movie.Movie:97
 #: twitcaspy.models.movie.Movie:116 twitcaspy.models.movie.Movie:123
 #: twitcaspy.models.movie.Movie:129 twitcaspy.models.subcategory.SubCategory:19
 #: twitcaspy.models.supporter.Supporter:38
@@ -343,19 +343,20 @@ msgstr "配信地域(国コード)"
 msgid "stream time (seconds)"
 msgstr "配信時間(秒)"
 
-#: of twitcaspy.models.movie.Movie:89
-msgid "Unix time stamp of stream start datetime"
-msgstr "配信開始日時のunixタイムスタンプ"
+#: of twitcaspy.models.comment.Comment:23 twitcaspy.models.movie.Movie:89
+msgid "Converted created_time to :class:`datetime.datetime` type"
+msgstr "created_timeを :class:`datetime.datetime` 型へ変換したもの"
 
-#: of twitcaspy.models.comment.Comment:29 twitcaspy.models.movie.Movie:95
-msgid "Converted created to :class:`datetime.datetime` type"
-msgstr "createdを :class:`datetime.datetime` 型へ変換したもの"
-
-#: of twitcaspy.models.comment.Comment:31
-#: twitcaspy.models.latelimit.LateLimit:25 twitcaspy.models.movie.Movie:97
+#: of twitcaspy.models.comment.Comment:25
+#: twitcaspy.models.latelimit.LateLimit:25 twitcaspy.models.movie.Movie:91
+#: twitcaspy.models.supporter.Supporter:58
 #: twitcaspy.models.supporter.Supporter:64
 msgid ":class:`datetime.datetime`"
 msgstr ":class:`datetime.datetime`"
+
+#: of twitcaspy.models.movie.Movie:95
+msgid "Unix time stamp of stream start datetime"
+msgstr "配信開始日時のunixタイムスタンプ"
 
 #: of twitcaspy.models.movie.Movie:101
 msgid "Whether it is a collaboration stream"
@@ -427,7 +428,7 @@ msgstr "コメント本文"
 msgid "Comment contributor information"
 msgstr "コメント投稿者の情報"
 
-#: of twitcaspy.models.comment.Comment:23
+#: of twitcaspy.models.comment.Comment:29
 msgid "Unix time stamp of comment posting datetime"
 msgstr "コメント投稿日時のunixタイムスタンプ"
 
@@ -512,10 +513,6 @@ msgid ""
 "Added 'unix time stamp <supported> of supported datetime' to "
 "SupporterUser object of response |google_translate_ja_en|"
 msgstr "レスポンスの SupporterUser object にサポートした日時のunixタイムスタンプ supported を追加しました"
-
-#: of twitcaspy.models.supporter.Supporter:58
-msgid ":class:`datetime.datetime`"
-msgstr ":class:`datetime.datetime`"
 
 #: of twitcaspy.models.supporter.Supporter:62
 msgid "Converted supported to :class:`datetime.datetime` type"
