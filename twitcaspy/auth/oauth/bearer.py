@@ -30,3 +30,6 @@ class OAuth2Bearer(AuthBase):
     def __call__(self, request):
         request.headers['Authorization'] = f'Bearer {self.bearer_token}'
         return request
+
+    def get_authorization(self):
+        return f'Bearer {self.bearer_token}'

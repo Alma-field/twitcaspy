@@ -38,3 +38,6 @@ class OAuth2Basic(AuthBase):
     def __call__(self, request):
         request.headers['Authorization'] = 'Basic ' + self.token
         return request
+
+    def get_authorization(self):
+        return f'Basic {self.token}'
