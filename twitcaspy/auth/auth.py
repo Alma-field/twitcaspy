@@ -36,3 +36,6 @@ class AuthHandler:
 
     def _get_oauth_url(self, endpoint):
         return 'https://' + self.OAUTH_HOST + self.OAUTH_ROOT + endpoint
+
+    def get_token(self):
+        raise NotImplementedError

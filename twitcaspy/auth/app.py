@@ -28,3 +28,8 @@ class AppAuthHandler(AuthHandler):
     def __init__(self, client_id, client_secret):
         super().__init__(client_id, client_secret)
         self.auth = OAuth2Basic(client_id, client_secret)
+
+    def get_token(self):
+        if self.auth is None:
+            return None
+        return self.auth.token

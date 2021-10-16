@@ -77,3 +77,8 @@ class ImplicitAuthHandler(AuthHandler):
         :class:`None`
         """
         self.auth = OAuth2Bearer(bearer_token)
+
+    def get_token(self):
+        if self.auth is None:
+            return None
+        return self.auth.bearer_token
