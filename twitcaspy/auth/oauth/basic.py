@@ -36,7 +36,7 @@ class OAuth2Basic(AuthBase):
         self.token = self.token.decode('utf-8')
 
     def __call__(self, request):
-        request.headers['Authorization'] = 'Basic ' + self.token
+        request.headers['Authorization'] = self.get_authorization()
         return request
 
     def get_authorization(self):
