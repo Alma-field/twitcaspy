@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: twitcaspy 0.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-05 14:12+0900\n"
+"POT-Creation-Date: 2021-10-17 23:14+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alma-field\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1165,15 +1165,13 @@ msgstr "ユーザーが、ある別のユーザのサポーターであるかの
 msgid "| target user id or screen_id"
 msgstr "対象ユーザの id または screen_id"
 
-#: of twitcaspy.api.API.get_supporting_status
-msgid "target user id or screen_id"
-msgstr "対象ユーザの id または screen_id"
-
 #: of twitcaspy.api.API.get_supporting_status:14
 msgid ""
 "Note that unlike :class:`~twitcaspy.models.Supporter`, there is no "
 "supported_time attribute."
-msgstr ":class:`~twitcaspy.models.Supporter` とは異なり、supported_time 属性がないことに注意してください。"
+msgstr ""
+":class:`~twitcaspy.models.Supporter` とは異なり、supported_time "
+"属性がないことに注意してください。"
 
 #: of twitcaspy.api.API.get_supporting_status:17
 msgid ""
