@@ -5,6 +5,8 @@
 from .parser import Parser
 
 class JsonParser(Parser):
+    """The payload is converted to :class:`dict` and then returned."""
+
     def __init__(self):
         pass
 

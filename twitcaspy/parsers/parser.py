@@ -3,6 +3,8 @@
 # See LICENSE for details.
 
 class Parser:
+    """Parser Base Class"""
+
     def parse(self, payload, *args, **kwargs):
         """
         Parse the response payload and return the result.

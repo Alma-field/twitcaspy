@@ -8,6 +8,8 @@
 from .parser import Parser
 
 class RawParser(Parser):
+    """The payload will be returned as it is."""
+
     def __init__(self):
         pass
 

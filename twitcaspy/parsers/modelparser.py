@@ -16,6 +16,8 @@ from ..models.factory import ModelFactory
 from .parser import Parser
 
 class ModelParser(Parser):
+    """The payload is converted to a model and then returned."""
+
     def __init__(self, model_factory=None):
         self.model_factory = model_factory or ModelFactory
 
